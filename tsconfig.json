@@ -8,6 +8,7 @@
     "jsx": "react-native",
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "src"

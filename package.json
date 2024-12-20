@@ -1,38 +1,38 @@
 {
-  "name": "react-native-search-select",
+  "name": "react-native-ecommerce-helper",
   "version": "5.0.2",
-  "description": "An animated searchbar component so you can search and select objects",
+  "description": "A compilation of components to optimize the development of your ecommerce",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
   "scripts": {
-    "compile": "npx tsc && rm -rf ../teste/node_modules/react-native-search-select/lib && cp -r lib ../teste/node_modules/react-native-search-select/",
+    "compileMacOS": "npx tsc && rm -rf ../teste/node_modules/react-native-ecommerce-helper/lib && cp -r lib ../teste/node_modules/react-native-ecommerce-helper/",
+    "compileWindows": "npx tsc && if exist ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib rd /s /q ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib && mkdir ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib && xcopy /e /y lib ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-native",
-    "search",
-    "select",
-    "react-native-search-select",
-    "react-native-search",
-    "react-native-searchbar"
+    "react",
+    "mobile",
+    "react-native-ecommerce-helper",
+    "ecommerce",
+    "react-native-ecommerce"
   ],
   "author": {
     "name": "Danilo Lima",
     "email": "danilojldeo@hotmail.com"
   },
   "bugs": {
-    "url": "https://github.com/Danilo-Js/react-native-search-select/issues"
+    "url": "https://github.com/Danilo-Js/react-native-ecommerce-helper"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Danilo-Js/react-native-search-select.git"
+    "url": "git://github.com/Danilo-Js/react-native-ecommerce-helper"
   },
   "license": "MIT",
   "dependencies": {
-    "react-native-animatable": "^1.3.3",
     "react-native-responsive-screen": "^1.4.2"
   },
   "peerDependencies": {
