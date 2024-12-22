@@ -43,106 +43,112 @@
 
 ## 📸 **Components**
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+  align-items: flex-start;
+  max-width: 100%;
+">
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/CategoryList.md" style="text-decoration: underline; color: blue;">
-      CategoryList
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/CategoryList.md" style="text-decoration: underline; color: blue;">
+      <strong>CategoryList</strong>
     </a><br/>
     <img src="Docs/Images/CategoryList.png" alt="CategoryList" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/CouponCodeInput.md" style="text-decoration: underline; color: blue;">
-      CouponCodeInput
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/CouponCodeInput.md" style="text-decoration: underline; color: blue;">
+      <strong>CouponCodeInput</strong>
     </a><br/>
     <img src="Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/NewClient.md" style="text-decoration: underline; color: blue;">
-      NewClient
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/NewClient.md" style="text-decoration: underline; color: blue;">
+      <strong>NewClient</strong>
     </a><br/>
     <img src="Docs/Images/NewClient.png" alt="NewClient" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/OrderConfirmation.md" style="text-decoration: underline; color: blue;">
-      OrderConfirmation
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/OrderConfirmation.md" style="text-decoration: underline; color: blue;">
+      <strong>OrderConfirmation</strong>
     </a><br/>
     <img src="Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/OrderSummary.md" style="text-decoration: underline; color: blue;">
-      OrderSummary
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/OrderSummary.md" style="text-decoration: underline; color: blue;">
+      <strong>OrderSummary</strong>
     </a><br/>
     <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/OrderTracking.md" style="text-decoration: underline; color: blue;">
-      OrderTracking
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/OrderTracking.md" style="text-decoration: underline; color: blue;">
+      <strong>OrderTracking</strong>
     </a><br/>
     <img src="Docs/Images/OrderTracking.png" alt="OrderTracking" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/PaymentGateway.md" style="text-decoration: underline; color: blue;">
-      PaymentGateway
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/PaymentGateway.md" style="text-decoration: underline; color: blue;">
+      <strong>PaymentGateway</strong>
     </a><br/>
     <img src="Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/ProductDetail.md" style="text-decoration: underline; color: blue;">
-      ProductDetail
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/ProductDetail.md" style="text-decoration: underline; color: blue;">
+      <strong>ProductDetail</strong>
     </a><br/>
     <img src="Docs/Images/ProductDetail.png" alt="ProductDetail" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/ProductList.md" style="text-decoration: underline; color: blue;">
-      ProductList
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/ProductList.md" style="text-decoration: underline; color: blue;">
+      <strong>ProductList</strong>
     </a><br/>
     <img src="Docs/Images/ProductList.png" alt="ProductList" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/ReviewAndRatings.md" style="text-decoration: underline; color: blue;">
-      ReviewAndRatings
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/ReviewAndRatings.md" style="text-decoration: underline; color: blue;">
+      <strong>ReviewAndRatings</strong>
     </a><br/>
     <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/SearchBar.md" style="text-decoration: underline; color: blue;">
-      SearchBar
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/SearchBar.md" style="text-decoration: underline; color: blue;">
+      <strong>SearchBar</strong>
     </a><br/>
     <img src="Docs/Images/SearchBar.png" alt="SearchBar" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/ShippingDetails.md" style="text-decoration: underline; color: blue;">
-      ShippingDetails
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/ShippingDetails.md" style="text-decoration: underline; color: blue;">
+      <strong>ShippingDetails</strong>
     </a><br/>
     <img src="Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/ShoppingCard.md" style="text-decoration: underline; color: blue;">
-      ShoppingCard
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/ShoppingCart.md" style="text-decoration: underline; color: blue;">
+      <strong>ShoppingCart</strong>
     </a><br/>
-    <img src="Docs/Images/ShoppingCard.png" alt="ShoppingCard" width="200"/>
+    <img src="Docs/Images/ShoppingCart.png" alt="ShoppingCart" width="200"/>
   </div>
 
-  <div style="text-align: center;">
-    <a href="Docs/Usage/WishList.md" style="text-decoration: underline; color: blue;">
-      WishList
+  <div style="text-align: center; width: 200px;">
+    <a href="Docs/WishList.md" style="text-decoration: underline; color: blue;">
+      <strong>WishList</strong>
     </a><br/>
     <img src="Docs/Images/WishList.png" alt="WishList" width="200"/>
   </div>
-
 </div>
 
 ---
