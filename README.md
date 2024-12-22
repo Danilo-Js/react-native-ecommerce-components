@@ -28,7 +28,7 @@
 
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-helper">
 
-  <a href="https://www.npmjs.com/package/react-native-react-native-search-bar">
+  <a href="https://www.npmjs.com/package/react-native-ecommerce-helper">
     <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-ecommerce-helper.svg">
   </a>
 </p>

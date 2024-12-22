@@ -87,7 +87,7 @@ Make sure everything works as expected.
 1. Commit your changes:
 
 ```sh
-git add *
+git add .
 git commit -m "Your descriptive commit message"
 ```
 
