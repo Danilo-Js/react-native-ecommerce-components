@@ -1,102 +1,212 @@
 <h1 align="center">
-  react-native-search-select
+  react-native-ecommerce-helper
 </h1>
 
-<h4 align="center">
-  Select objects from a searchbar
-</h4>
+<h5 align="center">
+  Components to boost the development of your ecommerce.
+</h5>
 
 </br>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-search-select">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-helper">
 
-  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-search-select/commits/master">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-search-select">
+  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper/commits/master">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper">
   </a>
   
-  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/react-native-search-select">
+  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-helper">
   
-  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/react-native-search-select">
+  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-helper">
 </p>
 
 <p align="center">
-  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-search-select/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/react-native-search-select">
+  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper">
   </a>
 
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-search-select">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-helper">
 
   <a href="https://www.npmjs.com/package/react-native-react-native-search-bar">
-    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-search-select.svg">
+    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-ecommerce-helper.svg">
   </a>
 </p>
 
-<p align="center" direction="row">
-<a href="#information_source-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="Docs/Props.md">Props</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<p align="center">
+  <a href="#information_source-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#clipboard-usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="Docs/HowToContribuite.md">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
-</br>
+---
 
-<div style="text-align: center;">
-  <div style="background-color: black; display: inline-block; padding: 20px; margin: 5px;">
-    <img alt="Android_SimpleSelect" width="200" src="./Gallery/Android_SimpleSelect.gif">
+## 📸 **Components**
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/CategoryList.md" style="text-decoration: underline; color: blue;">
+      CategoryList
+    </a><br/>
+    <img src="Docs/Images/CategoryList.png" alt="CategoryList" width="200"/>
   </div>
-  <div style="background-color: black; display: inline-block; padding: 20px; margin: 5px;">
-    <img alt="Android_MultipleObjectsWithCounterAndOptionsOnTop" width="200" src="./Gallery/Android_MultipleObjectsWithCounterAndOptionsOnTop.gif">
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/CouponCodeInput.md" style="text-decoration: underline; color: blue;">
+      CouponCodeInput
+    </a><br/>
+    <img src="Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="200"/>
   </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/NewClient.md" style="text-decoration: underline; color: blue;">
+      NewClient
+    </a><br/>
+    <img src="Docs/Images/NewClient.png" alt="NewClient" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/OrderConfirmation.md" style="text-decoration: underline; color: blue;">
+      OrderConfirmation
+    </a><br/>
+    <img src="Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/OrderSummary.md" style="text-decoration: underline; color: blue;">
+      OrderSummary
+    </a><br/>
+    <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/OrderTracking.md" style="text-decoration: underline; color: blue;">
+      OrderTracking
+    </a><br/>
+    <img src="Docs/Images/OrderTracking.png" alt="OrderTracking" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/PaymentGateway.md" style="text-decoration: underline; color: blue;">
+      PaymentGateway
+    </a><br/>
+    <img src="Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/ProductDetail.md" style="text-decoration: underline; color: blue;">
+      ProductDetail
+    </a><br/>
+    <img src="Docs/Images/ProductDetail.png" alt="ProductDetail" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/ProductList.md" style="text-decoration: underline; color: blue;">
+      ProductList
+    </a><br/>
+    <img src="Docs/Images/ProductList.png" alt="ProductList" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/ReviewAndRatings.md" style="text-decoration: underline; color: blue;">
+      ReviewAndRatings
+    </a><br/>
+    <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/SearchBar.md" style="text-decoration: underline; color: blue;">
+      SearchBar
+    </a><br/>
+    <img src="Docs/Images/SearchBar.png" alt="SearchBar" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/ShippingDetails.md" style="text-decoration: underline; color: blue;">
+      ShippingDetails
+    </a><br/>
+    <img src="Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/ShoppingCard.md" style="text-decoration: underline; color: blue;">
+      ShoppingCard
+    </a><br/>
+    <img src="Docs/Images/ShoppingCard.png" alt="ShoppingCard" width="200"/>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="Docs/Usage/WishList.md" style="text-decoration: underline; color: blue;">
+      WishList
+    </a><br/>
+    <img src="Docs/Images/WishList.png" alt="WishList" width="200"/>
+  </div>
+
 </div>
-
-
-
-</br>
-
-## :information_source: About the project
-
-This project was made for my final paper in the Computer Science course at UFES (Federal University of Espírito Santo). Please leave a ***STAR*** at the [repository](https://github.com/Danilo-Js/react-native-search-select) and contribute to the library.
-
-## :rocket: Getting Started
-
-1. Install [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons#installation) along with the icon sources you want to use. In the main example, we use the `Ionicons` source. You can browse all available icon sources and their icons [here](https://oblador.github.io/react-native-vector-icons/). If you're unsure which sources you'll need, consider installing all icon sources to cover potential requirements.
-
-2. Install a library to handle responsiveness. The usage examples rely on [react-native-responsive-screen](https://github.com/marudy/react-native-responsive-screen). You can install it using `$ yarn add react-native-responsive-screen` or `$ npm install react-native-responsive-screen`
-If you prefer another way to handle responsiveness, feel free to skip this step. However, you will need to adapt the usage example you choose to match your setup.
-
-1. Install this library. You can use `$ yarn add react-native-search-select` or `$ npm install react-native-search-select`
-
-## :information_source: Usage
-
-1. Create a folder in your project at `src/components/SearchSelect` and add a new file named `index.js` inside this folder.
-
-2. Choose one of the usage examples from the [usage examples](Docs/UsageExamples.md), and copy the code into `src/components/SearchSelect/index.js`. You can use any of the examples as a starting point based on your needs (e.g., single-select, multi-select, paginated list).
-
-3. Import the `SearchSelect` component into your code and use it as follows:
-
-   ```javascript
-   import SearchSelect from './src/components/SearchSelect';
-
-    const App = () => {
-      return (
-        <SearchSelect
-          placeholder="Search for options"
-          // Other props 
-        />
-      );
-    };
-
-    export default App;
-
-## :memo: License
-
-This project is under the MIT license. See the [LICENSE](https://github.com/Danilo-Js/react-native-search-select/blob/master/LICENSE) for more information.
 
 ---
 
-#### Made by Danilo José Lima de Oliveira
+## :information_source: **About the Project**
 
-#### [Get in touch!](https://www.linkedin.com/in/danilo-js/) with me
+This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.  
+
+Please leave a ***⭐ STAR*** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-helper) and contribute to the library to help improve it further.  
+
+---
+
+## :clipboard: Usage
+
+### **Installation**
+
+To install the library, run one of the following commands:
+
+```sh
+yarn add react-native-ecommerce-helper
+```
+
+or
+
+```sh
+npm install react-native-ecommerce-helper
+```
+
+### **Using a Component**
+
+1. **Import the desired component** in your project:
+
+```js
+import { NewClient } from 'react-native-ecommerce-helper/lib';
+```
+
+2. **Render the component:**
+
+```js
+<NewClient
+  onSubmit={(data) => console.log(data)}
+  fields={['Name', 'Email']}
+  title="Customer Registration"
+  subTitle="Fill out the form below"
+/>
+```
+
+### **Editing Components in Node Modules**
+
+If necessary, you can navigate to the following path:
+
+```plaintext
+node_modules/react-native-ecommerce-helper/lib/components
+```
+
+Locate the desired component file and make your edits.
+
+---
+
+## :memo: **License**
+
+This project is under the **MIT License**. See the [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-helper/blob/master/LICENSE) file for details.
+
+---
+
+**Made with ❤️ by Danilo José Lima de Oliveira**  
+[Get in touch!](https://www.linkedin.com/in/danilo-js/)
