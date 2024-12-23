@@ -1,0 +1,20 @@
+digraph SequenceDiagram {
+	rankdir=TB splines=polyline
+	Cliente [label="🛒 Cliente" shape=ellipse]
+	SearchBar [label="🔍 SearchBar" shape=box]
+	ProductList [label="🛍️ ProductList" shape=box]
+	ProductDetail [label="📦 ProductDetail" shape=box]
+	ShoppingCart [label="🛒 ShoppingCart" shape=box]
+	CouponCodeInput [label="🎟️ CouponCodeInput" shape=box]
+	PaymentGateway [label="💳 PaymentGateway" shape=box]
+	OrderConfirmation [label="✅ OrderConfirmation" shape=box]
+	OrderTracking [label="🚚 OrderTracking" shape=box]
+	Cliente -> SearchBar [label="1. Busca por produtos"]
+	SearchBar -> ProductList [label="2. Retorna resultados"]
+	Cliente -> ProductDetail [label="3. Visualiza detalhes do produto"]
+	Cliente -> ShoppingCart [label="4. Adiciona produto ao carrinho"]
+	Cliente -> CouponCodeInput [label="5. Aplica cupom de desconto"]
+	Cliente -> PaymentGateway [label="6. Realiza pagamento"]
+	PaymentGateway -> OrderConfirmation [label="7. Confirmação do pagamento"]
+	OrderConfirmation -> OrderTracking [label="8. Inicia rastreamento"]
+}

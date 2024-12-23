@@ -1,0 +1,42 @@
+digraph UseCaseDiagram {
+	rankdir=LR
+	Cliente [label="🛒 Cliente" shape=ellipse]
+	Pagamento [label="💳 Sistema de Pagamento" shape=ellipse]
+	Entrega [label="📦 Sistema de Entrega" shape=ellipse]
+	UC1 [label="Cadastrar-se no sistema"]
+	UC2 [label="Pesquisar produtos"]
+	UC3 [label="Adicionar produtos à lista de desejos"]
+	UC4 [label="Adicionar produtos ao carrinho"]
+	UC5 [label="Aplicar cupom de desconto"]
+	UC6 [label="Finalizar compra"]
+	UC7 [label="Realizar pagamento"]
+	UC8 [label="Acompanhar status do pedido"]
+	UC9 [label="Avaliar produto"]
+	UC10 [label="Visualizar detalhes do produto"]
+	UC11 [label="Confirmar pedido"]
+	UC12 [label="Informar detalhes de entrega"]
+	UC13 [label="Listar produtos"]
+	UC14 [label="Pesquisar produtos por categoria"]
+	UC15 [label="Validar informações do pagamento"]
+	UC16 [label="Processar pagamento"]
+	UC17 [label="Atualizar status de entrega"]
+	UC18 [label="Confirmar entrega ao cliente"]
+	Cliente -> UC1
+	Cliente -> UC2
+	Cliente -> UC3
+	Cliente -> UC4
+	Cliente -> UC5
+	Cliente -> UC6
+	Cliente -> UC7
+	Cliente -> UC8
+	Cliente -> UC9
+	Cliente -> UC10
+	Cliente -> UC11
+	Cliente -> UC12
+	Cliente -> UC13
+	Cliente -> UC14
+	Pagamento -> UC15
+	Pagamento -> UC16
+	Entrega -> UC17
+	Entrega -> UC18
+}

@@ -1,0 +1,29 @@
+digraph ArchitectureDiagram {
+	rankdir=TB splines=ortho
+	"UI Layer" [label="🖥️ Camada de Interface do Usuário" shape=box3d]
+	"Business Logic Layer" [label="⚙️ Camada de Lógica de Negócio" shape=box3d]
+	"Data Access Layer" [label="🗄️ Camada de Acesso a Dados" shape=box3d]
+	"External Services" [label="🌐 Serviços Externos" shape=folder]
+	SearchBar [label="🔍 SearchBar" shape=box]
+	ProductList [label="🛍️ ProductList" shape=box]
+	ProductDetail [label="📦 ProductDetail" shape=box]
+	ShoppingCart [label="🛒 ShoppingCart" shape=box]
+	CouponCodeInput [label="🎟️ CouponCodeInput" shape=box]
+	OrderConfirmation [label="✅ OrderConfirmation" shape=box]
+	OrderTracking [label="🚚 OrderTracking" shape=box]
+	"UI Layer" -> SearchBar
+	"UI Layer" -> ProductList
+	"UI Layer" -> ProductDetail
+	"UI Layer" -> ShoppingCart
+	"UI Layer" -> CouponCodeInput
+	"UI Layer" -> OrderConfirmation
+	"UI Layer" -> OrderTracking
+	SearchBar -> "Business Logic Layer"
+	ProductList -> "Business Logic Layer"
+	ShoppingCart -> "Business Logic Layer"
+	OrderTracking -> "Business Logic Layer"
+	"Business Logic Layer" -> "Data Access Layer"
+	"Business Logic Layer" -> "External Services"
+	"External Services" -> PaymentGateway [label="💳 Sistema de Pagamento"]
+	"External Services" -> DeliverySystem [label="🚚 Sistema de Entrega"]
+}
