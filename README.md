@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="./README.md">🇺🇸 English Documentation</a> | 
+  <a href="./README-pt.md">🇧🇷 Documentação em Português</a>
+</p>
+
+---
+
 <h1 align="center">
   react-native-ecommerce-helper
 </h1>
@@ -9,12 +16,6 @@
 
 ---
 
-<p align="center">
-  <a href="./README.md">🇺🇸 English Documentation</a> | 
-  <a href="./README-pt.md">🇧🇷 Documentação em Português</a>
-</p>
-
----
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-helper">
