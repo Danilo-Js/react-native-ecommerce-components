@@ -79,14 +79,14 @@ Clique na imagem para visualizar a documentação do componente.
         <img src="Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
       </a>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderSummary.md">
         <strong>Resumo do Pedido</strong><br/>
         <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
       </a>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderTracking.md">
         <strong>Rastreamento de Pedido</strong><br/>
@@ -105,6 +105,8 @@ Clique na imagem para visualizar a documentação do componente.
         <img src="Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
       </a>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="Docs/Portuguese/Usage/ProductList.md">
         <strong>Lista de Produtos</strong><br/>
@@ -117,8 +119,6 @@ Clique na imagem para visualizar a documentação do componente.
         <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
       </a>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="Docs/Portuguese/Usage/SearchBar.md">
         <strong>Barra de Pesquisa</strong><br/>
@@ -131,6 +131,8 @@ Clique na imagem para visualizar a documentação do componente.
         <img src="Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
       </a>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="Docs/Portuguese/Usage/ShoppingCart.md">
         <strong>Carrinho de Compras</strong><br/>

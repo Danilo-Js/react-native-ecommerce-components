@@ -57,89 +57,91 @@ Click on the image to view the component documentation.
 <table>
   <tr>
     <td align="center">
-      <a href="Docs/Usage/CategoryList.md">
+      <a href="Docs/English/Usage/CategoryList.md">
         <strong>Category List</strong><br/>
         <img src="Docs/Images/CategoryList.png" alt="CategoryList" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/CouponCodeInput.md">
+      <a href="Docs/English/Usage/CouponCodeInput.md">
         <strong>Coupon Code Input</strong><br/>
         <img src="Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/NewClient.md">
+      <a href="Docs/English/Usage/NewClient.md">
         <strong>New Client Form</strong><br/>
         <img src="Docs/Images/NewClient.png" alt="NewClient" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/OrderConfirmation.md">
+      <a href="Docs/English/Usage/OrderConfirmation.md">
         <strong>Order Confirmation</strong><br/>
         <img src="Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/Usage/OrderSummary.md">
-        <strong>Order Summary</strong><br/>
-        <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="Docs/Usage/OrderTracking.md">
+      <a href="Docs/English/Usage/OrderSummary.md">
+        <strong>Order Summary</strong><br/>
+        <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="Docs/English/Usage/OrderTracking.md">
         <strong>Order Tracking</strong><br/>
         <img src="Docs/Images/OrderTracking.png" alt="OrderTracking" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/PaymentGateway.md">
+      <a href="Docs/English/Usage/PaymentGateway.md">
         <strong>Payment Gateway</strong><br/>
         <img src="Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/ProductDetail.md">
+      <a href="Docs/English/Usage/ProductDetail.md">
         <strong>Product Detail</strong><br/>
         <img src="Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/Usage/ProductList.md">
-        <strong>Product List</strong><br/>
-        <img src="Docs/Images/ProductList.png" alt="ProductList" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/Usage/ReviewAndRatings.md">
-        <strong>Review and Ratings</strong><br/>
-        <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="Docs/Usage/SearchBar.md">
+      <a href="Docs/English/Usage/ProductList.md">
+        <strong>Product List</strong><br/>
+        <img src="Docs/Images/ProductList.png" alt="ProductList" width="300"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="Docs/English/Usage/ReviewAndRatings.md">
+        <strong>Review and Ratings</strong><br/>
+        <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="Docs/English/Usage/SearchBar.md">
         <strong>Search Bar</strong><br/>
         <img src="Docs/Images/SearchBar.png" alt="SearchBar" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/ShippingDetails.md">
+      <a href="Docs/English/Usage/ShippingDetails.md">
         <strong>Shipping Details</strong><br/>
         <img src="Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
       </a>
     </td>
+  </tr>
+  <tr>
     <td align="center">
-      <a href="Docs/Usage/ShoppingCart.md">
+      <a href="Docs/English/Usage/ShoppingCart.md">
         <strong>Shopping Cart</strong><br/>
         <img src="Docs/Images/ShoppingCart.png" alt="ShoppingCart" width="300"/>
       </a>
     </td>
     <td align="center">
-      <a href="Docs/Usage/WishList.md">
+      <a href="Docs/English/Usage/WishList.md">
         <strong>Wish List</strong><br/>
         <img src="Docs/Images/WishList.png" alt="WishList" width="300"/>
       </a>
