@@ -9,7 +9,7 @@ The **CategoryList** component displays a list of product categories in an organ
 <table>
   <tr>
     <td><strong>CategoryList</strong></td>
-    <td><img src="../Images/CategoryList.png" alt="CategoryList" width="200"/></td>
+    <td><img src="../../Images/CategoryList.png" alt="CategoryList" width="200"/></td>
   </tr>
 </table>
 
@@ -53,19 +53,22 @@ const App = () => {
     {
       id: "1",
       name: "Electronics",
-      image: "https://via.placeholder.com/100",
+      image:
+        "https://cdn3.iconfinder.com/data/icons/glypho-free/64/laptop-256.png",
       description: "Gadgets, devices, and accessories",
     },
     {
       id: "2",
       name: "Fashion",
-      image: "https://via.placeholder.com/100",
+      image:
+        "https://cdn0.iconfinder.com/data/icons/news-and-magazine/512/fashion-256.png",
       description: "Trendy clothing and accessories",
     },
     {
       id: "3",
       name: "Home & Kitchen",
-      image: "https://via.placeholder.com/100",
+      image:
+        "https://cdn2.iconfinder.com/data/icons/kitchen-appliances-computers-and-electronics/32/Appliances-15-256.png",
       description: "Essentials for your home",
     },
   ];

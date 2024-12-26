@@ -9,7 +9,7 @@ The **PaymentGateway** component provides a secure and user-friendly interface f
 <table>
   <tr>
     <td><strong>PaymentGateway</strong></td>
-    <td><img src="../Images/PaymentGateway.png" alt="PaymentGateway" width="200"/></td>
+    <td><img src="../../Images/PaymentGateway.png" alt="PaymentGateway" width="200"/></td>
   </tr>
 </table>
 

@@ -9,7 +9,7 @@ The **NewClient** component provides an intuitive interface for collecting custo
 <table>
   <tr>
     <td><strong>NewClient</strong></td>
-    <td><img src="../Images/NewClient.png" alt="NewClient" width="200"/></td>
+    <td><img src="../../Images/NewClient.png" alt="NewClient" width="200"/></td>
   </tr>
 </table>
 
@@ -56,7 +56,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 ---

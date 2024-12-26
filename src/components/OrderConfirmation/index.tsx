@@ -84,9 +84,6 @@ const OrderConfirmation: React.FC<OrderConfirmationProps> = ({
 const styles = StyleSheet.create({
   container: {
     padding: wp('5%'),
-    backgroundColor: '#fff',
-    borderRadius: wp('3%'),
-    elevation: 2,
     alignItems: 'center',
   },
   title: {

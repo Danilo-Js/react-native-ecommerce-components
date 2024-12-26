@@ -9,7 +9,7 @@ The **CouponCodeInput** component provides a user-friendly way to input and appl
 <table>
   <tr>
     <td><strong>CouponCodeInput</strong></td>
-    <td><img src="../Images/CouponCodeInput.png" alt="CouponCodeInput" width="200"/></td>
+    <td><img src="../../Images/CouponCodeInput.png" alt="CouponCodeInput" width="200"/></td>
   </tr>
 </table>
 
@@ -47,7 +47,7 @@ const CouponCodeInputTest = () => {
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View>
       <CouponCodeInput
         title="Apply Your Coupon"
         subTitle="Enter a valid coupon code to get discounts"

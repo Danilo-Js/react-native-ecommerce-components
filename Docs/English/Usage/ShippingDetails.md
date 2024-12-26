@@ -9,7 +9,7 @@ The **ShippingDetails** component provides a comprehensive interface for collect
 <table>
   <tr>
     <td><strong>ShippingDetails</strong></td>
-    <td><img src="../Images/ShippingDetails.png" alt="ShippingDetails" width="200"/></td>
+    <td><img src="../../Images/ShippingDetails.png" alt="ShippingDetails" width="200"/></td>
   </tr>
 </table>
 

@@ -1,6 +1,6 @@
 {
   "name": "react-native-ecommerce-helper",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "A compilation of components to optimize the development of your ecommerce",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,8 +8,8 @@
     "lib/**/*"
   ],
   "scripts": {
-    "compileMacOS": "npx tsc && rm -rf ../teste/node_modules/react-native-ecommerce-helper/lib && cp -r lib ../teste/node_modules/react-native-ecommerce-helper/",
-    "compileWindows": "npx tsc && if exist ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib rd /s /q ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib && mkdir ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib && xcopy /e /y lib ..\\teste\\node_modules\\react-native-ecommerce-helper\\lib",
+    "compileMacOS": "npx tsc && rm -rf ../Test/node_modules/react-native-ecommerce-helper/lib && cp -r lib ../Test/node_modules/react-native-ecommerce-helper/",
+    "compileWindows": "npx tsc && (if exist ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib (rd /s /q ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib)) && mkdir ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib && xcopy /e /y lib ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib\\",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

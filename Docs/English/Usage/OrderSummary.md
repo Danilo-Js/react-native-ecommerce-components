@@ -9,7 +9,7 @@ The **OrderSummary** component provides a detailed summary of an order, includin
 <table>
   <tr>
     <td><strong>OrderSummary</strong></td>
-    <td><img src="../Images/OrderSummary.png" alt="OrderSummary" width="200"/></td>
+    <td><img src="../../Images/OrderSummary.png" alt="OrderSummary" width="200"/></td>
   </tr>
 </table>
 

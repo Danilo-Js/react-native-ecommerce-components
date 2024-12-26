@@ -9,7 +9,7 @@ The **ShoppingCart** component provides a detailed overview of items in a user's
 <table>
   <tr>
     <td><strong>ShoppingCart</strong></td>
-    <td><img src="../Images/ShoppingCart.png" alt="ShoppingCart" width="200"/></td>
+    <td><img src="../../Images/ShoppingCart.png" alt="ShoppingCart" width="200"/></td>
   </tr>
 </table>
 

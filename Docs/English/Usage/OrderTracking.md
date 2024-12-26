@@ -9,7 +9,7 @@ The **OrderTracking** component displays the status of an order through a series
 <table>
   <tr>
     <td><strong>OrderTracking</strong></td>
-    <td><img src="../Images/OrderTracking.png" alt="OrderTracking" width="200"/></td>
+    <td><img src="../../Images/OrderTracking.png" alt="OrderTracking" width="200"/></td>
   </tr>
 </table>
 
@@ -93,7 +93,6 @@ const OrderTrackingTest = () => {
 
 export default OrderTrackingTest;
 ```
-
 ---
 
 ## 🧪 **Testing**

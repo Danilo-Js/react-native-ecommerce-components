@@ -12,11 +12,11 @@ This document presents and describes the main diagrams used to represent the str
 The **Use Case Diagram** illustrates the interactions between **external actors** (Customer, Payment System, and Delivery System) and the **main functionalities** of the system. It describes the key features available to each actor.
 
 ### 🖼️ **Diagram:**
-![Use Case Diagram](./UseCases/diagrama_casos_uso.png)
+![Use Case Diagram](../Diagrams/UseCases/diagrama_casos_uso.png)
 
 ### 📌 **Code Reference:**
 You can find the Python code used to generate this diagram here:  
-➡️ [Use Case Diagram Code](../UseCases/DiagramaDeCasosDeUso.py)
+➡️ [Use Case Diagram Code](../Diagrams/UseCases/DiagramaDeCasosDeUso.py)
 
 ---
 
@@ -26,11 +26,11 @@ You can find the Python code used to generate this diagram here:
 The **Component Diagram** represents the main modules and libraries of the project. It shows how each component is organized and how they communicate with each other.
 
 ### 🖼️ **Diagram:**
-![Component Diagram](./Components/diagrama_componentes.png)
+![Component Diagram](../Diagrams/Components/diagrama_componentes.png)
 
 ### 📌 **Code Reference:**
 You can find the Python code used to generate this diagram here:  
-➡️ [Component Diagram Code](../Components/DiagramaDeComponents.py)
+➡️ [Component Diagram Code](../Diagrams/Components/DiagramaDeComponents.py)
 
 ---
 
@@ -40,11 +40,11 @@ You can find the Python code used to generate this diagram here:
 The **Interaction Flow Diagram** illustrates how the main components interact throughout a typical system process, such as completing a purchase or updating an order status.
 
 ### 🖼️ **Diagram:**
-![Interaction Flow Diagram](./InteractionFlows/fluxo_interacao.png)
+![Interaction Flow Diagram](../Diagrams/InteractionFlows/fluxo_interacao.png)
 
 ### 📌 **Code Reference:**
 You can find the Python code used to generate this diagram here:  
-➡️ [Interaction Flow Diagram Code](../InteractionFlows/FluxoDeInteracoes.py)
+➡️ [Interaction Flow Diagram Code](../Diagrams/InteractionFlows/FluxoDeInteracoes.py)
 
 ---
 
@@ -54,11 +54,11 @@ You can find the Python code used to generate this diagram here:
 The **Sequence Diagram** describes the order of interactions between the system's components during a specific flow, such as searching for products or processing a payment.
 
 ### 🖼️ **Diagram:**
-![Sequence Diagram](./SequenceDiagram/diagrama_sequencia.png)
+![Sequence Diagram](../Diagrams/SequenceDiagram/diagrama_sequencia.png)
 
 ### 📌 **Code Reference:**
 You can find the Python code used to generate this diagram here:  
-➡️ [Sequence Diagram Code](../SequenceDiagram/DiagramaDeSequencia.py)
+➡️ [Sequence Diagram Code](../Diagrams/SequenceDiagram/DiagramaDeSequencia.py)
 
 ---
 
@@ -68,11 +68,11 @@ You can find the Python code used to generate this diagram here:
 The **Architecture Diagram** provides an overview of the system's layers. It details the **User Interface Layer**, **Business Logic Layer**, **Data Access Layer**, and how they connect with **External Services**.
 
 ### 🖼️ **Diagram:**
-![Architecture Diagram](./ArchitectureDiagram/diagrama_arquitetura.png)
+![Architecture Diagram](../Diagrams/ArchitectureDiagram/diagrama_arquitetura.png)
 
 ### 📌 **Code Reference:**
 You can find the Python code used to generate this diagram here:  
-➡️ [Architecture Diagram Code](../ArchitectureDiagram/DiagramaDeArquitetura.py)
+➡️ [Architecture Diagram Code](../Diagrams/ArchitectureDiagram/DiagramaDeArquitetura.py)
 
 ---
 

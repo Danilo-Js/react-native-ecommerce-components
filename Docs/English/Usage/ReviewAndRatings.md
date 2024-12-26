@@ -9,7 +9,7 @@ The **ReviewAndRatings** component allows users to view, add, and manage reviews
 <table>
   <tr>
     <td><strong>ReviewAndRatings</strong></td>
-    <td><img src="../Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="200"/></td>
+    <td><img src="../../Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="200"/></td>
   </tr>
 </table>
 

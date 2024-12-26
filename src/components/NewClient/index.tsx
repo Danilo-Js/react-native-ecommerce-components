@@ -59,9 +59,6 @@ const NewClient: React.FC<NewClientProps> = ({ onSubmit, fields, title, subTitle
 const styles = StyleSheet.create({
   container: {
     padding: wp('5%'),
-    backgroundColor: '#fff',
-    borderRadius: wp('3%'),
-    elevation: 2,
   },
   input: {
     height: hp('6%'),

@@ -20,17 +20,15 @@ cd react-native-ecommerce-helper
 To test your changes locally, create a new React Native project:
 
 ```sh
-npx react-native init Teste
-cd Teste
+npx react-native init Test
+cd Test
 ```
 
 Then, install the library locally:
 
 ```sh
-yarn add ../react-native-ecommerce-helper
+yarn add react-native-ecommerce-helper
 ```
-
-> **Note:** Replace `../react-native-ecommerce-helper` with the relative path to your cloned library.
 
 ---
 
@@ -55,10 +53,10 @@ npx tsc
 
 This will generate JavaScript files in the `/lib` folder of the library.
 
-Manually copy the compiled JavaScript files into your Teste project:
+Manually copy the compiled JavaScript files into your Test project:
 
 ```sh
-cp -r lib/ ../Teste/node_modules/react-native-ecommerce-helper/lib/
+cp -r lib/ ../Test/node_modules/react-native-ecommerce-helper/lib/
 ```
 
 ---
@@ -68,7 +66,7 @@ cp -r lib/ ../Teste/node_modules/react-native-ecommerce-helper/lib/
 Run your test project:
 
 ```sh
-cd ../Teste
+cd ../Test
 npx react-native run-android
 ```
 

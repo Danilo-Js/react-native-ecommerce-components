@@ -9,7 +9,7 @@ The **OrderConfirmation** component provides a clear summary of an order with es
 <table>
   <tr>
     <td><strong>OrderConfirmation</strong></td>
-    <td><img src="../Images/OrderConfirmation.png" alt="OrderConfirmation" width="200"/></td>
+    <td><img src="../../Images/OrderConfirmation.png" alt="OrderConfirmation" width="200"/></td>
   </tr>
 </table>
 
