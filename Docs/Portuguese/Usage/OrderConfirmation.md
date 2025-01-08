@@ -17,18 +17,18 @@ O componente **OrderConfirmation** fornece um resumo claro de um pedido com deta
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade         | Tipo                          | Obrigatória | Descrição                                                     |
-|----------------------|-------------------------------|-------------|----------------------------------------------------------------|
-| `orderId`           | `string`                      | ✅          | Identificador único do pedido.                                 |
-| `orderDate`         | `string`                      | ✅          | Data em que o pedido foi realizado.                            |
-| `totalAmount`       | `number`                      | ✅          | Valor total pago pelo pedido.                                  |
-| `paymentMethod`     | `string`                      | ✅          | Método de pagamento utilizado na transação.                    |
-| `shippingAddress`   | `string`                      | ✅          | Endereço de entrega do pedido.                                 |
-| `onContinueShopping`| `() => void`                  | ✅          | Função de callback acionada ao pressionar "Continuar Comprando".|
-| `onViewOrderDetails`| `() => void`                  | ✅          | Função de callback acionada ao pressionar "Ver Detalhes do Pedido". |
-| `title`            | `string`                      | ✅          | Texto do título exibido no topo da tela de confirmação.         |
-| `subTitle`         | `string`                      | ❌          | Texto do subtítulo exibido abaixo do título.                   |
-| `styles`           | `object`                      | ❌          | Estilos personalizados para container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title e subTitle. |
+| Propriedade          | Tipo         | Obrigatória | Descrição                                                                                                               |
+| -------------------- | ------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `orderId`            | `string`     | ✅          | Identificador único do pedido.                                                                                          |
+| `orderDate`          | `string`     | ✅          | Data em que o pedido foi realizado.                                                                                     |
+| `totalAmount`        | `number`     | ✅          | Valor total pago pelo pedido.                                                                                           |
+| `paymentMethod`      | `string`     | ✅          | Método de pagamento utilizado na transação.                                                                             |
+| `shippingAddress`    | `string`     | ✅          | Endereço de entrega do pedido.                                                                                          |
+| `onContinueShopping` | `() => void` | ✅          | Função de callback acionada ao pressionar "Continuar Comprando".                                                        |
+| `onViewOrderDetails` | `() => void` | ✅          | Função de callback acionada ao pressionar "Ver Detalhes do Pedido".                                                     |
+| `title`              | `string`     | ✅          | Texto do título exibido no topo da tela de confirmação.                                                                 |
+| `subTitle`           | `string`     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                            |
+| `styles`             | `object`     | ❌          | Estilos personalizados para container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title e subTitle. |
 
 ---
 
@@ -37,21 +37,21 @@ O componente **OrderConfirmation** fornece um resumo claro de um pedido com deta
 ### 📝 **Exemplo Básico**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {OrderConfirmation} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { OrderConfirmation } from "react-native-ecommerce-components/lib";
 
 const OrderConfirmationTest = () => {
   const handleContinueShopping = () => {
-    Alert.alert('Continue Shopping', 'Navigating to home page...');
+    Alert.alert("Continue Shopping", "Navigating to home page...");
   };
 
   const handleViewOrderDetails = () => {
-    Alert.alert('Order Details', 'Showing order details...');
+    Alert.alert("Order Details", "Showing order details...");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <OrderConfirmation
         title="Order Confirmed"
         subTitle="Thank you for your purchase!"

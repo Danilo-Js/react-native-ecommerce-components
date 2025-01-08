@@ -17,13 +17,13 @@ O componente **NewClient** fornece uma interface intuitiva para coletar informa�
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade  | Tipo                          | Obrigatória | Descrição                                                 |
-|--------------|--------------------------------|-------------|-----------------------------------------------------------|
-| `onSubmit`   | `(data: Record<string, string>) => void` | ✅ | Função de callback acionada quando o formulário é enviado. |
-| `fields`     | `string[]`                    | ✅          | Array com os rótulos dos campos de entrada.              |
-| `title`      | `string`                      | ✅          | Texto do título exibido no topo do formulário.           |
-| `subTitle`   | `string`                      | ❌          | Texto do subtítulo exibido abaixo do título.             |
-| `styles`     | `object`                      | ❌          | Estilos personalizados para container, input, button, buttonText, title e subTitle. |
+| Propriedade | Tipo                                     | Obrigatória | Descrição                                                                           |
+| ----------- | ---------------------------------------- | ----------- | ----------------------------------------------------------------------------------- |
+| `onSubmit`  | `(data: Record<string, string>) => void` | ✅          | Função de callback acionada quando o formulário é enviado.                          |
+| `fields`    | `string[]`                               | ✅          | Array com os rótulos dos campos de entrada.                                         |
+| `title`     | `string`                                 | ✅          | Texto do título exibido no topo do formulário.                                      |
+| `subTitle`  | `string`                                 | ❌          | Texto do subtítulo exibido abaixo do título.                                        |
+| `styles`    | `object`                                 | ❌          | Estilos personalizados para container, input, button, buttonText, title e subTitle. |
 
 ---
 
@@ -32,16 +32,16 @@ O componente **NewClient** fornece uma interface intuitiva para coletar informa�
 ### 📝 **Exemplo Básico**
 
 ```tsx
-import React from 'react';
-import {View} from 'react-native';
-import {NewClient} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View } from "react-native";
+import { NewClient } from "react-native-ecommerce-components/lib";
 
 const App = () => {
-  const handleClientSubmission = data => {
-    console.log('New Client Data:', data);
+  const handleClientSubmission = (data) => {
+    console.log("New Client Data:", data);
   };
 
-  const fields = ['Name', 'Date of Birth', 'Email', 'Phone'];
+  const fields = ["Name", "Date of Birth", "Email", "Phone"];
 
   return (
     <View>

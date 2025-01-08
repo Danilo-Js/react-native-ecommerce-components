@@ -13,18 +13,17 @@ The **CategoryList** component displays a list of product categories in an organ
   </tr>
 </table>
 
-
 ---
 
 ## 🛠️ **Props**
 
-| Prop              | Type                 | Required | Description                                              |
-|--------------------|----------------------|----------|----------------------------------------------------------|
-| `categories`      | `Category[]`         | ✅       | Array of category objects to display.                   |
-| `onSelectCategory`| `(category: Category) => void` | ✅ | Callback function when a category is selected.          |
-| `title`           | `string`             | ✅       | Title text displayed at the top of the list.            |
-| `subTitle`        | `string`             | ❌       | Subtitle text displayed below the title.               |
-| `styles`          | `object`             | ❌       | Custom styles for container, categoryContainer, categoryImage, categoryText, descriptionText, title and subTitle.      |
+| Prop               | Type                           | Required | Description                                                                                                       |
+| ------------------ | ------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| `categories`       | `Category[]`                   | ✅       | Array of category objects to display.                                                                             |
+| `onSelectCategory` | `(category: Category) => void` | ✅       | Callback function when a category is selected.                                                                    |
+| `title`            | `string`                       | ✅       | Title text displayed at the top of the list.                                                                      |
+| `subTitle`         | `string`                       | ❌       | Subtitle text displayed below the title.                                                                          |
+| `styles`           | `object`                       | ❌       | Custom styles for container, categoryContainer, categoryImage, categoryText, descriptionText, title and subTitle. |
 
 ### 📦 **Category Object Structure**
 
@@ -46,7 +45,7 @@ interface Category {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { CategoryList } from "react-native-ecommerce-helper/lib";
+import { CategoryList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const categories = [

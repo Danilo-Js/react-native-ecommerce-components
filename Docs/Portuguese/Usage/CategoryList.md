@@ -17,13 +17,13 @@ O componente **CategoryList** exibe uma lista de categorias de produtos de forma
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade       | Tipo                    | Obrigatória | Descrição                                               |
-|--------------------|-------------------------|-------------|---------------------------------------------------------|
-| `categories`      | `Category[]`            | ✅          | Array de objetos de categoria para exibição.           |
-| `onSelectCategory`| `(category: Category) => void` | ✅   | Função de callback chamada quando uma categoria é selecionada. |
-| `title`           | `string`                | ✅          | Texto do título exibido no topo da lista.              |
-| `subTitle`        | `string`                | ❌          | Texto do subtítulo exibido abaixo do título.           |
-| `styles`          | `object`                | ❌          | Estilos personalizados para container, categoryContainer, categoryImage, categoryText, descriptionText, title e subTitle. |
+| Propriedade        | Tipo                           | Obrigatória | Descrição                                                                                                                 |
+| ------------------ | ------------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `categories`       | `Category[]`                   | ✅          | Array de objetos de categoria para exibição.                                                                              |
+| `onSelectCategory` | `(category: Category) => void` | ✅          | Função de callback chamada quando uma categoria é selecionada.                                                            |
+| `title`            | `string`                       | ✅          | Texto do título exibido no topo da lista.                                                                                 |
+| `subTitle`         | `string`                       | ❌          | Texto do subtítulo exibido abaixo do título.                                                                              |
+| `styles`           | `object`                       | ❌          | Estilos personalizados para container, categoryContainer, categoryImage, categoryText, descriptionText, title e subTitle. |
 
 ### 📦 **Estrutura do Objeto Category**
 
@@ -45,7 +45,7 @@ interface Category {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { CategoryList } from "react-native-ecommerce-helper/lib";
+import { CategoryList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const categories = [

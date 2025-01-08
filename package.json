@@ -1,6 +1,6 @@
 {
-  "name": "react-native-ecommerce-helper",
-  "version": "6.0.8",
+  "name": "react-native-ecommerce-components",
+  "version": "6.0.9",
   "description": "A compilation of components to optimize the development of your ecommerce",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,15 +8,15 @@
     "lib/**/*"
   ],
   "scripts": {
-    "compileMacOS": "npx tsc && rm -rf ../Test/node_modules/react-native-ecommerce-helper/lib && cp -r lib ../Test/node_modules/react-native-ecommerce-helper/",
-    "compileWindows": "npx tsc && (if exist ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib (rd /s /q ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib)) && mkdir ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib && xcopy /e /y lib ..\\Test\\node_modules\\react-native-ecommerce-helper\\lib\\",
+    "compileMacOS": "npx tsc && rm -rf ../Test/node_modules/react-native-ecommerce-components/lib && cp -r lib ../Test/node_modules/react-native-ecommerce-components/",
+    "compileWindows": "npx tsc && (if exist ..\\Test\\node_modules\\react-native-ecommerce-components\\lib (rd /s /q ..\\Test\\node_modules\\react-native-ecommerce-components\\lib)) && mkdir ..\\Test\\node_modules\\react-native-ecommerce-components\\lib && xcopy /e /y lib ..\\Test\\node_modules\\react-native-ecommerce-components\\lib\\",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-native",
     "react",
     "mobile",
-    "react-native-ecommerce-helper",
+    "react-native-ecommerce-components",
     "ecommerce",
     "react-native-ecommerce"
   ],
@@ -25,11 +25,11 @@
     "email": "danilojldeo@hotmail.com"
   },
   "bugs": {
-    "url": "https://github.com/Danilo-Js/react-native-ecommerce-helper"
+    "url": "https://github.com/Danilo-Js/react-native-ecommerce-components"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Danilo-Js/react-native-ecommerce-helper"
+    "url": "git://github.com/Danilo-Js/react-native-ecommerce-components"
   },
   "license": "MIT",
   "dependencies": {

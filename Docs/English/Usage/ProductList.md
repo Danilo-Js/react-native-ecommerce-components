@@ -17,15 +17,15 @@ The **ProductList** component displays a list of products in either grid or list
 
 ## 🛠️ **Props**
 
-| Prop            | Type                                  | Required | Description                                              |
-|------------------|---------------------------------------|----------|----------------------------------------------------------|
-| `products`      | `Product[]`                           | ✅       | Array of product objects to display.                    |
-| `onAddToCart`   | `(product: Product) => void`          | ✅       | Callback triggered when 'Add to Cart' is pressed.        |
-| `onProductPress`| `(product: Product) => void`          | ✅       | Callback triggered when a product is selected.          |
-| `gridView`      | `boolean`                             | ❌       | Enables grid layout if set to `true`. Defaults to `false`. |
-| `title`         | `string`                              | ✅       | Title text displayed at the top of the list.            |
-| `subTitle`      | `string`                              | ❌       | Subtitle text displayed below the title.               |
-| `styles`        | `object`                              | ❌       | Custom styles for `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title`, and `subTitle`. |
+| Prop             | Type                         | Required | Description                                                                                                                                         |
+| ---------------- | ---------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `products`       | `Product[]`                  | ✅       | Array of product objects to display.                                                                                                                |
+| `onAddToCart`    | `(product: Product) => void` | ✅       | Callback triggered when 'Add to Cart' is pressed.                                                                                                   |
+| `onProductPress` | `(product: Product) => void` | ✅       | Callback triggered when a product is selected.                                                                                                      |
+| `gridView`       | `boolean`                    | ❌       | Enables grid layout if set to `true`. Defaults to `false`.                                                                                          |
+| `title`          | `string`                     | ✅       | Title text displayed at the top of the list.                                                                                                        |
+| `subTitle`       | `string`                     | ❌       | Subtitle text displayed below the title.                                                                                                            |
+| `styles`         | `object`                     | ❌       | Custom styles for `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title`, and `subTitle`. |
 
 ### 📦 **Product Object Structure**
 
@@ -48,7 +48,7 @@ interface Product {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { ProductList } from "react-native-ecommerce-helper/lib";
+import { ProductList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const products = [

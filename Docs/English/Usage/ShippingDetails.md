@@ -17,12 +17,12 @@ The **ShippingDetails** component provides a comprehensive interface for collect
 
 ## 🛠️ **Props**
 
-| Prop        | Type                                           | Required | Description                                              |
-|-------------|------------------------------------------------|----------|----------------------------------------------------------|
-| `onSubmit`  | `(shippingDetails: ShippingDetailsData) => void` | ✅       | Callback triggered when the shipping details form is submitted. |
-| `title`     | `string`                                       | ✅       | Title text displayed at the top of the form.            |
-| `subTitle`  | `string`                                       | ❌       | Subtitle text displayed below the title.               |
-| `styles`    | `object`                                       | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
+| Prop       | Type                                             | Required | Description                                                                              |
+| ---------- | ------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------- |
+| `onSubmit` | `(shippingDetails: ShippingDetailsData) => void` | ✅       | Callback triggered when the shipping details form is submitted.                          |
+| `title`    | `string`                                         | ✅       | Title text displayed at the top of the form.                                             |
+| `subTitle` | `string`                                         | ❌       | Subtitle text displayed below the title.                                                 |
+| `styles`   | `object`                                         | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
 
 ### 📦 **ShippingDetailsData Object Structure**
 
@@ -47,18 +47,18 @@ interface ShippingDetailsData {
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {ShippingDetails} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { ShippingDetails } from "react-native-ecommerce-components/lib";
 
 const ShippingDetailsTest = () => {
-  const handleShippingDetails = shippingDetails => {
-    console.log('Shipping Details:', shippingDetails);
-    Alert.alert('Success', 'Shipping details submitted!');
+  const handleShippingDetails = (shippingDetails) => {
+    console.log("Shipping Details:", shippingDetails);
+    Alert.alert("Success", "Shipping details submitted!");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <ShippingDetails
         title="Shipping Information"
         subTitle="Please enter your shipping details below"

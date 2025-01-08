@@ -17,14 +17,14 @@ The **ProductDetail** component displays detailed information about a specific p
 
 ## 🛠️ **Props**
 
-| Prop            | Type                                  | Required | Description                                              |
-|------------------|---------------------------------------|----------|----------------------------------------------------------|
-| `product`       | `Product`                             | ✅       | Object containing product details.                      |
-| `onAddToCart`   | `(product: Product) => void`          | ✅       | Callback triggered when 'Add to Cart' is pressed.        |
-| `onBuyNow`      | `(product: Product) => void`          | ✅       | Callback triggered when 'Buy Now' is pressed.           |
-| `title`         | `string`                              | ✅       | Title text displayed at the top of the product screen.  |
-| `subTitle`      | `string`                              | ❌       | Subtitle text displayed below the title.               |
-| `styles`        | `object`                              | ❌       | Custom styles for `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, and `buttonText`. |
+| Prop          | Type                         | Required | Description                                                                                                                                   |
+| ------------- | ---------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `product`     | `Product`                    | ✅       | Object containing product details.                                                                                                            |
+| `onAddToCart` | `(product: Product) => void` | ✅       | Callback triggered when 'Add to Cart' is pressed.                                                                                             |
+| `onBuyNow`    | `(product: Product) => void` | ✅       | Callback triggered when 'Buy Now' is pressed.                                                                                                 |
+| `title`       | `string`                     | ✅       | Title text displayed at the top of the product screen.                                                                                        |
+| `subTitle`    | `string`                     | ❌       | Subtitle text displayed below the title.                                                                                                      |
+| `styles`      | `object`                     | ❌       | Custom styles for `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, and `buttonText`. |
 
 ### 📦 **Product Object Structure**
 
@@ -48,7 +48,7 @@ interface Product {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { ProductDetail } from "react-native-ecommerce-helper/lib";
+import { ProductDetail } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const product = {

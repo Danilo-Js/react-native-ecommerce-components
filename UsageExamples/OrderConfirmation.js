@@ -1,19 +1,19 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {OrderConfirmation} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { OrderConfirmation } from "react-native-ecommerce-components/lib";
 
 const OrderConfirmationTest = () => {
   const handleContinueShopping = () => {
-    Alert.alert('Continue Shopping', 'Navigating to home page...');
+    Alert.alert("Continue Shopping", "Navigating to home page...");
   };
 
   const handleViewOrderDetails = () => {
-    Alert.alert('Order Details', 'Showing order details...');
+    Alert.alert("Order Details", "Showing order details...");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <OrderConfirmation
         title="Order Confirmed"
         subTitle="Thank you for your purchase!"

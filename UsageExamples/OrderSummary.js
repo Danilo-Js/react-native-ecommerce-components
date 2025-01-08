@@ -1,18 +1,18 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {View, Alert, StyleSheet} from 'react-native';
-import {OrderSummary} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert, StyleSheet } from "react-native";
+import { OrderSummary } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const orderItems = [
-    {id: '1', name: 'Smartphone', price: 499.99, quantity: 1},
-    {id: '2', name: 'Headphones', price: 59.99, quantity: 2},
-    {id: '3', name: 'Laptop', price: 1299.99, quantity: 1},
+    { id: "1", name: "Smartphone", price: 499.99, quantity: 1 },
+    { id: "2", name: "Headphones", price: 59.99, quantity: 2 },
+    { id: "3", name: "Laptop", price: 1299.99, quantity: 1 },
   ];
 
   const subtotal = orderItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0,
+    0
   );
   const shipping = 25.0;
   const tax = subtotal * 0.1;
@@ -20,8 +20,8 @@ const App = () => {
 
   const handleCheckout = () => {
     Alert.alert(
-      'Checkout',
-      `Your order total is $${total.toFixed(2)}. Proceeding to payment...`,
+      "Checkout",
+      `Your order total is $${total.toFixed(2)}. Proceeding to payment...`
     );
   };
 
@@ -44,7 +44,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });
 

@@ -9,8 +9,8 @@ Contributions are welcome and greatly appreciated! Follow the steps below to get
 First, clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/Danilo-Js/react-native-ecommerce-helper.git
-cd react-native-ecommerce-helper
+git clone https://github.com/Danilo-Js/react-native-ecommerce-components.git
+cd react-native-ecommerce-components
 ```
 
 ---
@@ -27,7 +27,7 @@ cd Test
 Then, install the library locally:
 
 ```sh
-yarn add react-native-ecommerce-helper
+yarn add react-native-ecommerce-components
 ```
 
 ---
@@ -37,8 +37,9 @@ yarn add react-native-ecommerce-helper
 Make the desired changes directly in the `src` folder of the library.
 
 Example path:
+
 ```
-/react-native-ecommerce-helper/src/
+/react-native-ecommerce-components/src/
 ```
 
 ---
@@ -56,7 +57,7 @@ This will generate JavaScript files in the `/lib` folder of the library.
 Manually copy the compiled JavaScript files into your Test project:
 
 ```sh
-cp -r lib/ ../Test/node_modules/react-native-ecommerce-helper/lib/
+cp -r lib/ ../Test/node_modules/react-native-ecommerce-components/lib/
 ```
 
 ---
@@ -103,4 +104,4 @@ git push origin your-feature-branch
 
 Once your Pull Request is submitted, it will be reviewed, and feedback may be provided.
 
-Thank you for contributing to **react-native-ecommerce-helper**! 🚀✨
+Thank you for contributing to **react-native-ecommerce-components**! 🚀✨

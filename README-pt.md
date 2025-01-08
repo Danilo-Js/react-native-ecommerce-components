@@ -6,7 +6,7 @@
 ---
 
 <h1 align="center">
-  react-native-ecommerce-helper
+  react-native-ecommerce-components
 </h1>
 
 <h5 align="center">
@@ -16,26 +16,26 @@
 ---
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-components">
 
-  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper/commits/master">
-    <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper">
+  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components/commits/master">
+    <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components">
   </a>
   
-  <img alt="Forks do repositório" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Forks do repositório" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-components">
   
-  <img alt="Estrelas do repositório" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Estrelas do repositório" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-components">
 </p>
 
 <p align="center">
-  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper/issues">
-    <img alt="Problemas do repositório" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper">
+  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components/issues">
+    <img alt="Problemas do repositório" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components">
   </a>
 
-  <img alt="Último commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Último commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-components">
 
-  <a href="https://www.npmjs.com/package/react-native-ecommerce-helper">
-    <img alt="Downloads no npm" src="https://img.shields.io/npm/dm/react-native-ecommerce-helper.svg">
+  <a href="https://www.npmjs.com/package/react-native-ecommerce-components">
+    <img alt="Downloads no npm" src="https://img.shields.io/npm/dm/react-native-ecommerce-components.svg">
   </a>
 </p>
 
@@ -154,7 +154,7 @@ Clique na imagem para visualizar a documentação do componente.
 
 Este projeto foi criado como parte de um **Trabalho de Conclusão de Curso (TCC)** em Ciência da Computação na **UFES (Universidade Federal do Espírito Santo)**.
 
-Deixe uma ***⭐ ESTRELA*** no [repositório](https://github.com/Danilo-Js/react-native-ecommerce-helper) e contribua para melhorar ainda mais esta biblioteca.
+Deixe uma **_⭐ ESTRELA_** no [repositório](https://github.com/Danilo-Js/react-native-ecommerce-components) e contribua para melhorar ainda mais esta biblioteca.
 
 ---
 
@@ -163,18 +163,18 @@ Deixe uma ***⭐ ESTRELA*** no [repositório](https://github.com/Danilo-Js/react
 ### **Instalação**
 
 ```sh
-yarn add react-native-ecommerce-helper
+yarn add react-native-ecommerce-components
 ```
 
 ou
 
 ```sh
-npm install react-native-ecommerce-helper
+npm install react-native-ecommerce-components
 ```
 
 ## :memo: **Licença**
 
-Este projeto está sob a **Licença MIT**. Consulte o arquivo [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-helper/blob/master/LICENSE) para mais detalhes.
+Este projeto está sob a **Licença MIT**. Consulte o arquivo [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-components/blob/master/LICENSE) para mais detalhes.
 
 ---
 

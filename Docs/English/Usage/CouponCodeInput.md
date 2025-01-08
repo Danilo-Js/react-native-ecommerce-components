@@ -17,14 +17,14 @@ The **CouponCodeInput** component provides a user-friendly way to input and appl
 
 ## 🛠️ **Props**
 
-| Prop              | Type                        | Required | Description                                              |
-|--------------------|-----------------------------|----------|----------------------------------------------------------|
-| `onApplyCoupon`   | `(coupon: string) => void`   | ✅       | Callback function when a coupon is applied.             |
-| `onRemoveCoupon`  | `() => void`                | ❌       | Callback function when a coupon is removed.             |
-| `placeholder`     | `string`                    | ❌       | Placeholder text for the input field.                   |
-| `title`           | `string`                    | ✅       | Title text displayed above the coupon input.            |
-| `subTitle`        | `string`                    | ❌       | Subtitle text displayed below the title.                |
-| `styles`          | `object`                    | ❌       | Custom styles for container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title, and subTitle. |
+| Prop             | Type                       | Required | Description                                                                                                               |
+| ---------------- | -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `onApplyCoupon`  | `(coupon: string) => void` | ✅       | Callback function when a coupon is applied.                                                                               |
+| `onRemoveCoupon` | `() => void`               | ❌       | Callback function when a coupon is removed.                                                                               |
+| `placeholder`    | `string`                   | ❌       | Placeholder text for the input field.                                                                                     |
+| `title`          | `string`                   | ✅       | Title text displayed above the coupon input.                                                                              |
+| `subTitle`       | `string`                   | ❌       | Subtitle text displayed below the title.                                                                                  |
+| `styles`         | `object`                   | ❌       | Custom styles for container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title, and subTitle. |
 
 ---
 
@@ -33,17 +33,17 @@ The **CouponCodeInput** component provides a user-friendly way to input and appl
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {CouponCodeInput} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { CouponCodeInput } from "react-native-ecommerce-components/lib";
 
 const CouponCodeInputTest = () => {
-  const handleApplyCoupon = coupon => {
-    Alert.alert('Coupon Applied', `Coupon Code: ${coupon}`);
+  const handleApplyCoupon = (coupon) => {
+    Alert.alert("Coupon Applied", `Coupon Code: ${coupon}`);
   };
 
   const handleRemoveCoupon = () => {
-    Alert.alert('Coupon Removed', 'The coupon has been removed.');
+    Alert.alert("Coupon Removed", "The coupon has been removed.");
   };
 
   return (

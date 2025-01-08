@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { View, Alert } from "react-native";
-import { WishList } from "react-native-ecommerce-helper/lib";
+import { WishList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const wishlistItems = [

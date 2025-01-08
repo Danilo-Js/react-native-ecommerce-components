@@ -1,13 +1,13 @@
-import React from 'react';
-import {View} from 'react-native';
-import {NewClient} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View } from "react-native";
+import { NewClient } from "react-native-ecommerce-components/lib";
 
 const App = () => {
-  const handleClientSubmission = data => {
-    console.log('New Client Data:', data);
+  const handleClientSubmission = (data) => {
+    console.log("New Client Data:", data);
   };
 
-  const fields = ['Name', 'Date of Birth', 'Email', 'Phone'];
+  const fields = ["Name", "Date of Birth", "Email", "Phone"];
 
   return (
     <View>

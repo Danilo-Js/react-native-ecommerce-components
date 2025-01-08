@@ -17,12 +17,12 @@ The **PaymentGateway** component provides a secure and user-friendly interface f
 
 ## 🛠️ **Props**
 
-| Prop             | Type                                   | Required | Description                                              |
-|-------------------|----------------------------------------|----------|----------------------------------------------------------|
-| `onPaymentSubmit`| `(paymentDetails: PaymentDetails) => void` | ✅       | Callback triggered when payment details are submitted.  |
-| `title`          | `string`                               | ✅       | Title text displayed at the top of the payment form.    |
-| `subTitle`       | `string`                               | ❌       | Subtitle text displayed below the title.               |
-| `styles`         | `object`                               | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
+| Prop              | Type                                       | Required | Description                                                                              |
+| ----------------- | ------------------------------------------ | -------- | ---------------------------------------------------------------------------------------- |
+| `onPaymentSubmit` | `(paymentDetails: PaymentDetails) => void` | ✅       | Callback triggered when payment details are submitted.                                   |
+| `title`           | `string`                                   | ✅       | Title text displayed at the top of the payment form.                                     |
+| `subTitle`        | `string`                                   | ❌       | Subtitle text displayed below the title.                                                 |
+| `styles`          | `object`                                   | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
 
 ### 📦 **PaymentDetails Object Structure**
 
@@ -43,18 +43,18 @@ interface PaymentDetails {
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {PaymentGateway} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { PaymentGateway } from "react-native-ecommerce-components/lib";
 
 const PaymentGatewayTest = () => {
-  const handlePayment = paymentDetails => {
-    console.log('Payment Details:', paymentDetails);
-    Alert.alert('Payment Success', 'Payment details have been submitted.');
+  const handlePayment = (paymentDetails) => {
+    console.log("Payment Details:", paymentDetails);
+    Alert.alert("Payment Success", "Payment details have been submitted.");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <PaymentGateway
         title="Secure Payment"
         subTitle="Please enter your card details"

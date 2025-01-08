@@ -17,13 +17,13 @@ The **NewClient** component provides an intuitive interface for collecting custo
 
 ## 🛠️ **Props**
 
-| Prop        | Type                         | Required | Description                                              |
-|-------------|-------------------------------|----------|----------------------------------------------------------|
-| `onSubmit`  | `(data: Record<string, string>) => void` | ✅ | Callback function triggered when the form is submitted. |
-| `fields`    | `string[]`                   | ✅       | Array of input field labels.                            |
-| `title`     | `string`                     | ✅       | Title text displayed at the top of the form.            |
-| `subTitle`  | `string`                     | ❌       | Subtitle text displayed below the title.               |
-| `styles`    | `object`                     | ❌       | Custom styles for container, input, button, buttonText, title, and subTitle. |
+| Prop       | Type                                     | Required | Description                                                                  |
+| ---------- | ---------------------------------------- | -------- | ---------------------------------------------------------------------------- |
+| `onSubmit` | `(data: Record<string, string>) => void` | ✅       | Callback function triggered when the form is submitted.                      |
+| `fields`   | `string[]`                               | ✅       | Array of input field labels.                                                 |
+| `title`    | `string`                                 | ✅       | Title text displayed at the top of the form.                                 |
+| `subTitle` | `string`                                 | ❌       | Subtitle text displayed below the title.                                     |
+| `styles`   | `object`                                 | ❌       | Custom styles for container, input, button, buttonText, title, and subTitle. |
 
 ---
 
@@ -32,16 +32,16 @@ The **NewClient** component provides an intuitive interface for collecting custo
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View} from 'react-native';
-import {NewClient} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View } from "react-native";
+import { NewClient } from "react-native-ecommerce-components/lib";
 
 const App = () => {
-  const handleClientSubmission = data => {
-    console.log('New Client Data:', data);
+  const handleClientSubmission = (data) => {
+    console.log("New Client Data:", data);
   };
 
-  const fields = ['Name', 'Date of Birth', 'Email', 'Phone'];
+  const fields = ["Name", "Date of Birth", "Email", "Phone"];
 
   return (
     <View>

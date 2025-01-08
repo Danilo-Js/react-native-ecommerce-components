@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Alert } from "react-native";
-import { CategoryList } from "react-native-ecommerce-helper/lib";
+import { CategoryList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const categories = [

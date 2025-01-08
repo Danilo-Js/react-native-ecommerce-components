@@ -17,12 +17,12 @@ O componente **PaymentGateway** fornece uma interface segura e intuitiva para in
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade       | Tipo                                     | Obrigatória | Descrição                                                    |
-|--------------------|------------------------------------------|-------------|--------------------------------------------------------------|
-| `onPaymentSubmit` | `(paymentDetails: PaymentDetails) => void` | ✅          | Callback acionado quando os detalhes de pagamento são enviados. |
-| `title`           | `string`                                 | ✅          | Texto do título exibido no topo do formulário de pagamento. |
-| `subTitle`        | `string`                                 | ❌          | Texto do subtítulo exibido abaixo do título.                |
-| `styles`          | `object`                                 | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
+| Propriedade       | Tipo                                       | Obrigatória | Descrição                                                                                       |
+| ----------------- | ------------------------------------------ | ----------- | ----------------------------------------------------------------------------------------------- |
+| `onPaymentSubmit` | `(paymentDetails: PaymentDetails) => void` | ✅          | Callback acionado quando os detalhes de pagamento são enviados.                                 |
+| `title`           | `string`                                   | ✅          | Texto do título exibido no topo do formulário de pagamento.                                     |
+| `subTitle`        | `string`                                   | ❌          | Texto do subtítulo exibido abaixo do título.                                                    |
+| `styles`          | `object`                                   | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
 
 ### 📦 **Estrutura do Objeto PaymentDetails**
 
@@ -43,18 +43,18 @@ interface PaymentDetails {
 ### 📝 **Exemplo Básico**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {PaymentGateway} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { PaymentGateway } from "react-native-ecommerce-components/lib";
 
 const PaymentGatewayTest = () => {
-  const handlePayment = paymentDetails => {
-    console.log('Payment Details:', paymentDetails);
-    Alert.alert('Payment Success', 'Payment details have been submitted.');
+  const handlePayment = (paymentDetails) => {
+    console.log("Payment Details:", paymentDetails);
+    Alert.alert("Payment Success", "Payment details have been submitted.");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <PaymentGateway
         title="Secure Payment"
         subTitle="Please enter your card details"

@@ -17,14 +17,14 @@ O componente **CouponCodeInput** fornece uma maneira intuitiva para inserir e ap
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade       | Tipo                        | Obrigatória | Descrição                                               |
-|--------------------|-----------------------------|-------------|---------------------------------------------------------|
-| `onApplyCoupon`   | `(coupon: string) => void`   | ✅          | Função de callback chamada quando um cupom é aplicado. |
-| `onRemoveCoupon`  | `() => void`                | ❌          | Função de callback chamada quando um cupom é removido. |
-| `placeholder`     | `string`                    | ❌          | Texto de placeholder para o campo de entrada.          |
-| `title`           | `string`                    | ✅          | Texto do título exibido acima do campo de cupom.       |
-| `subTitle`        | `string`                    | ❌          | Texto do subtítulo exibido abaixo do título.           |
-| `styles`          | `object`                    | ❌          | Estilos personalizados para container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title e subTitle. |
+| Propriedade      | Tipo                       | Obrigatória | Descrição                                                                                                                        |
+| ---------------- | -------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `onApplyCoupon`  | `(coupon: string) => void` | ✅          | Função de callback chamada quando um cupom é aplicado.                                                                           |
+| `onRemoveCoupon` | `() => void`               | ❌          | Função de callback chamada quando um cupom é removido.                                                                           |
+| `placeholder`    | `string`                   | ❌          | Texto de placeholder para o campo de entrada.                                                                                    |
+| `title`          | `string`                   | ✅          | Texto do título exibido acima do campo de cupom.                                                                                 |
+| `subTitle`       | `string`                   | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                     |
+| `styles`         | `object`                   | ❌          | Estilos personalizados para container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title e subTitle. |
 
 ---
 
@@ -33,17 +33,17 @@ O componente **CouponCodeInput** fornece uma maneira intuitiva para inserir e ap
 ### 📝 **Exemplo Básico**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {CouponCodeInput} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { CouponCodeInput } from "react-native-ecommerce-components/lib";
 
 const CouponCodeInputTest = () => {
-  const handleApplyCoupon = coupon => {
-    Alert.alert('Coupon Applied', `Coupon Code: ${coupon}`);
+  const handleApplyCoupon = (coupon) => {
+    Alert.alert("Coupon Applied", `Coupon Code: ${coupon}`);
   };
 
   const handleRemoveCoupon = () => {
-    Alert.alert('Coupon Removed', 'The coupon has been removed.');
+    Alert.alert("Coupon Removed", "The coupon has been removed.");
   };
 
   return (
@@ -60,6 +60,7 @@ const CouponCodeInputTest = () => {
 
 export default CouponCodeInputTest;
 ```
+
 ---
 
 ## 🧪 **Testando o Componente**

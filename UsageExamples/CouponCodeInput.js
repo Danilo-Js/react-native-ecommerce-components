@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { View, Alert } from "react-native";
-import { CouponCodeInput } from "react-native-ecommerce-helper/lib";
+import { CouponCodeInput } from "react-native-ecommerce-components/lib";
 
 const CouponCodeInputTest = () => {
   const handleApplyCoupon = (coupon) => {

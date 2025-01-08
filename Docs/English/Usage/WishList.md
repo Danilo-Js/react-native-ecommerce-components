@@ -17,21 +17,21 @@ The **WishList** component displays a list of favorite products, allowing users 
 
 ## 🛠️ **Props**
 
-| Prop            | Type                                        | Required | Description                                              |
-|------------------|---------------------------------------------|----------|----------------------------------------------------------|
-| `items`         | `WishlistItem[]`                            | ✅       | Array of wishlist items with `id`, `name`, `price`, and `image`. |
-| `onRemoveItem`  | `(id: string) => void`                      | ✅       | Callback triggered when an item is removed from the wishlist. |
-| `onAddToCart`   | `(item: WishlistItem) => void`              | ✅       | Callback triggered when an item is added to the cart.    |
-| `title`         | `string`                                    | ✅       | Title text displayed at the top of the wishlist.         |
-| `subTitle`      | `string`                                    | ❌       | Subtitle text displayed below the title.                |
-| `styles`        | `object`                                    | ❌       | Custom styles for `container`, `itemContainer`, `image`, `itemText`, `priceText`, `buttonContainer`, `button`, `buttonText`, `title`, and `subTitle`. |
+| Prop           | Type                           | Required | Description                                                                                                                                           |
+| -------------- | ------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`        | `WishlistItem[]`               | ✅       | Array of wishlist items with `id`, `name`, `price`, and `image`.                                                                                      |
+| `onRemoveItem` | `(id: string) => void`         | ✅       | Callback triggered when an item is removed from the wishlist.                                                                                         |
+| `onAddToCart`  | `(item: WishlistItem) => void` | ✅       | Callback triggered when an item is added to the cart.                                                                                                 |
+| `title`        | `string`                       | ✅       | Title text displayed at the top of the wishlist.                                                                                                      |
+| `subTitle`     | `string`                       | ❌       | Subtitle text displayed below the title.                                                                                                              |
+| `styles`       | `object`                       | ❌       | Custom styles for `container`, `itemContainer`, `image`, `itemText`, `priceText`, `buttonContainer`, `button`, `buttonText`, `title`, and `subTitle`. |
 
 ### 📦 **WishlistItem Object Structure**
 
 ```ts
 import React from "react";
 import { View, Alert } from "react-native";
-import { WishList } from "react-native-ecommerce-helper/lib";
+import { WishList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const wishlistItems = [

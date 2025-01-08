@@ -6,9 +6,8 @@
 ---
 
 <h1 align="center">
-  react-native-ecommerce-helper
+  react-native-ecommerce-components
 </h1>
-
 
 <h5 align="center">
   Components to boost the development of your ecommerce.
@@ -16,28 +15,27 @@
 
 ---
 
-
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-components">
 
-  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper/commits/master">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-helper">
+  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components/commits/master">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components">
   </a>
   
-  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-components">
   
-  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-components">
 </p>
 
 <p align="center">
-  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-helper">
+  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components">
   </a>
 
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-helper">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-components">
 
-  <a href="https://www.npmjs.com/package/react-native-ecommerce-helper">
-    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-ecommerce-helper.svg">
+  <a href="https://www.npmjs.com/package/react-native-ecommerce-components">
+    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-ecommerce-components.svg">
   </a>
 </p>
 
@@ -154,9 +152,9 @@ Click on the image to view the component documentation.
 
 ## :information_source: **About the Project**
 
-This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.  
+This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.
 
-Please leave a ***⭐ STAR*** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-helper) and contribute to the library to help improve it further.  
+Please leave a **_⭐ STAR_** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-components) and contribute to the library to help improve it further.
 
 ---
 
@@ -167,13 +165,13 @@ Please leave a ***⭐ STAR*** on the [repository](https://github.com/Danilo-Js/r
 To install the library, run one of the following commands:
 
 ```sh
-yarn add react-native-ecommerce-helper
+yarn add react-native-ecommerce-components
 ```
 
 or
 
 ```sh
-npm install react-native-ecommerce-helper
+npm install react-native-ecommerce-components
 ```
 
 ### **Using a Component**
@@ -181,7 +179,7 @@ npm install react-native-ecommerce-helper
 1. **Import the desired component** in your project:
 
 ```js
-import { NewClient } from 'react-native-ecommerce-helper/lib';
+import { NewClient } from "react-native-ecommerce-components/lib";
 ```
 
 2. **Render the component:**
@@ -189,7 +187,7 @@ import { NewClient } from 'react-native-ecommerce-helper/lib';
 ```js
 <NewClient
   onSubmit={(data) => console.log(data)}
-  fields={['Name', 'Email']}
+  fields={["Name", "Email"]}
   title="Customer Registration"
   subTitle="Fill out the form below"
 />
@@ -200,7 +198,7 @@ import { NewClient } from 'react-native-ecommerce-helper/lib';
 If necessary, you can navigate to the following path:
 
 ```plaintext
-node_modules/react-native-ecommerce-helper/lib/components
+node_modules/react-native-ecommerce-components/lib/components
 ```
 
 Locate the desired component file and make your edits.
@@ -209,7 +207,7 @@ Locate the desired component file and make your edits.
 
 ## :memo: **License**
 
-This project is under the **MIT License**. See the [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-helper/blob/master/LICENSE) file for details.
+This project is under the **MIT License**. See the [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-components/blob/master/LICENSE) file for details.
 
 ---
 

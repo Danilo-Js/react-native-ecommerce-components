@@ -9,8 +9,8 @@ Contribuições são bem-vindas e muito apreciadas! Siga os passos abaixo para c
 Primeiro, clone o repositório para sua máquina local:
 
 ```sh
-git clone https://github.com/Danilo-Js/react-native-ecommerce-helper.git
-cd react-native-ecommerce-helper
+git clone https://github.com/Danilo-Js/react-native-ecommerce-components.git
+cd react-native-ecommerce-components
 ```
 
 ---
@@ -27,7 +27,7 @@ cd Teste
 Depois, instale a biblioteca localmente:
 
 ```sh
-yarn add react-native-ecommerce-helper
+yarn add react-native-ecommerce-components
 ```
 
 ---
@@ -37,8 +37,9 @@ yarn add react-native-ecommerce-helper
 Faça as alterações desejadas diretamente na pasta `src` da biblioteca.
 
 Exemplo de caminho:
+
 ```
-/react-native-ecommerce-helper/src/
+/react-native-ecommerce-components/src/
 ```
 
 ---
@@ -56,7 +57,7 @@ Isso irá gerar os arquivos JavaScript na pasta `/lib` da biblioteca.
 Copie manualmente os arquivos JavaScript compilados para seu projeto de teste:
 
 ```sh
-cp -r lib/ ../Teste/node_modules/react-native-ecommerce-helper/lib/
+cp -r lib/ ../Teste/node_modules/react-native-ecommerce-components/lib/
 ```
 
 ---
@@ -103,4 +104,4 @@ git push origin sua-branch-de-recurso
 
 Depois que seu Pull Request for enviado, ele será revisado e pode receber feedback.
 
-Obrigado por contribuir com **react-native-ecommerce-helper**! 🚀✨
+Obrigado por contribuir com **react-native-ecommerce-components**! 🚀✨

@@ -17,15 +17,15 @@ O componente **ProductList** exibe uma lista de produtos em formato de **grade**
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade     | Tipo                                  | Obrigatória | Descrição                                                  |
-|------------------|---------------------------------------|-------------|------------------------------------------------------------|
-| `products`      | `Product[]`                           | ✅          | Array de objetos de produtos para exibição.                |
-| `onAddToCart`   | `(product: Product) => void`          | ✅          | Callback acionado ao pressionar 'Adicionar ao Carrinho'.   |
-| `onProductPress`| `(product: Product) => void`          | ✅          | Callback acionado ao selecionar um produto.                |
-| `gridView`      | `boolean`                             | ❌          | Ativa o layout em grade se definido como `true`. Padrão: `false`. |
-| `title`         | `string`                              | ✅          | Texto do título exibido no topo da lista.                  |
-| `subTitle`      | `string`                              | ❌          | Texto do subtítulo exibido abaixo do título.               |
-| `styles`        | `object`                              | ❌          | Estilos personalizados para `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title` e `subTitle`. |
+| Propriedade      | Tipo                         | Obrigatória | Descrição                                                                                                                                                  |
+| ---------------- | ---------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `products`       | `Product[]`                  | ✅          | Array de objetos de produtos para exibição.                                                                                                                |
+| `onAddToCart`    | `(product: Product) => void` | ✅          | Callback acionado ao pressionar 'Adicionar ao Carrinho'.                                                                                                   |
+| `onProductPress` | `(product: Product) => void` | ✅          | Callback acionado ao selecionar um produto.                                                                                                                |
+| `gridView`       | `boolean`                    | ❌          | Ativa o layout em grade se definido como `true`. Padrão: `false`.                                                                                          |
+| `title`          | `string`                     | ✅          | Texto do título exibido no topo da lista.                                                                                                                  |
+| `subTitle`       | `string`                     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                               |
+| `styles`         | `object`                     | ❌          | Estilos personalizados para `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title` e `subTitle`. |
 
 ### 📦 **Estrutura do Objeto Product**
 
@@ -48,7 +48,7 @@ interface Product {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { ProductList } from "react-native-ecommerce-helper/lib";
+import { ProductList } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const products = [

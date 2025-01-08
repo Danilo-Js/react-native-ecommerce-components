@@ -17,15 +17,15 @@ The **ReviewAndRatings** component allows users to view, add, and manage reviews
 
 ## 🛠️ **Props**
 
-| Prop           | Type                                      | Required | Description                                              |
-|-----------------|------------------------------------------|----------|----------------------------------------------------------|
-| `reviews`      | `Review[]`                               | ✅       | Array of reviews to display.                            |
-| `averageRating`| `number`                                 | ✅       | Average rating value displayed at the top.              |
-| `totalReviews` | `number`                                 | ✅       | Total number of reviews displayed at the top.           |
-| `onAddReview`  | `(review: Omit<Review, 'id' | 'date'>) => void` | ✅ | Callback triggered when a user adds a new review.       |
-| `title`        | `string`                                 | ✅       | Title text displayed at the top of the reviews section. |
-| `subTitle`     | `string`                                 | ❌       | Subtitle text displayed below the title.                |
-| `styles`       | `object`                                 | ❌       | Custom styles for `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer`, and `averageRating`. |
+| Prop            | Type                        | Required          | Description                                                                                                                                                                                                                    |
+| --------------- | --------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| `reviews`       | `Review[]`                  | ✅                | Array of reviews to display.                                                                                                                                                                                                   |
+| `averageRating` | `number`                    | ✅                | Average rating value displayed at the top.                                                                                                                                                                                     |
+| `totalReviews`  | `number`                    | ✅                | Total number of reviews displayed at the top.                                                                                                                                                                                  |
+| `onAddReview`   | `(review: Omit<Review, 'id' | 'date'>) => void` | ✅                                                                                                                                                                                                                             | Callback triggered when a user adds a new review. |
+| `title`         | `string`                    | ✅                | Title text displayed at the top of the reviews section.                                                                                                                                                                        |
+| `subTitle`      | `string`                    | ❌                | Subtitle text displayed below the title.                                                                                                                                                                                       |
+| `styles`        | `object`                    | ❌                | Custom styles for `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer`, and `averageRating`. |
 
 ### 📦 **Review Object Structure**
 
@@ -46,90 +46,90 @@ interface Review {
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View} from 'react-native';
-import {ReviewAndRatings} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View } from "react-native";
+import { ReviewAndRatings } from "react-native-ecommerce-components/lib";
 
 const initialReviews = [
   {
-    id: '1',
-    user: 'Alice',
+    id: "1",
+    user: "Alice",
     rating: 4.5,
-    comment: 'Great product!',
-    date: '2024-06-20',
+    comment: "Great product!",
+    date: "2024-06-20",
   },
   {
-    id: '2',
-    user: 'Bob',
+    id: "2",
+    user: "Bob",
     rating: 5,
-    comment: 'Exceeded my expectations!',
-    date: '2024-06-19',
+    comment: "Exceeded my expectations!",
+    date: "2024-06-19",
   },
   {
-    id: '3',
-    user: 'Charlie',
+    id: "3",
+    user: "Charlie",
     rating: 4.0,
-    comment: 'Good value for the price.',
-    date: '2024-06-18',
+    comment: "Good value for the price.",
+    date: "2024-06-18",
   },
   {
-    id: '4',
-    user: 'Diana',
+    id: "4",
+    user: "Diana",
     rating: 3.5,
-    comment: 'Decent, but could be better.',
-    date: '2024-06-17',
+    comment: "Decent, but could be better.",
+    date: "2024-06-17",
   },
   {
-    id: '5',
-    user: 'Ethan',
+    id: "5",
+    user: "Ethan",
     rating: 5,
-    comment: 'Absolutely loved it!',
-    date: '2024-06-16',
+    comment: "Absolutely loved it!",
+    date: "2024-06-16",
   },
   {
-    id: '6',
-    user: 'Fiona',
+    id: "6",
+    user: "Fiona",
     rating: 2.5,
-    comment: 'Not worth the price.',
-    date: '2024-06-15',
+    comment: "Not worth the price.",
+    date: "2024-06-15",
   },
   {
-    id: '7',
-    user: 'George',
+    id: "7",
+    user: "George",
     rating: 4.8,
-    comment: 'Highly recommend this product.',
-    date: '2024-06-14',
+    comment: "Highly recommend this product.",
+    date: "2024-06-14",
   },
   {
-    id: '8',
-    user: 'Hannah',
+    id: "8",
+    user: "Hannah",
     rating: 3.0,
-    comment: 'It’s okay, nothing special.',
-    date: '2024-06-13',
+    comment: "It’s okay, nothing special.",
+    date: "2024-06-13",
   },
   {
-    id: '9',
-    user: 'Ian',
+    id: "9",
+    user: "Ian",
     rating: 4.2,
-    comment: 'Solid performance, minor flaws.',
-    date: '2024-06-12',
+    comment: "Solid performance, minor flaws.",
+    date: "2024-06-12",
   },
   {
-    id: '10',
-    user: 'Jasmine',
+    id: "10",
+    user: "Jasmine",
     rating: 5,
-    comment: 'Perfect in every way!',
-    date: '2024-06-11',
+    comment: "Perfect in every way!",
+    date: "2024-06-11",
   },
 ];
 
 const ReviewAndRatingsTest = () => {
-  const handleAddReview = review => {
-    console.log('New Review Added:', review);
+  const handleAddReview = (review) => {
+    console.log("New Review Added:", review);
   };
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <ReviewAndRatings
         title="Product Reviews"
         subTitle="See what others are saying"

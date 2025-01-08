@@ -17,18 +17,18 @@ The **OrderConfirmation** component provides a clear summary of an order with es
 
 ## 🛠️ **Props**
 
-| Prop                | Type                          | Required | Description                                              |
-|----------------------|------------------------------|----------|----------------------------------------------------------|
-| `orderId`           | `string`                     | ✅       | Unique identifier for the order.                        |
-| `orderDate`         | `string`                     | ✅       | Date when the order was placed.                         |
-| `totalAmount`       | `number`                     | ✅       | Total amount paid for the order.                        |
-| `paymentMethod`     | `string`                     | ✅       | Payment method used for the transaction.                |
-| `shippingAddress`   | `string`                     | ✅       | Shipping address for the order.                         |
-| `onContinueShopping`| `() => void`                 | ✅       | Callback triggered when the 'Continue Shopping' button is pressed. |
-| `onViewOrderDetails`| `() => void`                 | ✅       | Callback triggered when the 'View Order Details' button is pressed. |
-| `title`            | `string`                     | ✅       | Title text displayed at the top of the confirmation screen. |
-| `subTitle`         | `string`                     | ❌       | Subtitle text displayed below the title.               |
-| `styles`           | `object`                     | ❌       | Custom styles for container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title, and subTitle. |
+| Prop                 | Type         | Required | Description                                                                                                      |
+| -------------------- | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| `orderId`            | `string`     | ✅       | Unique identifier for the order.                                                                                 |
+| `orderDate`          | `string`     | ✅       | Date when the order was placed.                                                                                  |
+| `totalAmount`        | `number`     | ✅       | Total amount paid for the order.                                                                                 |
+| `paymentMethod`      | `string`     | ✅       | Payment method used for the transaction.                                                                         |
+| `shippingAddress`    | `string`     | ✅       | Shipping address for the order.                                                                                  |
+| `onContinueShopping` | `() => void` | ✅       | Callback triggered when the 'Continue Shopping' button is pressed.                                               |
+| `onViewOrderDetails` | `() => void` | ✅       | Callback triggered when the 'View Order Details' button is pressed.                                              |
+| `title`              | `string`     | ✅       | Title text displayed at the top of the confirmation screen.                                                      |
+| `subTitle`           | `string`     | ❌       | Subtitle text displayed below the title.                                                                         |
+| `styles`             | `object`     | ❌       | Custom styles for container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title, and subTitle. |
 
 ---
 
@@ -37,21 +37,21 @@ The **OrderConfirmation** component provides a clear summary of an order with es
 ### 📝 **Basic Example**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {OrderConfirmation} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { OrderConfirmation } from "react-native-ecommerce-components/lib";
 
 const OrderConfirmationTest = () => {
   const handleContinueShopping = () => {
-    Alert.alert('Continue Shopping', 'Navigating to home page...');
+    Alert.alert("Continue Shopping", "Navigating to home page...");
   };
 
   const handleViewOrderDetails = () => {
-    Alert.alert('Order Details', 'Showing order details...');
+    Alert.alert("Order Details", "Showing order details...");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <OrderConfirmation
         title="Order Confirmed"
         subTitle="Thank you for your purchase!"

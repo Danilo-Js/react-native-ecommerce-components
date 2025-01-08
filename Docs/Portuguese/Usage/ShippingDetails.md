@@ -17,12 +17,12 @@ O componente **ShippingDetails** oferece uma interface completa para coletar inf
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade   | Tipo                                            | Obrigatória | Descrição                                                    |
-|---------------|--------------------------------------------------|-------------|--------------------------------------------------------------|
-| `onSubmit`    | `(shippingDetails: ShippingDetailsData) => void` | ✅          | Função de callback acionada quando o formulário é enviado.   |
-| `title`       | `string`                                        | ✅          | Texto do título exibido no topo do formulário.               |
-| `subTitle`    | `string`                                        | ❌          | Texto do subtítulo exibido abaixo do título.                 |
-| `styles`      | `object`                                        | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
+| Propriedade | Tipo                                             | Obrigatória | Descrição                                                                                       |
+| ----------- | ------------------------------------------------ | ----------- | ----------------------------------------------------------------------------------------------- |
+| `onSubmit`  | `(shippingDetails: ShippingDetailsData) => void` | ✅          | Função de callback acionada quando o formulário é enviado.                                      |
+| `title`     | `string`                                         | ✅          | Texto do título exibido no topo do formulário.                                                  |
+| `subTitle`  | `string`                                         | ❌          | Texto do subtítulo exibido abaixo do título.                                                    |
+| `styles`    | `object`                                         | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
 
 ---
 
@@ -49,18 +49,18 @@ interface ShippingDetailsData {
 ### 📝 **Exemplo Básico**
 
 ```tsx
-import React from 'react';
-import {View, Alert} from 'react-native';
-import {ShippingDetails} from 'react-native-ecommerce-helper/lib';
+import React from "react";
+import { View, Alert } from "react-native";
+import { ShippingDetails } from "react-native-ecommerce-components/lib";
 
 const ShippingDetailsTest = () => {
-  const handleShippingDetails = shippingDetails => {
-    console.log('Shipping Details:', shippingDetails);
-    Alert.alert('Success', 'Shipping details submitted!');
+  const handleShippingDetails = (shippingDetails) => {
+    console.log("Shipping Details:", shippingDetails);
+    Alert.alert("Success", "Shipping details submitted!");
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <ShippingDetails
         title="Shipping Information"
         subTitle="Please enter your shipping details below"

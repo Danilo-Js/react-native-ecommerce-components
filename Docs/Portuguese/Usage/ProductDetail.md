@@ -17,14 +17,14 @@ O componente **ProductDetail** exibe informações detalhadas sobre um produto e
 
 ## 🛠️ **Propriedades (Props)**
 
-| Propriedade    | Tipo                                  | Obrigatória | Descrição                                                  |
-|-----------------|---------------------------------------|-------------|------------------------------------------------------------|
-| `product`      | `Product`                             | ✅          | Objeto contendo os detalhes do produto.                    |
-| `onAddToCart`  | `(product: Product) => void`          | ✅          | Callback acionado ao pressionar 'Adicionar ao Carrinho'.   |
-| `onBuyNow`     | `(product: Product) => void`          | ✅          | Callback acionado ao pressionar 'Comprar Agora'.           |
-| `title`        | `string`                              | ✅          | Texto do título exibido no topo da tela do produto.        |
-| `subTitle`     | `string`                              | ❌          | Texto do subtítulo exibido abaixo do título.               |
-| `styles`       | `object`                              | ❌          | Estilos personalizados para `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, e `buttonText`. |
+| Propriedade   | Tipo                         | Obrigatória | Descrição                                                                                                                                             |
+| ------------- | ---------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `product`     | `Product`                    | ✅          | Objeto contendo os detalhes do produto.                                                                                                               |
+| `onAddToCart` | `(product: Product) => void` | ✅          | Callback acionado ao pressionar 'Adicionar ao Carrinho'.                                                                                              |
+| `onBuyNow`    | `(product: Product) => void` | ✅          | Callback acionado ao pressionar 'Comprar Agora'.                                                                                                      |
+| `title`       | `string`                     | ✅          | Texto do título exibido no topo da tela do produto.                                                                                                   |
+| `subTitle`    | `string`                     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                          |
+| `styles`      | `object`                     | ❌          | Estilos personalizados para `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, e `buttonText`. |
 
 ### 📦 **Estrutura do Objeto Product**
 
@@ -48,7 +48,7 @@ interface Product {
 ```tsx
 import React from "react";
 import { View, Alert } from "react-native";
-import { ProductDetail } from "react-native-ecommerce-helper/lib";
+import { ProductDetail } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const product = {

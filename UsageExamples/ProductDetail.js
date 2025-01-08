@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { View, Alert } from "react-native";
-import { ProductDetail } from "react-native-ecommerce-helper/lib";
+import { ProductDetail } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const product = {
