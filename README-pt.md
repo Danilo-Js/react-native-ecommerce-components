@@ -49,6 +49,14 @@
 
 ---
 
+## :information_source: **Sobre o Projeto**
+
+Este projeto foi criado como parte de um **Trabalho de Conclusão de Curso (TCC)** em Ciência da Computação na **UFES (Universidade Federal do Espírito Santo)**.
+
+Deixe uma **_⭐ ESTRELA_** no [repositório](https://github.com/Danilo-Js/react-native-ecommerce-components) e contribua para melhorar ainda mais esta biblioteca.
+
+---
+
 ## 📸 **Componentes**
 
 Clique na imagem para visualizar a documentação do componente.
@@ -147,14 +155,6 @@ Clique na imagem para visualizar a documentação do componente.
     </td>
   </tr>
 </table>
-
----
-
-## :information_source: **Sobre o Projeto**
-
-Este projeto foi criado como parte de um **Trabalho de Conclusão de Curso (TCC)** em Ciência da Computação na **UFES (Universidade Federal do Espírito Santo)**.
-
-Deixe uma **_⭐ ESTRELA_** no [repositório](https://github.com/Danilo-Js/react-native-ecommerce-components) e contribua para melhorar ainda mais esta biblioteca.
 
 ---
 

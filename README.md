@@ -49,6 +49,14 @@
 
 ---
 
+## :information_source: **About the Project**
+
+This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.
+
+Please leave a **_⭐ STAR_** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-components) and contribute to the library to help improve it further.
+
+---
+
 ## 📸 **Components**
 
 Click on the image to view the component documentation.
@@ -147,14 +155,6 @@ Click on the image to view the component documentation.
     </td>
   </tr>
 </table>
-
----
-
-## :information_source: **About the Project**
-
-This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.
-
-Please leave a **_⭐ STAR_** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-components) and contribute to the library to help improve it further.
 
 ---
 
