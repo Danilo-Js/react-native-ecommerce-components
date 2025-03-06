@@ -17,15 +17,16 @@ The **ReviewAndRatings** component allows users to view, add, and manage reviews
 
 ## 🛠️ **Props**
 
-| Prop            | Type                        | Required          | Description                                                                                                                                                                                                                    |
-| --------------- | --------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
-| `reviews`       | `Review[]`                  | ✅                | Array of reviews to display.                                                                                                                                                                                                   |
-| `averageRating` | `number`                    | ✅                | Average rating value displayed at the top.                                                                                                                                                                                     |
-| `totalReviews`  | `number`                    | ✅                | Total number of reviews displayed at the top.                                                                                                                                                                                  |
-| `onAddReview`   | `(review: Omit<Review, 'id' | 'date'>) => void` | ✅                                                                                                                                                                                                                             | Callback triggered when a user adds a new review. |
-| `title`         | `string`                    | ✅                | Title text displayed at the top of the reviews section.                                                                                                                                                                        |
-| `subTitle`      | `string`                    | ❌                | Subtitle text displayed below the title.                                                                                                                                                                                       |
-| `styles`        | `object`                    | ❌                | Custom styles for `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer`, and `averageRating`. |
+| Prop            | Type                                      | Required  | Description                                                                                                                                                        |
+| --------------- | ---------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `reviews`       | `Review[]`                               | ✅        | Array of reviews to display.                                                                                                                                      |
+| `averageRating` | `number`                                 | ✅        | Average rating value displayed at the top.                                                                                                                        |
+| `totalReviews`  | `number`                                 | ✅        | Total number of reviews displayed at the top.                                                                                                                     |
+| `onAddReview`   | `(review: Omit<Review, 'id' \| 'date'>) => void` | ✅        | Callback triggered when a user adds a new review.                                                                                                                 |
+| `title`         | `string`                                 | ✅        | Title text displayed at the top of the reviews section.                                                                                                           |
+| `subTitle`      | `string`                                 | ❌        | Subtitle text displayed below the title.                                                                                                                          |
+| `styles`        | `object`                                 | ❌        | Custom styles for `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer`, and `averageRating`. |
+
 
 ### 📦 **Review Object Structure**
 
