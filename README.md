@@ -72,7 +72,7 @@ Click on the image to view the component documentation.
     <td align="center">
       <a href="Docs/English/Usage/CouponCodeInput.md">
         <strong>Coupon Code Input</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
+        <img src="./Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
       </a>
     </td>
     <td align="center">
