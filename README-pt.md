@@ -66,25 +66,25 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/CategoryList.md">
         <strong>Lista de Categorias</strong><br/>
-        <img src="Docs/Images/CategoryList.png" alt="CategoryList" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/CategoryList.png" alt="CategoryList" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/CouponCodeInput.md">
         <strong>Entrada de Cupom</strong><br/>
-        <img src="Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/NewClient.md">
         <strong>Formulário Novo Cliente</strong><br/>
-        <img src="Docs/Images/NewClient.png" alt="NewClient" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/NewClient.png" alt="NewClient" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderConfirmation.md">
         <strong>Confirmação de Pedido</strong><br/>
-        <img src="Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
       </a>
     </td>
   </tr>
@@ -92,25 +92,25 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderSummary.md">
         <strong>Resumo do Pedido</strong><br/>
-        <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderTracking.md">
         <strong>Rastreamento de Pedido</strong><br/>
-        <img src="Docs/Images/OrderTracking.png" alt="OrderTracking" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderTracking.png" alt="OrderTracking" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/PaymentGateway.md">
         <strong>Gateway de Pagamento</strong><br/>
-        <img src="Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/ProductDetail.md">
         <strong>Detalhes do Produto</strong><br/>
-        <img src="Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
       </a>
     </td>
   </tr>
@@ -118,25 +118,25 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ProductList.md">
         <strong>Lista de Produtos</strong><br/>
-        <img src="Docs/Images/ProductList.png" alt="ProductList" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductList.png" alt="ProductList" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/ReviewAndRatings.md">
         <strong>Avaliações</strong><br/>
-        <img src="Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/SearchBar.md">
         <strong>Barra de Pesquisa</strong><br/>
-        <img src="Docs/Images/SearchBar.png" alt="SearchBar" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/SearchBar.png" alt="SearchBar" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/ShippingDetails.md">
         <strong>Detalhes de Envio</strong><br/>
-        <img src="Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
       </a>
     </td>
   </tr>
@@ -144,13 +144,13 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ShoppingCart.md">
         <strong>Carrinho de Compras</strong><br/>
-        <img src="Docs/Images/ShoppingCart.png" alt="ShoppingCart" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShoppingCart.png" alt="ShoppingCart" width="300"/>
       </a>
     </td>
     <td align="center">
       <a href="Docs/Portuguese/Usage/WishList.md">
         <strong>Lista de Desejos</strong><br/>
-        <img src="Docs/Images/WishList.png" alt="WishList" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/WishList.png" alt="WishList" width="300"/>
       </a>
     </td>
   </tr>
