@@ -92,7 +92,11 @@ Click on the image to view the component documentation.
     <td align="center">
       <a href="Docs/English/Usage/OrderSummary.md">
         <strong>Order Summary</strong><br/>
-        <img src="Docs/Images/OrderSummary.png" alt="OrderSummary" width="300"/>
+        <img
+          src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderSummary.png"
+          alt="Order Summary"
+          width="300"
+        />
       </a>
     </td>
     <td align="center">
