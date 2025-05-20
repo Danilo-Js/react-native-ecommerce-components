@@ -1,94 +1,143 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
+// Tipos de idioma suportados
+type Language = 'en' | 'pt';
+
+// Estrutura de traduções
+const translations: Record<Language, {
+  invalidTitle: string;
+  invalidMessage: string;
+  applyButton: string;
+  removeButton: string;
+  successMessage: string;
+  placeholder: string;
+}> = {
+  en: {
+    invalidTitle: 'Invalid Coupon',
+    invalidMessage: 'Please enter a valid coupon code.',
+    applyButton: 'Apply Coupon',
+    removeButton: 'Remove Coupon',
+    successMessage: 'Coupon applied successfully!',
+    placeholder: 'Enter coupon code',
+  },
+  pt: {
+    invalidTitle: 'Cupom inválido',
+    invalidMessage: 'Por favor, insira um código de cupom válido.',
+    applyButton: 'Aplicar cupom',
+    removeButton: 'Remover cupom',
+    successMessage: 'Cupom aplicado com sucesso!',
+    placeholder: 'Insira o código do cupom',
+  },
+};
+
+// Props do componente
 interface CouponCodeInputProps {
   onApplyCoupon: (coupon: string) => void;
   onRemoveCoupon?: () => void;
   placeholder?: string;
-  title: string;
+  title?: string;
   subTitle?: string;
   styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    input?: object;
-    buttonContainer?: object;
-    buttonApply?: object;
-    buttonRemove?: object;
-    buttonText?: object;
-    message?: object;
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    input?: StyleProp<ViewStyle>;
+    buttonContainer?: StyleProp<ViewStyle>;
+    buttonApply?: StyleProp<ViewStyle>;
+    buttonRemove?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+    message?: StyleProp<TextStyle>;
   };
+  language?: Language;
 }
 
 const CouponCodeInput: React.FC<CouponCodeInputProps> = ({
   onApplyCoupon,
   onRemoveCoupon,
-  placeholder = 'Enter coupon code',
+  placeholder,
   title,
   subTitle,
   styles: customStyles = {},
+  language = 'en',
 }) => {
-  const [coupon, setCoupon] = useState('');
-  const [message, setMessage] = useState('');
-  const [isCouponApplied, setIsCouponApplied] = useState(false);
+  const [coupon, setCoupon] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [isCouponApplied, setIsCouponApplied] = useState<boolean>(false);
+
+  // Seleciona traduções conforme idioma
+  const t = translations[language] || translations.en;
+  const placeholderText = placeholder || t.placeholder;
 
   const handleApplyCoupon = () => {
     if (!coupon.trim()) {
-      Alert.alert('Invalid Coupon', 'Please enter a valid coupon code.');
+      Alert.alert(t.invalidTitle, t.invalidMessage);
       return;
     }
-
     onApplyCoupon(coupon);
     setIsCouponApplied(true);
-    setMessage('Coupon applied successfully!');
+    setMessage(t.successMessage);
   };
 
   const handleRemoveCoupon = () => {
     setCoupon('');
     setIsCouponApplied(false);
     setMessage('');
-    if (onRemoveCoupon) {
-      onRemoveCoupon();
-    }
+    onRemoveCoupon?.();
   };
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      {/* Title */}
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
+      {title && <Text style={[styles.title, customStyles.title]}>{title}</Text>}
       {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
 
-      {/* Input Field */}
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder={placeholder}
+        placeholder={placeholderText}
         value={coupon}
         onChangeText={setCoupon}
         editable={!isCouponApplied}
       />
 
-      {/* Buttons */}
       <View style={[styles.buttonContainer, customStyles.buttonContainer]}>
         {!isCouponApplied ? (
           <TouchableOpacity
             style={[styles.buttonApply, customStyles.buttonApply]}
             onPress={handleApplyCoupon}
           >
-            <Text style={[styles.buttonText, customStyles.buttonText]}>Apply Coupon</Text>
+            <Text style={[styles.buttonText, customStyles.buttonText]}>
+              {t.applyButton}
+            </Text>
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             style={[styles.buttonRemove, customStyles.buttonRemove]}
             onPress={handleRemoveCoupon}
           >
-            <Text style={[styles.buttonText, customStyles.buttonText]}>Remove Coupon</Text>
+            <Text style={[styles.buttonText, customStyles.buttonText]}>
+              {t.removeButton}
+            </Text>
           </TouchableOpacity>
         )}
       </View>
 
-      {/* Message */}
-      {message && <Text style={[styles.message, customStyles.message]}>{message}</Text>}
+      {message ? (
+        <Text style={[styles.message, customStyles.message]}>{message}</Text>
+      ) : null}
     </View>
   );
 };

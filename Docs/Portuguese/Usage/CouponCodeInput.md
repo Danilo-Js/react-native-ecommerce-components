@@ -39,18 +39,19 @@ import { CouponCodeInput } from "react-native-ecommerce-components/lib";
 
 const CouponCodeInputTest = () => {
   const handleApplyCoupon = (coupon) => {
-    Alert.alert("Coupon Applied", `Coupon Code: ${coupon}`);
+    Alert.alert("Cupom aplicado", `Código do cupom: ${coupon}`);
   };
 
   const handleRemoveCoupon = () => {
-    Alert.alert("Coupon Removed", "The coupon has been removed.");
+    Alert.alert("Cupom removido", "O cupom foi removido.");
   };
 
   return (
     <View>
       <CouponCodeInput
-        title="Apply Your Coupon"
-        subTitle="Enter a valid coupon code to get discounts"
+        language="pt"
+        title="Aplique o cupom"
+        subTitle="Receba descontos através de um cupom"
         onApplyCoupon={handleApplyCoupon}
         onRemoveCoupon={handleRemoveCoupon}
       />
