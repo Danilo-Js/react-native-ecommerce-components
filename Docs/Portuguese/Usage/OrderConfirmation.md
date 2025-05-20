@@ -29,6 +29,7 @@ O componente **OrderConfirmation** fornece um resumo claro de um pedido com deta
 | `title`              | `string`     | ✅          | Texto do título exibido no topo da tela de confirmação.                                                                 |
 | `subTitle`           | `string`     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                            |
 | `styles`             | `object`     | ❌          | Estilos personalizados para container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title e subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ---
 
@@ -43,23 +44,24 @@ import { OrderConfirmation } from "react-native-ecommerce-components/lib";
 
 const OrderConfirmationTest = () => {
   const handleContinueShopping = () => {
-    Alert.alert("Continue Shopping", "Navigating to home page...");
+    Alert.alert("Continuar comprando", "Navegando para a página inicial...");
   };
 
   const handleViewOrderDetails = () => {
-    Alert.alert("Order Details", "Showing order details...");
+    Alert.alert("Detalhes da compra", "Mostrando detalhes da compra...");
   };
 
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <OrderConfirmation
-        title="Order Confirmed"
-        subTitle="Thank you for your purchase!"
+        language="pt"
+        title="Pedido realizado"
+        subTitle="Obrigado pela compra!"
         orderId="ORD12345"
-        orderDate="2024-06-21"
+        orderDate="21/06/2024"
         totalAmount={149.99}
-        paymentMethod="Credit Card"
-        shippingAddress="123 Main Street, Cityville, CA"
+        paymentMethod="Cartão de crédito"
+        shippingAddress="123 Copacabana, Rio de Janeiro, RJ"
         onContinueShopping={handleContinueShopping}
         onViewOrderDetails={handleViewOrderDetails}
       />

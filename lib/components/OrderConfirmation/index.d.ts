@@ -1,4 +1,6 @@
 import React from 'react';
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+type Language = 'en' | 'pt';
 interface OrderConfirmationProps {
     orderId: string;
     orderDate: string;
@@ -7,17 +9,18 @@ interface OrderConfirmationProps {
     shippingAddress: string;
     onContinueShopping: () => void;
     onViewOrderDetails: () => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        title?: object;
-        subTitle?: object;
-        orderInfo?: object;
-        orderInfoText?: object;
-        buttonContainer?: object;
-        button?: object;
-        buttonText?: object;
+        container?: StyleProp<ViewStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
+        orderInfo?: StyleProp<ViewStyle>;
+        orderInfoText?: StyleProp<TextStyle>;
+        buttonContainer?: StyleProp<ViewStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
     };
 }
 declare const OrderConfirmation: React.FC<OrderConfirmationProps>;

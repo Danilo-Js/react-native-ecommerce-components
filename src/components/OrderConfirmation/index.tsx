@@ -1,6 +1,57 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para labels e botões
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle: string;
+  orderIdLabel: string;
+  orderDateLabel: string;
+  totalAmountLabel: string;
+  paymentMethodLabel: string;
+  shippingAddressLabel: string;
+  continueShopping: string;
+  viewOrderDetails: string;
+}> = {
+  en: {
+    defaultTitle: 'Order Confirmed!',
+    defaultSubTitle: 'Thank you for your purchase.',
+    orderIdLabel: 'Order ID:',
+    orderDateLabel: 'Order Date:',
+    totalAmountLabel: 'Total Amount:',
+    paymentMethodLabel: 'Payment Method:',
+    shippingAddressLabel: 'Shipping Address:',
+    continueShopping: 'Continue Shopping',
+    viewOrderDetails: 'View Order Details',
+  },
+  pt: {
+    defaultTitle: 'Pedido Confirmado!',
+    defaultSubTitle: 'Obrigado pela sua compra.',
+    orderIdLabel: 'ID do Pedido:',
+    orderDateLabel: 'Data do Pedido:',
+    totalAmountLabel: 'Valor Total:',
+    paymentMethodLabel: 'Método de Pagamento:',
+    shippingAddressLabel: 'Endereço de Entrega:',
+    continueShopping: 'Continuar Comprando',
+    viewOrderDetails: 'Ver Detalhes do Pedido',
+  },
+};
 
 interface OrderConfirmationProps {
   orderId: string;
@@ -10,17 +61,18 @@ interface OrderConfirmationProps {
   shippingAddress: string;
   onContinueShopping: () => void;
   onViewOrderDetails: () => void;
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    orderInfo?: object;
-    orderInfoText?: object;
-    buttonContainer?: object;
-    button?: object;
-    buttonText?: object;
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    orderInfo?: StyleProp<ViewStyle>;
+    orderInfoText?: StyleProp<TextStyle>;
+    buttonContainer?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
   };
 }
 
@@ -34,30 +86,40 @@ const OrderConfirmation: React.FC<OrderConfirmationProps> = ({
   onViewOrderDetails,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   return (
     <ScrollView contentContainerStyle={[styles.container, customStyles.container]}>
       {/* Title */}
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>}
 
       {/* Order Details */}
       <View style={[styles.orderInfo, customStyles.orderInfo]}>
         <Text style={[styles.orderInfoText, customStyles.orderInfoText]}>
-          <Text style={styles.boldText}>Order ID:</Text> {orderId}
+          <Text style={styles.boldText}>{t.orderIdLabel} </Text>
+          {orderId}
         </Text>
         <Text style={[styles.orderInfoText, customStyles.orderInfoText]}>
-          <Text style={styles.boldText}>Order Date:</Text> {orderDate}
+          <Text style={styles.boldText}>{t.orderDateLabel} </Text>
+          {orderDate}
         </Text>
         <Text style={[styles.orderInfoText, customStyles.orderInfoText]}>
-          <Text style={styles.boldText}>Total Amount:</Text> ${totalAmount.toFixed(2)}
+          <Text style={styles.boldText}>{t.totalAmountLabel} </Text>
+          ${totalAmount.toFixed(2)}
         </Text>
         <Text style={[styles.orderInfoText, customStyles.orderInfoText]}>
-          <Text style={styles.boldText}>Payment Method:</Text> {paymentMethod}
+          <Text style={styles.boldText}>{t.paymentMethodLabel} </Text>
+          {paymentMethod}
         </Text>
         <Text style={[styles.orderInfoText, customStyles.orderInfoText]}>
-          <Text style={styles.boldText}>Shipping Address:</Text> {shippingAddress}
+          <Text style={styles.boldText}>{t.shippingAddressLabel} </Text>
+          {shippingAddress}
         </Text>
       </View>
 
@@ -67,14 +129,14 @@ const OrderConfirmation: React.FC<OrderConfirmationProps> = ({
           style={[styles.button, customStyles.button]}
           onPress={onContinueShopping}
         >
-          <Text style={[styles.buttonText, customStyles.buttonText]}>Continue Shopping</Text>
+          <Text style={[styles.buttonText, customStyles.buttonText]}>{t.continueShopping}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.button, customStyles.button]}
           onPress={onViewOrderDetails}
         >
-          <Text style={[styles.buttonText, customStyles.buttonText]}>View Order Details</Text>
+          <Text style={[styles.buttonText, customStyles.buttonText]}>{t.viewOrderDetails}</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

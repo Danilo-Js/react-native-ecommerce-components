@@ -25,6 +25,7 @@ O componente **CouponCodeInput** fornece uma maneira intuitiva para inserir e ap
 | `title`          | `string`                   | ✅          | Texto do título exibido acima do campo de cupom.                                                                                 |
 | `subTitle`       | `string`                   | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                     |
 | `styles`         | `object`                   | ❌          | Estilos personalizados para container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title e subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ---
 
