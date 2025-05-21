@@ -1,28 +1,56 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface OrderTrackingStep {
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para título e subtítulo
+const translations: Record<Language, { defaultTitle: string; defaultSubTitle?: string }> = {
+  en: {
+    defaultTitle: 'Order Tracking',
+    defaultSubTitle: 'Track your order',
+  },
+  pt: {
+    defaultTitle: 'Rastreamento de Pedido',
+    defaultSubTitle: 'Acompanhe seu pedido',
+  },
+};
+
+// Passo de rastreamento
+type OrderTrackingStep = {
   id: string;
   title: string;
   description: string;
   status: 'completed' | 'current' | 'pending';
-}
+};
 
 interface OrderTrackingProps {
   steps: OrderTrackingStep[];
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    stepContainer?: object;
-    stepTitle?: object;
-    stepDescription?: object;
-    stepCompleted?: object;
-    stepCurrent?: object;
-    stepPending?: object;
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    stepContainer?: StyleProp<ViewStyle>;
+    stepTitle?: StyleProp<TextStyle>;
+    stepDescription?: StyleProp<TextStyle>;
+    stepCompleted?: StyleProp<ViewStyle>;
+    stepCurrent?: StyleProp<ViewStyle>;
+    stepPending?: StyleProp<ViewStyle>;
   };
 }
 
@@ -30,16 +58,35 @@ const OrderTracking: React.FC<OrderTrackingProps> = ({
   steps,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const renderStep = ({ item }: { item: OrderTrackingStep }) => {
-    let stepStyle = styles.stepPending;
-    if (item.status === 'completed') stepStyle = styles.stepCompleted;
-    if (item.status === 'current') stepStyle = styles.stepCurrent;
+    let stepDefaultStyle = styles.stepPending;
+    if (item.status === 'completed') stepDefaultStyle = styles.stepCompleted;
+    if (item.status === 'current') stepDefaultStyle = styles.stepCurrent;
+
+    // Seleciona estilo customizado conforme status
+    const statusCustomStyle =
+      item.status === 'completed'
+        ? customStyles.stepCompleted
+        : item.status === 'current'
+        ? customStyles.stepCurrent
+        : customStyles.stepPending;
 
     return (
       <View style={[styles.stepContainer, customStyles.stepContainer]}>
-        <View style={[styles.stepIndicator, stepStyle]} />
+        <View
+          style={[
+            styles.stepIndicator,
+            stepDefaultStyle,
+            statusCustomStyle,
+          ]}
+        />
         <View style={styles.stepContent}>
           <Text style={[styles.stepTitle, customStyles.stepTitle]}>{item.title}</Text>
           <Text style={[styles.stepDescription, customStyles.stepDescription]}>
@@ -52,11 +99,13 @@ const OrderTracking: React.FC<OrderTrackingProps> = ({
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      {/* Title */}
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>
+          {displaySubTitle}
+        </Text>
+      )}
 
-      {/* Steps */}
       <FlatList
         data={steps}
         renderItem={renderStep}

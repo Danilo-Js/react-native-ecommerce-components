@@ -23,6 +23,7 @@ O componente **OrderTracking** exibe o status de um pedido por meio de uma séri
 | `title`     | `string`              | ✅          | Texto do título exibido no topo do componente de rastreamento.                                                                                                 |
 | `subTitle`  | `string`              | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                                   |
 | `styles`    | `object`              | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `stepContainer`, `stepTitle`, `stepDescription`, `stepCompleted`, `stepCurrent` e `stepPending`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto OrderTrackingStep**
 
@@ -48,34 +49,34 @@ import { OrderTracking } from "react-native-ecommerce-components/lib";
 
 const steps = [
   {
-    id: "1",
-    title: "Order Placed",
-    description: "Your order has been placed.",
-    status: "completed",
+    id: '1',
+    title: 'Pedido realizado',
+    description: 'Seu pedido foi feito.',
+    status: 'completed',
   },
   {
-    id: "2",
-    title: "Order Processed",
-    description: "Your order is being processed.",
-    status: "completed",
+    id: '2',
+    title: 'Pedido processado',
+    description: 'Seu pedido está sendo processado.',
+    status: 'completed',
   },
   {
-    id: "3",
-    title: "Shipped",
-    description: "Your order has been shipped.",
-    status: "current",
+    id: '3',
+    title: 'Enviado',
+    description: 'Seu pedido foi enviado.',
+    status: 'current',
   },
   {
-    id: "4",
-    title: "Out for Delivery",
-    description: "Your order is on the way.",
-    status: "pending",
+    id: '4',
+    title: 'A caminho',
+    description: 'Seu pedido está a caminho.',
+    status: 'pending',
   },
   {
-    id: "5",
-    title: "Delivered",
-    description: "Your order has been delivered.",
-    status: "pending",
+    id: '5',
+    title: 'Entregue',
+    description: 'Seu pedido foi entregue.',
+    status: 'pending',
   },
 ];
 
@@ -83,9 +84,10 @@ const OrderTrackingTest = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <OrderTracking
-        title="Track Your Order"
-        subTitle="Stay updated with your order status"
-        steps={steps}
+        language="pt"
+        title="Acompanhe a entrega"
+        subTitle="Fique atualizado com o status da entrega"
+        steps={steps as any}
       />
     </View>
   );
