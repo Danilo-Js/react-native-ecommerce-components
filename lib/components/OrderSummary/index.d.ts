@@ -1,4 +1,6 @@
 import React from 'react';
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+type Language = 'en' | 'pt';
 interface OrderItem {
     id: string;
     name: string;
@@ -12,19 +14,20 @@ interface OrderSummaryProps {
     tax: number;
     total: number;
     onCheckout: () => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        itemContainer?: object;
-        itemText?: object;
-        summaryContainer?: object;
-        summaryText?: object;
-        totalText?: object;
-        button?: object;
-        buttonText?: object;
-        title?: object;
-        subTitle?: object;
+        container?: StyleProp<ViewStyle>;
+        itemContainer?: StyleProp<ViewStyle>;
+        itemText?: StyleProp<TextStyle>;
+        summaryContainer?: StyleProp<ViewStyle>;
+        summaryText?: StyleProp<TextStyle>;
+        totalText?: StyleProp<TextStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
     };
 }
 declare const OrderSummary: React.FC<OrderSummaryProps>;

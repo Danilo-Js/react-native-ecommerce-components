@@ -28,6 +28,7 @@ O componente **OrderSummary** fornece um resumo detalhado de um pedido, incluind
 | `title`      | `string`      | ✅          | Texto do título exibido no topo do resumo.                                                                                                                          |
 | `subTitle`   | `string`      | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                                        |
 | `styles`     | `object`      | ❌          | Estilos personalizados para `container`, `itemContainer`, `itemText`, `summaryContainer`, `summaryText`, `totalText`, `button`, `buttonText`, `title` e `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto OrderItem**
 
@@ -69,7 +70,7 @@ const App = () => {
   const handleCheckout = () => {
     Alert.alert(
       "Checkout",
-      `Your order total is $${total.toFixed(2)}. Proceeding to payment...`
+      `O valor do pedido é $${total.toFixed(2)}. Procedendo ao pagamento...`
     );
   };
 
@@ -82,8 +83,8 @@ const App = () => {
         tax={tax}
         total={total}
         onCheckout={handleCheckout}
-        title="Order Summary"
-        subTitle="Review your order before proceeding"
+        title="Resumo do pedido"
+        subTitle="Revise o seu pedido antes de continuar"
       />
     </View>
   );
