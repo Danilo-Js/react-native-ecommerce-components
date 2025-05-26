@@ -26,7 +26,7 @@ O componente **ReviewAndRatings** permite que os usuários visualizem, adicionem
 | `title`         | `string`                                 | ✅          | Texto do título exibido no topo da seção de avaliações.                                                                                                    |
 | `subTitle`      | `string`                                 | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                               |
 | `styles`        | `object`                                 | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer` e `averageRating`. |
-
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto Review**
 
@@ -56,88 +56,94 @@ const initialReviews = [
     id: "1",
     user: "Alice",
     rating: 4.5,
-    comment: "Great product!",
+    comment: "Ótimo produto!",
     date: "2024-06-20",
   },
   {
     id: "2",
     user: "Bob",
     rating: 5,
-    comment: "Exceeded my expectations!",
+    comment: "Superou minhas expectativas!",
     date: "2024-06-19",
   },
   {
     id: "3",
     user: "Charlie",
     rating: 4.0,
-    comment: "Good value for the price.",
+    comment: "Bom valor pelo preço.",
     date: "2024-06-18",
   },
   {
     id: "4",
     user: "Diana",
     rating: 3.5,
-    comment: "Decent, but could be better.",
+    comment: "Decente, mas poderia ser melhor.",
     date: "2024-06-17",
   },
   {
     id: "5",
     user: "Ethan",
     rating: 5,
-    comment: "Absolutely loved it!",
+    comment: "Adorei!",
     date: "2024-06-16",
   },
   {
     id: "6",
     user: "Fiona",
     rating: 2.5,
-    comment: "Not worth the price.",
+    comment: "Não vale o preço.",
     date: "2024-06-15",
   },
   {
     id: "7",
     user: "George",
     rating: 4.8,
-    comment: "Highly recommend this product.",
+    comment: "Recomendo muito este produto.",
     date: "2024-06-14",
   },
   {
     id: "8",
     user: "Hannah",
     rating: 3.0,
-    comment: "It’s okay, nothing special.",
+    comment: "É ok, nada especial.",
     date: "2024-06-13",
   },
   {
     id: "9",
     user: "Ian",
     rating: 4.2,
-    comment: "Solid performance, minor flaws.",
+    comment: "Desempenho sólido, pequenas falhas.",
     date: "2024-06-12",
   },
   {
     id: "10",
     user: "Jasmine",
     rating: 5,
-    comment: "Perfect in every way!",
+    comment: "Perfeito em todos os aspectos!",
     date: "2024-06-11",
   },
 ];
 
 const ReviewAndRatingsTest = () => {
   const handleAddReview = (review) => {
-    console.log("New Review Added:", review);
+    console.log("Nova avaliação adicionada:", review);
   };
 
   return (
     <View style={{ flex: 1 }}>
       <ReviewAndRatings
-        title="Product Reviews"
-        subTitle="See what others are saying"
-        reviews={initialReviews}
-        averageRating={4.8}
-        totalReviews={10}
-        onAddReview={handleAddReview}
+        language="pt"
+        reviews={productReviews}
+        averageRating={averageRating}
+        totalReviews={productReviews.length}
+        onAddReview={(review) => addReview({
+          ...review,
+          id: productReviews.length + 1 + '',
+          date: new Date().toISOString(),
+          productId,
+        })}
+        title="Avaliações do Produto"
+        subTitle="Veja a opinião dos compradores"
       />
     </View>
   );

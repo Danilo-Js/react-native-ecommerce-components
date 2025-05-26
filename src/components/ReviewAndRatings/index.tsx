@@ -1,8 +1,67 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  TextInput,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface Review {
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções do componente
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  placeholderName: string;
+  placeholderComment: string;
+  placeholderRating: string;
+  errorTitle: string;
+  errorMessage: string;
+  successTitle: string;
+  successMessage: string;
+  averageTemplate: (avg: number, total: number) => string;
+  submitButton: string;
+}> = {
+  en: {
+    defaultTitle: 'Reviews & Ratings',
+    defaultSubTitle: 'What our customers say',
+    placeholderName: 'Your Name',
+    placeholderComment: 'Your Comment',
+    placeholderRating: 'Your Rating (1-5)',
+    errorTitle: 'Error',
+    errorMessage: 'Please fill in all fields and select a rating.',
+    successTitle: 'Success',
+    successMessage: 'Review added successfully!',
+    averageTemplate: (avg, total) => `⭐ ${avg.toFixed(1)} (${total} reviews)`,
+    submitButton: 'Submit Review',
+  },
+  pt: {
+    defaultTitle: 'Avaliações & Comentários',
+    defaultSubTitle: 'O que nossos clientes dizem',
+    placeholderName: 'Seu Nome',
+    placeholderComment: 'Seu Comentário',
+    placeholderRating: 'Sua Nota (1-5)',
+    errorTitle: 'Erro',
+    errorMessage: 'Por favor, preencha todos os campos e selecione uma nota.',
+    successTitle: 'Sucesso',
+    successMessage: 'Avaliação adicionada com sucesso!',
+    averageTemplate: (avg, total) => `⭐ ${avg.toFixed(1)} (${total} avaliações)`,
+    submitButton: 'Enviar Avaliação',
+  },
+};
+
+export interface Review {
   id: string;
   user: string;
   rating: number;
@@ -15,23 +74,24 @@ interface ReviewAndRatingsProps {
   averageRating: number;
   totalReviews: number;
   onAddReview: (review: Omit<Review, 'id' | 'date'>) => void;
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    reviewContainer?: object;
-    reviewUser?: object;
-    reviewComment?: object;
-    reviewDate?: object;
-    reviewRating?: object;
-    inputContainer?: object;
-    input?: object;
-    button?: object;
-    buttonText?: object;
-    ratingContainer?: object;
-    averageRating?: object;
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    ratingContainer?: StyleProp<ViewStyle>;
+    averageRating?: StyleProp<TextStyle>;
+    reviewContainer?: StyleProp<ViewStyle>;
+    reviewUser?: StyleProp<TextStyle>;
+    reviewRating?: StyleProp<TextStyle>;
+    reviewComment?: StyleProp<TextStyle>;
+    reviewDate?: StyleProp<TextStyle>;
+    inputContainer?: StyleProp<ViewStyle>;
+    input?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
   };
 }
 
@@ -42,36 +102,33 @@ const ReviewAndRatings: React.FC<ReviewAndRatingsProps> = ({
   onAddReview,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const [user, setUser] = useState('');
   const [rating, setRating] = useState<number | null>(null);
   const [comment, setComment] = useState('');
 
   const handleAddReview = () => {
-    if (!user || !rating || !comment) {
-      Alert.alert('Error', 'Please fill in all fields and select a rating.');
+    if (!user || rating === null || !comment) {
+      Alert.alert(t.errorTitle, t.errorMessage);
       return;
     }
-
-    onAddReview({
-      user,
-      rating,
-      comment,
-    });
-
+    onAddReview({ user, rating, comment });
     setUser('');
     setRating(null);
     setComment('');
-    Alert.alert('Success', 'Review added successfully!');
+    Alert.alert(t.successTitle, t.successMessage);
   };
 
   const renderReview = ({ item }: { item: Review }) => (
     <View style={[styles.reviewContainer, customStyles.reviewContainer]}>
       <Text style={[styles.reviewUser, customStyles.reviewUser]}>{item.user}</Text>
-      <Text style={[styles.reviewRating, customStyles.reviewRating]}>
-        ⭐ {item.rating.toFixed(1)}
-      </Text>
+      <Text style={[styles.reviewRating, customStyles.reviewRating]}>⭐ {item.rating.toFixed(1)}</Text>
       <Text style={[styles.reviewComment, customStyles.reviewComment]}>{item.comment}</Text>
       <Text style={[styles.reviewDate, customStyles.reviewDate]}>{item.date}</Text>
     </View>
@@ -79,18 +136,15 @@ const ReviewAndRatings: React.FC<ReviewAndRatingsProps> = ({
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      {/* Title */}
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>}
 
-      {/* Average Rating */}
       <View style={[styles.ratingContainer, customStyles.ratingContainer]}>
         <Text style={[styles.averageRating, customStyles.averageRating]}>
-          ⭐ {averageRating.toFixed(1)} ({totalReviews} reviews)
+          {t.averageTemplate(averageRating, totalReviews)}
         </Text>
       </View>
 
-      {/* Reviews List */}
       <FlatList
         data={reviews}
         renderItem={renderReview}
@@ -98,30 +152,29 @@ const ReviewAndRatings: React.FC<ReviewAndRatingsProps> = ({
         style={{ marginBottom: hp('2%') }}
       />
 
-      {/* Add Review Section */}
       <View style={[styles.inputContainer, customStyles.inputContainer]}>
         <TextInput
           style={[styles.input, customStyles.input]}
-          placeholder="Your Name"
+          placeholder={t.placeholderName}
           value={user}
           onChangeText={setUser}
         />
         <TextInput
           style={[styles.input, customStyles.input]}
-          placeholder="Your Comment"
+          placeholder={t.placeholderComment}
           value={comment}
           onChangeText={setComment}
           multiline
         />
         <TextInput
           style={[styles.input, customStyles.input]}
-          placeholder="Your Rating (1-5)"
-          value={rating ? rating.toString() : ''}
-          onChangeText={(value) => setRating(Number(value) || null)}
+          placeholder={t.placeholderRating}
+          value={rating !== null ? rating.toString() : ''}
+          onChangeText={(v) => setRating(Number(v) || null)}
           keyboardType="numeric"
         />
         <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handleAddReview}>
-          <Text style={[styles.buttonText, customStyles.buttonText]}>Submit Review</Text>
+          <Text style={[styles.buttonText, customStyles.buttonText]}>{t.submitButton}</Text>
         </TouchableOpacity>
       </View>
     </View>

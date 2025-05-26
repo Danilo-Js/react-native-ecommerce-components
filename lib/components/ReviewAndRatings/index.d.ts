@@ -1,5 +1,7 @@
 import React from 'react';
-interface Review {
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface Review {
     id: string;
     user: string;
     rating: number;
@@ -11,23 +13,24 @@ interface ReviewAndRatingsProps {
     averageRating: number;
     totalReviews: number;
     onAddReview: (review: Omit<Review, 'id' | 'date'>) => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        title?: object;
-        subTitle?: object;
-        reviewContainer?: object;
-        reviewUser?: object;
-        reviewComment?: object;
-        reviewDate?: object;
-        reviewRating?: object;
-        inputContainer?: object;
-        input?: object;
-        button?: object;
-        buttonText?: object;
-        ratingContainer?: object;
-        averageRating?: object;
+        container?: StyleProp<ViewStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
+        ratingContainer?: StyleProp<ViewStyle>;
+        averageRating?: StyleProp<TextStyle>;
+        reviewContainer?: StyleProp<ViewStyle>;
+        reviewUser?: StyleProp<TextStyle>;
+        reviewRating?: StyleProp<TextStyle>;
+        reviewComment?: StyleProp<TextStyle>;
+        reviewDate?: StyleProp<TextStyle>;
+        inputContainer?: StyleProp<ViewStyle>;
+        input?: StyleProp<ViewStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
     };
 }
 declare const ReviewAndRatings: React.FC<ReviewAndRatingsProps>;
