@@ -1,6 +1,6 @@
 {
   "name": "react-native-ecommerce-components",
-  "version": "6.1.6",
+  "version": "6.1.7",
   "description": "A compilation of components to optimize the development of your ecommerce",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
