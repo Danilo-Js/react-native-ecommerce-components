@@ -26,6 +26,7 @@ O componente **ShoppingCart** fornece uma visão detalhada dos itens no carrinho
 | `title`            | `string`                                     | ✅          | Texto do título exibido no topo do carrinho.                                                                                                       |
 | `subTitle`         | `string`                                     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                       |
 | `styles`           | `object`                                     | ❌          | Estilos personalizados para `container`, `itemContainer`, `itemText`, `button`, `buttonText`, `totalContainer`, `totalText`, `title` e `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ---
 
@@ -53,13 +54,13 @@ import { ShoppingCart } from "react-native-ecommerce-components/lib";
 
 const ShoppingCartTest = () => {
   const [items, setItems] = useState([
-    { id: "1", name: "Product 1", price: 10.99, quantity: 1 },
-    { id: "2", name: "Product 2", price: 15.49, quantity: 2 },
-    { id: "3", name: "Product 3", price: 7.99, quantity: 3 },
-    { id: "4", name: "Product 4", price: 1007, quantity: 1 },
-    { id: "5", name: "Product 5", price: 37.99, quantity: 4 },
-    { id: "6", name: "Product 6", price: 22.99, quantity: 3 },
-    { id: "7", name: "Product 7", price: 70.15, quantity: 1 },
+    { id: "1", name: "Produto 1", price: 10.99, quantity: 1 },
+    { id: "2", name: "Produto 2", price: 15.49, quantity: 2 },
+    { id: "3", name: "Produto 3", price: 7.99, quantity: 3 },
+    { id: "4", name: "Produto 4", price: 1007, quantity: 1 },
+    { id: "5", name: "Produto 5", price: 37.99, quantity: 4 },
+    { id: "6", name: "Produto 6", price: 22.99, quantity: 3 },
+    { id: "7", name: "Produto 7", price: 70.15, quantity: 1 },
   ]);
 
   const handleUpdateQuantity = (id, quantity) => {
@@ -83,8 +84,8 @@ const ShoppingCartTest = () => {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onCheckout={handleCheckout}
-        title="Shopping Cart"
-        subTitle="Review your items below"
+        title="Carrinho de Compras"
+        subTitle="Revise seus itens abaixo"
       />
     </View>
   );

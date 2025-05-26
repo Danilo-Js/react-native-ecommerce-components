@@ -1,5 +1,7 @@
 import React from 'react';
-interface CartItem {
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface CartItem {
     id: string;
     name: string;
     price: number;
@@ -10,18 +12,23 @@ interface ShoppingCartProps {
     onUpdateQuantity: (id: string, quantity: number) => void;
     onRemoveItem: (id: string) => void;
     onCheckout: (items: CartItem[], total: number) => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        itemContainer?: object;
-        itemText?: object;
-        button?: object;
-        buttonText?: object;
-        totalContainer?: object;
-        totalText?: object;
-        title?: object;
-        subTitle?: object;
+        container?: StyleProp<ViewStyle>;
+        itemContainer?: StyleProp<ViewStyle>;
+        itemText?: StyleProp<TextStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
+        totalContainer?: StyleProp<ViewStyle>;
+        totalText?: StyleProp<TextStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
+        quantityContainer?: StyleProp<ViewStyle>;
+        quantityButton?: StyleProp<TextStyle>;
+        quantityText?: StyleProp<TextStyle>;
+        removeButton?: StyleProp<TextStyle>;
     };
 }
 declare const ShoppingCart: React.FC<ShoppingCartProps>;
