@@ -1,8 +1,43 @@
 import React from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+  ImageStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface Product {
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para título, subtítulo e botão
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  addToCartButton: string;
+}> = {
+  en: {
+    defaultTitle: 'Products',
+    defaultSubTitle: 'Browse our products',
+    addToCartButton: 'Add to Cart',
+  },
+  pt: {
+    defaultTitle: 'Produtos',
+    defaultSubTitle: 'Confira nossos produtos',
+    addToCartButton: '+ Carrinho',
+  },
+};
+
+export interface Product {
   id: string;
   title: string;
   price: number;
@@ -15,18 +50,19 @@ interface ProductListProps {
   onAddToCart: (product: Product) => void;
   onProductPress: (product: Product) => void;
   gridView?: boolean;
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    productContainer?: object;
-    productImage?: object;
-    productTitle?: object;
-    productPrice?: object;
-    button?: object;
-    buttonText?: object;
-    title?: object;
-    subTitle?: object;
+    container?: StyleProp<ViewStyle>;
+    productContainer?: StyleProp<ViewStyle>;
+    productImage?: StyleProp<ImageStyle>;
+    productTitle?: StyleProp<TextStyle>;
+    productPrice?: StyleProp<TextStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
   };
 }
 
@@ -37,8 +73,13 @@ const ProductList: React.FC<ProductListProps> = ({
   gridView = false,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle ?? t.defaultSubTitle;
+
   const renderItem = ({ item }: { item: Product }) => (
     <TouchableOpacity
       style={[
@@ -51,21 +92,29 @@ const ProductList: React.FC<ProductListProps> = ({
         source={{ uri: item.image }}
         style={[styles.productImage, customStyles.productImage]}
       />
-      <Text style={[styles.productTitle, customStyles.productTitle]}>{item.title}</Text>
+      <Text style={[styles.productTitle, customStyles.productTitle]}>
+        {item.title}
+      </Text>
       <Text style={[styles.productPrice, customStyles.productPrice]}>${item.price.toFixed(2)}</Text>
       <TouchableOpacity
         style={[styles.button, customStyles.button]}
         onPress={() => onAddToCart(item)}
       >
-        <Text style={[styles.buttonText, customStyles.buttonText]}>Add to Cart</Text>
+        <Text style={[styles.buttonText, customStyles.buttonText]}>
+          {t.addToCartButton}
+        </Text>
       </TouchableOpacity>
     </TouchableOpacity>
   );
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>
+          {displaySubTitle}
+        </Text>
+      )}
       <FlatList
         data={products}
         renderItem={renderItem}

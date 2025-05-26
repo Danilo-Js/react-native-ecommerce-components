@@ -26,6 +26,7 @@ O componente **ProductList** exibe uma lista de produtos em formato de **grade**
 | `title`          | `string`                     | ✅          | Texto do título exibido no topo da lista.                                                                                                                  |
 | `subTitle`       | `string`                     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                               |
 | `styles`         | `object`                     | ❌          | Estilos personalizados para `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title` e `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto Product**
 
@@ -76,22 +77,23 @@ const App = () => {
   ];
 
   const handleAddToCart = (product) => {
-    Alert.alert("Add to Cart", `${product.title} added to cart.`);
+    Alert.alert("Adicionar ao carrinho", `${product.title} adicionado ao carrinho.`);
   };
 
   const handleProductPress = (product) => {
-    Alert.alert("Product Selected", `You selected ${product.title}`);
+    Alert.alert("Producto selecionado", `Você selecionou o produto ${product.title}`);
   };
 
   return (
     <View style={{ flex: 1 }}>
       <ProductList
-        products={products}
+        language="pt"
+        products={filteredProducts}
         onAddToCart={handleAddToCart}
         onProductPress={handleProductPress}
         gridView={true}
-        title="Our Products"
-        subTitle="Find the best deals here"
+        title="Nossos produtos"
+        subTitle="Encontre os melhores produtos aqui"
       />
     </View>
   );

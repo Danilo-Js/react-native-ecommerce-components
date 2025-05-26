@@ -1,5 +1,7 @@
 import React from 'react';
-interface Product {
+import { StyleProp, ViewStyle, TextStyle, ImageStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface Product {
     id: string;
     title: string;
     price: number;
@@ -11,18 +13,19 @@ interface ProductListProps {
     onAddToCart: (product: Product) => void;
     onProductPress: (product: Product) => void;
     gridView?: boolean;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        productContainer?: object;
-        productImage?: object;
-        productTitle?: object;
-        productPrice?: object;
-        button?: object;
-        buttonText?: object;
-        title?: object;
-        subTitle?: object;
+        container?: StyleProp<ViewStyle>;
+        productContainer?: StyleProp<ViewStyle>;
+        productImage?: StyleProp<ImageStyle>;
+        productTitle?: StyleProp<TextStyle>;
+        productPrice?: StyleProp<TextStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
     };
 }
 declare const ProductList: React.FC<ProductListProps>;
