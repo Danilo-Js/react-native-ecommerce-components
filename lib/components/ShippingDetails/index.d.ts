@@ -1,18 +1,7 @@
 import React from 'react';
-interface ShippingDetailsProps {
-    onSubmit: (shippingDetails: ShippingDetailsData) => void;
-    title: string;
-    subTitle?: string;
-    styles?: {
-        container?: object;
-        title?: object;
-        subTitle?: object;
-        input?: object;
-        button?: object;
-        buttonText?: object;
-    };
-}
-interface ShippingDetailsData {
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface ShippingDetailsData {
     recipientName: string;
     addressLine1: string;
     addressLine2?: string;
@@ -22,6 +11,20 @@ interface ShippingDetailsData {
     country: string;
     phone: string;
     email: string;
+}
+interface ShippingDetailsProps {
+    onSubmit: (shippingDetails: ShippingDetailsData) => void;
+    title?: string;
+    subTitle?: string;
+    language?: Language;
+    styles?: {
+        container?: StyleProp<ViewStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
+        input?: StyleProp<ViewStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
+    };
 }
 declare const ShippingDetails: React.FC<ShippingDetailsProps>;
 export default ShippingDetails;

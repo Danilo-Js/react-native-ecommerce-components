@@ -1,22 +1,91 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface ShippingDetailsProps {
-  onSubmit: (shippingDetails: ShippingDetailsData) => void;
-  title: string;
-  subTitle?: string;
-  styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    input?: object;
-    button?: object;
-    buttonText?: object;
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para títulos, placeholders e mensagens
+type Translation = {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  placeholders: {
+    recipientName: string;
+    addressLine1: string;
+    addressLine2: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    country: string;
+    phone: string;
+    email: string;
   };
-}
+  errorTitle: string;
+  errorMessage: string;
+  successTitle: string;
+  successMessage: string;
+  submitButton: string;
+};
 
-interface ShippingDetailsData {
+const translations: Record<Language, Translation> = {
+  en: {
+    defaultTitle: 'Shipping Details',
+    defaultSubTitle: 'Enter your shipping information',
+    placeholders: {
+      recipientName: 'Recipient Name',
+      addressLine1: 'Address Line 1',
+      addressLine2: 'Address Line 2 (Optional)',
+      city: 'City',
+      state: 'State',
+      postalCode: 'Postal Code',
+      country: 'Country',
+      phone: 'Phone',
+      email: 'Email',
+    },
+    errorTitle: 'Error',
+    errorMessage: 'Please fill in all required fields.',
+    successTitle: 'Success',
+    successMessage: 'Shipping details submitted successfully!',
+    submitButton: 'Submit Shipping Details',
+  },
+  pt: {
+    defaultTitle: 'Detalhes de Envio',
+    defaultSubTitle: 'Insira suas informações de envio',
+    placeholders: {
+      recipientName: 'Nome do Destinatário',
+      addressLine1: 'Endereço Linha 1',
+      addressLine2: 'Endereço Linha 2 (Opcional)',
+      city: 'Cidade',
+      state: 'Estado',
+      postalCode: 'CEP',
+      country: 'País',
+      phone: 'Telefone',
+      email: 'Email',
+    },
+    errorTitle: 'Erro',
+    errorMessage: 'Por favor, preencha todos os campos obrigatórios.',
+    successTitle: 'Sucesso',
+    successMessage: 'Detalhes de envio enviados com sucesso!',
+    submitButton: 'Enviar Detalhes de Envio',
+  },
+};
+
+// Dados de envio
+export interface ShippingDetailsData {
   recipientName: string;
   addressLine1: string;
   addressLine2?: string;
@@ -28,12 +97,32 @@ interface ShippingDetailsData {
   email: string;
 }
 
+interface ShippingDetailsProps {
+  onSubmit: (shippingDetails: ShippingDetailsData) => void;
+  title?: string;
+  subTitle?: string;
+  language?: Language;
+  styles?: {
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    input?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+  };
+}
+
 const ShippingDetails: React.FC<ShippingDetailsProps> = ({
   onSubmit,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const [recipientName, setRecipientName] = useState('');
   const [addressLine1, setAddressLine1] = useState('');
   const [addressLine2, setAddressLine2] = useState('');
@@ -45,12 +134,20 @@ const ShippingDetails: React.FC<ShippingDetailsProps> = ({
   const [email, setEmail] = useState('');
 
   const handleSubmit = () => {
-    if (!recipientName || !addressLine1 || !city || !state || !postalCode || !country || !phone || !email) {
-      Alert.alert('Error', 'Please fill in all required fields.');
+    if (
+      !recipientName ||
+      !addressLine1 ||
+      !city ||
+      !state ||
+      !postalCode ||
+      !country ||
+      !phone ||
+      !email
+    ) {
+      Alert.alert(t.errorTitle, t.errorMessage);
       return;
     }
-
-    const shippingDetails: ShippingDetailsData = {
+    const details: ShippingDetailsData = {
       recipientName,
       addressLine1,
       addressLine2,
@@ -61,76 +158,77 @@ const ShippingDetails: React.FC<ShippingDetailsProps> = ({
       phone,
       email,
     };
-
-    onSubmit(shippingDetails);
-    Alert.alert('Success', 'Shipping details submitted successfully!');
+    onSubmit(details);
+    Alert.alert(t.successTitle, t.successMessage);
   };
 
   return (
     <ScrollView contentContainerStyle={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>
+      )}
 
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Recipient Name"
+        placeholder={t.placeholders.recipientName}
         value={recipientName}
         onChangeText={setRecipientName}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Address Line 1"
+        placeholder={t.placeholders.addressLine1}
         value={addressLine1}
         onChangeText={setAddressLine1}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Address Line 2 (Optional)"
+        placeholder={t.placeholders.addressLine2}
         value={addressLine2}
         onChangeText={setAddressLine2}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="City"
+        placeholder={t.placeholders.city}
         value={city}
         onChangeText={setCity}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="State"
+        placeholder={t.placeholders.state}
         value={state}
         onChangeText={setState}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Postal Code"
+        placeholder={t.placeholders.postalCode}
         keyboardType="numeric"
         value={postalCode}
         onChangeText={setPostalCode}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Country"
+        placeholder={t.placeholders.country}
         value={country}
         onChangeText={setCountry}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Phone"
+        placeholder={t.placeholders.phone}
         keyboardType="phone-pad"
         value={phone}
         onChangeText={setPhone}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Email"
+        placeholder={t.placeholders.email}
         keyboardType="email-address"
         value={email}
         onChangeText={setEmail}
       />
 
       <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handleSubmit}>
-        <Text style={[styles.buttonText, customStyles.buttonText]}>Submit Shipping Details</Text>
+        <Text style={[styles.buttonText, customStyles.buttonText]}>{t.submitButton}</Text>
       </TouchableOpacity>
     </ScrollView>
   );

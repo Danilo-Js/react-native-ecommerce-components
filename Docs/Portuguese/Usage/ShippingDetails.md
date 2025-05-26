@@ -23,7 +23,7 @@ O componente **ShippingDetails** oferece uma interface completa para coletar inf
 | `title`     | `string`                                         | ✅          | Texto do título exibido no topo do formulário.                                                  |
 | `subTitle`  | `string`                                         | ❌          | Texto do subtítulo exibido abaixo do título.                                                    |
 | `styles`    | `object`                                         | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
-
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 ---
 
 ### 📦 **Estrutura do Objeto ShippingDetailsData**
@@ -55,15 +55,16 @@ import { ShippingDetails } from "react-native-ecommerce-components/lib";
 
 const ShippingDetailsTest = () => {
   const handleShippingDetails = (shippingDetails) => {
-    console.log("Shipping Details:", shippingDetails);
-    Alert.alert("Success", "Shipping details submitted!");
+    console.log("Detalhes de Envio:", shippingDetails);
+    Alert.alert("Sucesso", "Detalhes de envio enviados!");
   };
 
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <ShippingDetails
-        title="Shipping Information"
-        subTitle="Please enter your shipping details below"
+        language="pt"
+        title="Informações de Envio"
+        subTitle="Por favor, insira seus detalhes de envio abaixo"
         onSubmit={handleShippingDetails}
       />
     </View>
