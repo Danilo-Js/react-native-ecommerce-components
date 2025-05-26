@@ -1,26 +1,61 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para placeholder e botões
+const translations: Record<Language, { placeholder: string; searchButton: string; clearButton: string }> = {
+  en: {
+    placeholder: 'Search...',
+    searchButton: 'Search',
+    clearButton: 'Clear',
+  },
+  pt: {
+    placeholder: 'Buscar...',
+    searchButton: 'Buscar',
+    clearButton: 'Limpar',
+  },
+};
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
   placeholder?: string;
   clearButtonText?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    input?: object;
-    button?: object;
-    buttonText?: object;
+    container?: StyleProp<ViewStyle>;
+    input?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
   };
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
-  placeholder = 'Search...',
-  clearButtonText = 'Clear',
+  placeholder,
+  clearButtonText,
+  language = 'en',
   styles: customStyles = {},
 }) => {
   const [query, setQuery] = useState('');
+  const t = translations[language] || translations.en;
+  const placeholderText = placeholder || t.placeholder;
+  const searchText = t.searchButton;
+  const clearText = clearButtonText || t.clearButton;
 
   const handleSearch = () => {
     onSearch(query);
@@ -35,17 +70,17 @@ const SearchBar: React.FC<SearchBarProps> = ({
     <View style={[styles.container, customStyles.container]}>
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder={placeholder}
+        placeholder={placeholderText}
         value={query}
         onChangeText={setQuery}
         onSubmitEditing={handleSearch}
         returnKeyType="search"
       />
       <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handleSearch}>
-        <Text style={[styles.buttonText, customStyles.buttonText]}>Search</Text>
+        <Text style={[styles.buttonText, customStyles.buttonText]}>{searchText}</Text>
       </TouchableOpacity>
       <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handleClear}>
-        <Text style={[styles.buttonText, customStyles.buttonText]}>{clearButtonText}</Text>
+        <Text style={[styles.buttonText, customStyles.buttonText]}>{clearText}</Text>
       </TouchableOpacity>
     </View>
   );

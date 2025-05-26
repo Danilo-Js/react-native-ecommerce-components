@@ -23,7 +23,7 @@ O componente **SearchBar** oferece uma interface intuitiva de pesquisa, permitin
 | `placeholder`     | `string`                  | ❌          | Texto exibido no campo de entrada. Padrão: `"Pesquisar..."`.               |
 | `clearButtonText` | `string`                  | ❌          | Texto exibido no botão de limpar. Padrão: `"Limpar"`.                      |
 | `styles`          | `object`                  | ❌          | Estilos personalizados para `container`, `input`, `button` e `buttonText`. |
-
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 ---
 
 ## 💻 **Exemplo de Uso**
@@ -39,8 +39,8 @@ const App = () => {
   const [data, setData] = useState([
     { id: "1", name: "Smartphone" },
     { id: "2", name: "Laptop" },
-    { id: "3", name: "Headphones" },
-    { id: "4", name: "Smartwatch" },
+    { id: "3", name: "Fones de ouvido" },
+    { id: "4", name: "Relógio inteligente" },
   ]);
 
   const [filteredData, setFilteredData] = useState(data);
@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <SearchBar onSearch={handleSearch} placeholder="Search products..." />
+      <SearchBar onSearch={handleSearch} language="pt" />
       <FlatList
         data={filteredData}
         keyExtractor={(item) => item.id}
