@@ -1,8 +1,62 @@
 import React from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+  ImageStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface WishlistItem {
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções do componente
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  removeConfirmTitle: string;
+  removeConfirmMessage: string;
+  addConfirmTitle: string;
+  addConfirmMessage: (name: string) => string;
+  cancelText: string;
+  removeText: string;
+  addText: string;
+}> = {
+  en: {
+    defaultTitle: 'Wishlist',
+    defaultSubTitle: 'Your saved items',
+    removeConfirmTitle: 'Remove Item',
+    removeConfirmMessage: 'Are you sure you want to remove this item from your wishlist?',
+    addConfirmTitle: 'Add to Cart',
+    addConfirmMessage: name => `Do you want to add "${name}" to your cart?`,
+    cancelText: 'Cancel',
+    removeText: 'Remove',
+    addText: 'Add',
+  },
+  pt: {
+    defaultTitle: 'Lista de Desejos',
+    defaultSubTitle: 'Seus itens salvos',
+    removeConfirmTitle: 'Remover Item',
+    removeConfirmMessage: 'Tem certeza que deseja remover este item da lista de desejos?',
+    addConfirmTitle: 'Adicionar ao Carrinho',
+    addConfirmMessage: name => `Deseja adicionar "${name}" ao seu carrinho?`,
+    cancelText: 'Cancelar',
+    removeText: 'Remover',
+    addText: 'Adicionar',
+  },
+};
+
+export interface WishlistItem {
   id: string;
   name: string;
   price: number;
@@ -13,19 +67,20 @@ interface WishlistProps {
   items: WishlistItem[];
   onRemoveItem: (id: string) => void;
   onAddToCart: (item: WishlistItem) => void;
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    itemContainer?: object;
-    image?: object;
-    itemText?: object;
-    priceText?: object;
-    buttonContainer?: object;
-    button?: object;
-    buttonText?: object;
-    title?: object;
-    subTitle?: object;
+    container?: StyleProp<ViewStyle>;
+    itemContainer?: StyleProp<ViewStyle>;
+    image?: StyleProp<ImageStyle>;
+    itemText?: StyleProp<TextStyle>;
+    priceText?: StyleProp<TextStyle>;
+    buttonContainer?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
   };
 }
 
@@ -35,28 +90,33 @@ const Wishlist: React.FC<WishlistProps> = ({
   onAddToCart,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const handleRemoveItem = (id: string) => {
-    Alert.alert('Remove Item', 'Are you sure you want to remove this item from your wishlist?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Remove',
-        style: 'destructive',
-        onPress: () => onRemoveItem(id),
-      },
-    ]);
+    Alert.alert(
+      t.removeConfirmTitle,
+      t.removeConfirmMessage,
+      [
+        { text: t.cancelText, style: 'cancel' },
+        { text: t.removeText, style: 'destructive', onPress: () => onRemoveItem(id) },
+      ]
+    );
   };
 
   const handleAddToCart = (item: WishlistItem) => {
-    Alert.alert('Add to Cart', `Do you want to add "${item.name}" to your cart?`, [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Add',
-        style: 'default',
-        onPress: () => onAddToCart(item),
-      },
-    ]);
+    Alert.alert(
+      t.addConfirmTitle,
+      t.addConfirmMessage(item.name),
+      [
+        { text: t.cancelText, style: 'cancel' },
+        { text: t.addText, onPress: () => onAddToCart(item) },
+      ]
+    );
   };
 
   const renderItem = ({ item }: { item: WishlistItem }) => (
@@ -66,17 +126,11 @@ const Wishlist: React.FC<WishlistProps> = ({
         <Text style={[styles.itemText, customStyles.itemText]}>{item.name}</Text>
         <Text style={[styles.priceText, customStyles.priceText]}>${item.price.toFixed(2)}</Text>
         <View style={[styles.buttonContainer, customStyles.buttonContainer]}>
-          <TouchableOpacity
-            style={[styles.button, customStyles.button]}
-            onPress={() => handleAddToCart(item)}
-          >
-            <Text style={[styles.buttonText, customStyles.buttonText]}>Add to Cart</Text>
+          <TouchableOpacity style={[styles.button, customStyles.button]} onPress={() => handleAddToCart(item)}>
+            <Text style={[styles.buttonText, customStyles.buttonText]}>{t.addText}</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.button, customStyles.button]}
-            onPress={() => handleRemoveItem(item.id)}
-          >
-            <Text style={[styles.buttonText, customStyles.buttonText]}>Remove</Text>
+          <TouchableOpacity style={[styles.button, customStyles.button]} onPress={() => handleRemoveItem(item.id)}>
+            <Text style={[styles.buttonText, customStyles.buttonText]}>{t.removeText}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -85,14 +139,9 @@ const Wishlist: React.FC<WishlistProps> = ({
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
-      <FlatList
-        data={items}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingBottom: hp('3%') }}
-      />
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>}
+      <FlatList data={items} renderItem={renderItem} keyExtractor={item => item.id} contentContainerStyle={{ paddingBottom: hp('3%') }} />
     </View>
   );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
-interface WishlistItem {
+import { StyleProp, ViewStyle, TextStyle, ImageStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface WishlistItem {
     id: string;
     name: string;
     price: number;
@@ -9,19 +11,20 @@ interface WishlistProps {
     items: WishlistItem[];
     onRemoveItem: (id: string) => void;
     onAddToCart: (item: WishlistItem) => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        itemContainer?: object;
-        image?: object;
-        itemText?: object;
-        priceText?: object;
-        buttonContainer?: object;
-        button?: object;
-        buttonText?: object;
-        title?: object;
-        subTitle?: object;
+        container?: StyleProp<ViewStyle>;
+        itemContainer?: StyleProp<ViewStyle>;
+        image?: StyleProp<ImageStyle>;
+        itemText?: StyleProp<TextStyle>;
+        priceText?: StyleProp<TextStyle>;
+        buttonContainer?: StyleProp<ViewStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
     };
 }
 declare const Wishlist: React.FC<WishlistProps>;
