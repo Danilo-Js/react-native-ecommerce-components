@@ -1,23 +1,81 @@
 import React, { useState } from 'react';
-import { Text, TextInput, StyleSheet, TouchableOpacity, Alert, ScrollView } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções do componente
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  errorTitle: string;
+  errorMessage: (missing: string[]) => string;
+  successTitle: string;
+  successMessage: string;
+  submitButton: string;
+}> = {
+  en: {
+    defaultTitle: 'New Client',
+    defaultSubTitle: 'Enter client details',
+    errorTitle: 'Error',
+    errorMessage: missing => `Please fill in all fields: ${missing.join(', ')}`,
+    successTitle: 'Success',
+    successMessage: 'Customer registered successfully!',
+    submitButton: 'Register',
+  },
+  pt: {
+    defaultTitle: 'Novo Cliente',
+    defaultSubTitle: 'Insira os dados do cliente',
+    errorTitle: 'Erro',
+    errorMessage: missing => `Por favor, preencha todos os campos: ${missing.join(', ')}`,
+    successTitle: 'Sucesso',
+    successMessage: 'Cliente registrado com sucesso!',
+    submitButton: 'Registrar',
+  },
+};
 
 interface NewClientProps {
   onSubmit: (data: Record<string, string>) => void;
   fields: string[];
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    input?: object;
-    button?: object;
-    buttonText?: object;
-    title?: object;
-    subTitle?: object;
+    container?: StyleProp<ViewStyle>;
+    input?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
   };
 }
 
-const NewClient: React.FC<NewClientProps> = ({ onSubmit, fields, title, subTitle, styles: customStyles = {} }: NewClientProps) => {
+const NewClient: React.FC<NewClientProps> = ({
+  onSubmit,
+  fields,
+  title,
+  subTitle,
+  language = 'en',
+  styles: customStyles = {},
+}) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const [formData, setFormData] = useState<Record<string, string>>({});
 
   const handleInputChange = (field: string, value: string) => {
@@ -25,32 +83,41 @@ const NewClient: React.FC<NewClientProps> = ({ onSubmit, fields, title, subTitle
   };
 
   const handleSubmit = () => {
-    const missingFields = fields.filter((field) => !formData[field]);
+    const missingFields = fields.filter(field => !formData[field]);
     if (missingFields.length > 0) {
-      Alert.alert('Error', `Please fill in all fields: ${missingFields.join(', ')}`);
+      Alert.alert(t.errorTitle, t.errorMessage(missingFields));
       return;
     }
-
     onSubmit(formData);
     setFormData({});
-    Alert.alert('Success', 'Customer registered successfully!');
+    Alert.alert(t.successTitle, t.successMessage);
   };
 
   return (
-    <ScrollView style={[styles.container, customStyles.container]} contentContainerStyle={{ paddingBottom: hp('10%') }}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
-      {fields.map((field) => (
+    <ScrollView
+      style={[styles.container, customStyles.container]}
+      contentContainerStyle={{ paddingBottom: hp('10%') }}
+    >
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>
+      )}
+      {fields.map(field => (
         <TextInput
           key={field}
           style={[styles.input, customStyles.input]}
           placeholder={field}
           value={formData[field] || ''}
-          onChangeText={(value) => handleInputChange(field, value)}
+          onChangeText={value => handleInputChange(field, value)}
         />
       ))}
-      <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handleSubmit}>
-        <Text style={[styles.buttonText, customStyles.buttonText]}>Register</Text>
+      <TouchableOpacity
+        style={[styles.button, customStyles.button]}
+        onPress={handleSubmit}
+      >
+        <Text style={[styles.buttonText, customStyles.buttonText]}>
+          {t.submitButton}
+        </Text>
       </TouchableOpacity>
     </ScrollView>
   );
