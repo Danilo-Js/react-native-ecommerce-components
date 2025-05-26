@@ -23,6 +23,7 @@ O componente **PaymentGateway** fornece uma interface segura e intuitiva para in
 | `title`           | `string`                                   | ✅          | Texto do título exibido no topo do formulário de pagamento.                                     |
 | `subTitle`        | `string`                                   | ❌          | Texto do subtítulo exibido abaixo do título.                                                    |
 | `styles`          | `object`                                   | ❌          | Estilos personalizados para `container`, `title`, `subTitle`, `input`, `button` e `buttonText`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto PaymentDetails**
 

@@ -1,22 +1,76 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface PaymentGatewayProps {
-  onPaymentSubmit: (paymentDetails: PaymentDetails) => void;
-  title: string;
-  subTitle?: string;
-  styles?: {
-    container?: object;
-    title?: object;
-    subTitle?: object;
-    input?: object;
-    button?: object;
-    buttonText?: object;
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções do componente
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  errorTitle: string;
+  errorMessage: string;
+  successTitle: string;
+  successMessage: string;
+  placeholders: {
+    cardNumber: string;
+    cardHolder: string;
+    expirationDate: string;
+    cvv: string;
+    billingAddress: string;
   };
-}
+  submitButton: string;
+}> = {
+  en: {
+    defaultTitle: 'Payment',
+    defaultSubTitle: 'Enter your payment details',
+    errorTitle: 'Error',
+    errorMessage: 'Please fill in all required fields.',
+    successTitle: 'Success',
+    successMessage: 'Payment processed successfully!',
+    placeholders: {
+      cardNumber: 'Card Number',
+      cardHolder: 'Card Holder',
+      expirationDate: 'Expiration Date (MM/YY)',
+      cvv: 'CVV',
+      billingAddress: 'Billing Address (Optional)',
+    },
+    submitButton: 'Submit Payment',
+  },
+  pt: {
+    defaultTitle: 'Pagamento',
+    defaultSubTitle: 'Insira os dados de pagamento',
+    errorTitle: 'Erro',
+    errorMessage: 'Por favor, preencha todos os campos obrigatórios.',
+    successTitle: 'Sucesso',
+    successMessage: 'Pagamento processado com sucesso!',
+    placeholders: {
+      cardNumber: 'Número do Cartão',
+      cardHolder: 'Titular do Cartão',
+      expirationDate: 'Validade (MM/AA)',
+      cvv: 'CVV',
+      billingAddress: 'Endereço de Cobrança (Opcional)',
+    },
+    submitButton: 'Enviar Pagamento',
+  },
+};
 
-interface PaymentDetails {
+// Detalhes do pagamento capturados
+export interface PaymentDetails {
   cardNumber: string;
   cardHolder: string;
   expirationDate: string;
@@ -24,12 +78,32 @@ interface PaymentDetails {
   billingAddress?: string;
 }
 
+interface PaymentGatewayProps {
+  onPaymentSubmit: (paymentDetails: PaymentDetails) => void;
+  title?: string;
+  subTitle?: string;
+  language?: Language;
+  styles?: {
+    container?: StyleProp<ViewStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    input?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
+  };
+}
+
 const PaymentGateway: React.FC<PaymentGatewayProps> = ({
   onPaymentSubmit,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   const [cardNumber, setCardNumber] = useState('');
   const [cardHolder, setCardHolder] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
@@ -38,30 +112,22 @@ const PaymentGateway: React.FC<PaymentGatewayProps> = ({
 
   const handlePayment = () => {
     if (!cardNumber || !cardHolder || !expirationDate || !cvv) {
-      Alert.alert('Error', 'Please fill in all required fields.');
+      Alert.alert(t.errorTitle, t.errorMessage);
       return;
     }
-
-    const paymentDetails: PaymentDetails = {
-      cardNumber,
-      cardHolder,
-      expirationDate,
-      cvv,
-      billingAddress,
-    };
-
+    const paymentDetails: PaymentDetails = { cardNumber, cardHolder, expirationDate, cvv, billingAddress };
     onPaymentSubmit(paymentDetails);
-    Alert.alert('Success', 'Payment processed successfully!');
+    Alert.alert(t.successTitle, t.successMessage);
   };
 
   return (
     <ScrollView contentContainerStyle={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>}
 
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Card Number"
+        placeholder={t.placeholders.cardNumber}
         keyboardType="numeric"
         value={cardNumber}
         onChangeText={setCardNumber}
@@ -69,20 +135,20 @@ const PaymentGateway: React.FC<PaymentGatewayProps> = ({
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Card Holder"
+        placeholder={t.placeholders.cardHolder}
         value={cardHolder}
         onChangeText={setCardHolder}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Expiration Date (MM/YY)"
+        placeholder={t.placeholders.expirationDate}
         value={expirationDate}
         onChangeText={setExpirationDate}
         maxLength={5}
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="CVV"
+        placeholder={t.placeholders.cvv}
         keyboardType="numeric"
         secureTextEntry
         value={cvv}
@@ -91,13 +157,13 @@ const PaymentGateway: React.FC<PaymentGatewayProps> = ({
       />
       <TextInput
         style={[styles.input, customStyles.input]}
-        placeholder="Billing Address (Optional)"
+        placeholder={t.placeholders.billingAddress}
         value={billingAddress}
         onChangeText={setBillingAddress}
       />
 
       <TouchableOpacity style={[styles.button, customStyles.button]} onPress={handlePayment}>
-        <Text style={[styles.buttonText, customStyles.buttonText]}>Submit Payment</Text>
+        <Text style={[styles.buttonText, customStyles.buttonText]}>{t.submitButton}</Text>
       </TouchableOpacity>
     </ScrollView>
   );
