@@ -25,6 +25,7 @@ O componente **ProductDetail** exibe informações detalhadas sobre um produto e
 | `title`       | `string`                     | ✅          | Texto do título exibido no topo da tela do produto.                                                                                                   |
 | `subTitle`    | `string`                     | ❌          | Texto do subtítulo exibido abaixo do título.                                                                                                          |
 | `styles`      | `object`                     | ❌          | Estilos personalizados para `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, e `buttonText`. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ### 📦 **Estrutura do Objeto Product**
 
@@ -53,9 +54,9 @@ import { ProductDetail } from "react-native-ecommerce-components/lib";
 const App = () => {
   const product = {
     id: "1",
-    title: "Smartphone Pro X",
+    title: "Celular Pro X",
     description:
-      "A powerful smartphone with excellent camera quality and long battery life.",
+      "Um smartphone potente com excelente qualidade de câmera e longa duração de bateria.",
     price: 999.99,
     image:
       "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-iphone-256.png",
@@ -63,21 +64,22 @@ const App = () => {
   };
 
   const handleAddToCart = (paramProduct) => {
-    Alert.alert("Add to Cart", `${paramProduct.title} added to cart.`);
+    Alert.alert("Adicionar ao carrinho", `${paramProduct.title} added to cart.`);
   };
 
   const handleBuyNow = (paramProduct) => {
-    Alert.alert("Buy Now", `Proceeding to buy ${paramProduct.title}.`);
+    Alert.alert("Comprar agora", `Comprando ${paramProduct.title}.`);
   };
 
   return (
     <View style={{ flex: 1 }}>
       <ProductDetail
+        language="pt"
         product={product}
         onAddToCart={handleAddToCart}
         onBuyNow={handleBuyNow}
-        title="Product Details"
-        subTitle="Explore the features of this product"
+        title="Detalhes do Produto"
+        subTitle="Conheça as características"
       />
     </View>
   );

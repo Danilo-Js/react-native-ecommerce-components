@@ -50,15 +50,15 @@ import { PaymentGateway } from "react-native-ecommerce-components/lib";
 
 const PaymentGatewayTest = () => {
   const handlePayment = (paymentDetails) => {
-    console.log("Payment Details:", paymentDetails);
-    Alert.alert("Payment Success", "Payment details have been submitted.");
+    console.log("Detalhes do pagamento:", paymentDetails);
+    Alert.alert("Pagamento realizado", "Os detalhes do pagamento foram enviados.");
   };
 
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <PaymentGateway
-        title="Secure Payment"
-        subTitle="Please enter your card details"
+        title="Pagamento seguro"
+        subTitle="Insira os dados do cartão"
         onPaymentSubmit={handlePayment}
       />
     </View>

@@ -1,8 +1,47 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+  ImageStyle,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-interface Product {
+// Idiomas suportados
+type Language = 'en' | 'pt';
+
+// Traduções para títulos, subtítulos e botões
+const translations: Record<Language, {
+  defaultTitle: string;
+  defaultSubTitle?: string;
+  addToCart: string;
+  buyNow: string;
+}> = {
+  en: {
+    defaultTitle: 'Product Details',
+    defaultSubTitle: undefined,
+    addToCart: 'Add to Cart',
+    buyNow: 'Buy Now',
+  },
+  pt: {
+    defaultTitle: 'Detalhes do Produto',
+    defaultSubTitle: undefined,
+    addToCart: '+ Carrinho',
+    buyNow: 'Comprar Agora',
+  },
+};
+
+// Modelo de produto
+export interface Product {
   id: string;
   title: string;
   description: string;
@@ -15,19 +54,21 @@ interface ProductDetailProps {
   product: Product;
   onAddToCart: (product: Product) => void;
   onBuyNow: (product: Product) => void;
-  title: string;
+  title?: string;
   subTitle?: string;
+  language?: Language;
   styles?: {
-    container?: object;
-    image?: object;
-    title?: object;
-    subTitle?: object;
-    description?: object;
-    price?: object;
-    rating?: object;
-    buttonContainer?: object;
-    button?: object;
-    buttonText?: object;
+    container?: StyleProp<ViewStyle>;
+    image?: StyleProp<ImageStyle>;
+    title?: StyleProp<TextStyle>;
+    subTitle?: StyleProp<TextStyle>;
+    productTitle?: StyleProp<TextStyle>;
+    price?: StyleProp<TextStyle>;
+    rating?: StyleProp<TextStyle>;
+    description?: StyleProp<TextStyle>;
+    buttonContainer?: StyleProp<ViewStyle>;
+    button?: StyleProp<ViewStyle>;
+    buttonText?: StyleProp<TextStyle>;
   };
 }
 
@@ -37,33 +78,50 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
   onBuyNow,
   title,
   subTitle,
+  language = 'en',
   styles: customStyles = {},
 }) => {
+  const t = translations[language] || translations.en;
+  const displayTitle = title || t.defaultTitle;
+  const displaySubTitle = subTitle || t.defaultSubTitle;
+
   return (
     <ScrollView style={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title}</Text>
-      {subTitle && <Text style={[styles.subTitle, customStyles.subTitle]}>{subTitle}</Text>}
+      <Text style={[styles.title, customStyles.title]}>{displayTitle}</Text>
+      {displaySubTitle && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>{displaySubTitle}</Text>
+      )}
 
       <Image source={{ uri: product.image }} style={[styles.image, customStyles.image]} />
 
-      <Text style={[styles.productTitle, customStyles.title]}>{product.title}</Text>
+      <Text style={[styles.productTitle, customStyles.productTitle]}>
+        {product.title}
+      </Text>
       <Text style={[styles.price, customStyles.price]}>${product.price.toFixed(2)}</Text>
-      {product.rating && <Text style={[styles.rating, customStyles.rating]}>⭐ {product.rating}</Text>}
+      {product.rating !== undefined && (
+        <Text style={[styles.rating, customStyles.rating]}>⭐ {product.rating}</Text>
+      )}
 
-      <Text style={[styles.description, customStyles.description]}>{product.description}</Text>
+      <Text style={[styles.description, customStyles.description]}>
+        {product.description}
+      </Text>
 
       <View style={[styles.buttonContainer, customStyles.buttonContainer]}>
         <TouchableOpacity
-          style={[styles.button, styles.addToCartButton, customStyles.button]}
+          style={[styles.button, customStyles.button]}
           onPress={() => onAddToCart(product)}
         >
-          <Text style={[styles.buttonText, customStyles.buttonText]}>Add to Cart</Text>
+          <Text style={[styles.buttonText, customStyles.buttonText]}>
+            {t.addToCart}
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.button, styles.buyNowButton, customStyles.button]}
+          style={[styles.button, customStyles.button]}
           onPress={() => onBuyNow(product)}
         >
-          <Text style={[styles.buttonText, customStyles.buttonText]}>Buy Now</Text>
+          <Text style={[styles.buttonText, customStyles.buttonText]}>
+            {t.buyNow}
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -123,12 +181,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('1%'),
     borderRadius: wp('2%'),
     alignItems: 'center',
-  },
-  addToCartButton: {
     backgroundColor: '#007bff',
-  },
-  buyNowButton: {
-    backgroundColor: '#ffc107',
   },
   buttonText: {
     color: '#fff',

@@ -1,5 +1,7 @@
 import React from 'react';
-interface Product {
+import { StyleProp, ViewStyle, TextStyle, ImageStyle } from 'react-native';
+type Language = 'en' | 'pt';
+export interface Product {
     id: string;
     title: string;
     description: string;
@@ -11,19 +13,21 @@ interface ProductDetailProps {
     product: Product;
     onAddToCart: (product: Product) => void;
     onBuyNow: (product: Product) => void;
-    title: string;
+    title?: string;
     subTitle?: string;
+    language?: Language;
     styles?: {
-        container?: object;
-        image?: object;
-        title?: object;
-        subTitle?: object;
-        description?: object;
-        price?: object;
-        rating?: object;
-        buttonContainer?: object;
-        button?: object;
-        buttonText?: object;
+        container?: StyleProp<ViewStyle>;
+        image?: StyleProp<ImageStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
+        productTitle?: StyleProp<TextStyle>;
+        price?: StyleProp<TextStyle>;
+        rating?: StyleProp<TextStyle>;
+        description?: StyleProp<TextStyle>;
+        buttonContainer?: StyleProp<ViewStyle>;
+        button?: StyleProp<ViewStyle>;
+        buttonText?: StyleProp<TextStyle>;
     };
 }
 declare const ProductDetail: React.FC<ProductDetailProps>;
