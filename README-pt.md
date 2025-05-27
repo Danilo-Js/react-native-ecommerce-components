@@ -78,7 +78,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/NewClient.md">
         <strong>Formulário Novo Cliente</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/NewClient.png" alt="NewClient" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/NewClientpt.png" alt="NewClient" width="300"/>
       </a>
     </td>
     <td align="center">

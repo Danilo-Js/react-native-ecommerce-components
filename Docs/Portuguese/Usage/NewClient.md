@@ -9,7 +9,7 @@ O componente **NewClient** fornece uma interface intuitiva para coletar informa�
 <table>
   <tr>
     <td><strong>Novo Cliente</strong></td>
-    <td><img src="../../Images/NewClient.png" alt="NewClient" width="200"/></td>
+    <td><img src="../../Images/NewClientpt.png" alt="NewClient" width="200"/></td>
   </tr>
 </table>
 
@@ -24,6 +24,7 @@ O componente **NewClient** fornece uma interface intuitiva para coletar informa�
 | `title`     | `string`                                 | ✅          | Texto do título exibido no topo do formulário.                                      |
 | `subTitle`  | `string`                                 | ❌          | Texto do subtítulo exibido abaixo do título.                                        |
 | `styles`    | `object`                                 | ❌          | Estilos personalizados para container, input, button, buttonText, title e subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Linguagem do componente em português ou inglês (default). |
 
 ---
 
@@ -38,18 +39,19 @@ import { NewClient } from "react-native-ecommerce-components/lib";
 
 const App = () => {
   const handleClientSubmission = (data) => {
-    console.log("New Client Data:", data);
+    console.log("Dados do Novo Cliente:", data);
   };
 
-  const fields = ["Name", "Date of Birth", "Email", "Phone"];
+  const fields = ["Nome", "Data de Nascimento", "Email", "Telefone"];
 
   return (
     <View>
       <NewClient
+        language="pt"
         onSubmit={handleClientSubmission}
         fields={fields}
-        title="Customer Registration"
-        subTitle="Fill out the form below to register"
+        title="Cadastro de Cliente"
+        subTitle="Preencha o formulário abaixo para se cadastrar"
       />
     </View>
   );
