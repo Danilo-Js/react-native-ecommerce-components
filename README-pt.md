@@ -72,7 +72,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/CouponCodeInput.md">
         <strong>Entrada de Cupom</strong><br/>
-        <img src="./Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
+        <img src="./Docs/Images/CouponCodeInputpt.png" alt="CouponCodeInput" width="300"/>
       </a>
     </td>
     <td align="center">

@@ -9,7 +9,7 @@ O componente **CouponCodeInput** fornece uma maneira intuitiva para inserir e ap
 <table>
   <tr>
     <td><strong>Entrada de Código de Cupom</strong></td>
-    <td><img src="../../Images/CouponCodeInput.png" alt="CouponCodeInput" width="200"/></td>
+    <td><img src="../../Images/CouponCodeInputpt.png" alt="CouponCodeInput" width="200"/></td>
   </tr>
 </table>
 
