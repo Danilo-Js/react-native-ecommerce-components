@@ -1,4 +1,5 @@
 import React from 'react';
+import { ViewStyle, TextStyle, ImageStyle, StyleProp } from 'react-native';
 interface Category {
     id: string;
     name: string;
@@ -11,13 +12,13 @@ interface CategoryListProps {
     title: string;
     subTitle?: string;
     styles?: {
-        container?: object;
-        categoryContainer?: object;
-        categoryImage?: object;
-        categoryText?: object;
-        descriptionText?: object;
-        title?: object;
-        subTitle?: object;
+        container?: StyleProp<ViewStyle>;
+        categoryContainer?: StyleProp<ViewStyle>;
+        categoryImage?: StyleProp<ImageStyle>;
+        categoryText?: StyleProp<TextStyle>;
+        descriptionText?: StyleProp<TextStyle>;
+        title?: StyleProp<TextStyle>;
+        subTitle?: StyleProp<TextStyle>;
     };
 }
 declare const CategoryList: React.FC<CategoryListProps>;

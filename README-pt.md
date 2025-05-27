@@ -64,7 +64,7 @@ Clique na imagem para visualizar a documentação do componente.
 <table>
   <tr>
     <td align="center">
-      <a href="Docs/Portuguese/Usage/CategoryList.md">
+      <a href="Docs/Portuguese/Usage/CategoryListpt.md">
         <strong>Lista de Categorias</strong><br/>
         <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/CategoryList.png" alt="CategoryList" width="300"/>
       </a>
