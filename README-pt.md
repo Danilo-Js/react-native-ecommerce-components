@@ -124,7 +124,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ReviewAndRatings.md">
         <strong>Avaliações</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ReviewAndRatingspt.png" alt="ReviewAndRatings" width="300"/>
       </a>
     </td>
     <td align="center">
