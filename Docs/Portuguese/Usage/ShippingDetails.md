@@ -9,7 +9,7 @@ O componente **ShippingDetails** oferece uma interface completa para coletar inf
 <table>
   <tr>
     <td><strong>Detalhes de Envio</strong></td>
-    <td><img src="../../Images/ShippingDetails.png" alt="ShippingDetails" width="200"/></td>
+    <td><img src="../../Images/ShippingDetailspt.png" alt="ShippingDetails" width="200"/></td>
   </tr>
 </table>
 

@@ -136,7 +136,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ShippingDetails.md">
         <strong>Detalhes de Envio</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShippingDetailspt.png" alt="ShippingDetails" width="300"/>
       </a>
     </td>
   </tr>
