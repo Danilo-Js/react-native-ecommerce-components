@@ -25,6 +25,7 @@ The **ProductDetail** component displays detailed information about a specific p
 | `title`       | `string`                     | ✅       | Title text displayed at the top of the product screen.                                                                                        |
 | `subTitle`    | `string`                     | ❌       | Subtitle text displayed below the title.                                                                                                      |
 | `styles`      | `object`                     | ❌       | Custom styles for `container`, `image`, `title`, `subTitle`, `description`, `price`, `rating`, `buttonContainer`, `button`, and `buttonText`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **Product Object Structure**
 

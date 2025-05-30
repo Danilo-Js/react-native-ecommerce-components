@@ -24,6 +24,7 @@ The **CategoryList** component displays a list of product categories in an organ
 | `title`            | `string`                       | ✅       | Title text displayed at the top of the list.                                                                      |
 | `subTitle`         | `string`                       | ❌       | Subtitle text displayed below the title.                                                                          |
 | `styles`           | `object`                       | ❌       | Custom styles for container, categoryContainer, categoryImage, categoryText, descriptionText, title and subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **Category Object Structure**
 

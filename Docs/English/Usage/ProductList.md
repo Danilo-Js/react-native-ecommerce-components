@@ -26,6 +26,7 @@ The **ProductList** component displays a list of products in either grid or list
 | `title`          | `string`                     | ✅       | Title text displayed at the top of the list.                                                                                                        |
 | `subTitle`       | `string`                     | ❌       | Subtitle text displayed below the title.                                                                                                            |
 | `styles`         | `object`                     | ❌       | Custom styles for `container`, `productContainer`, `productImage`, `productTitle`, `productPrice`, `button`, `buttonText`, `title`, and `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **Product Object Structure**
 

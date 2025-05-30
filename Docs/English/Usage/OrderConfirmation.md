@@ -29,6 +29,7 @@ The **OrderConfirmation** component provides a clear summary of an order with es
 | `title`              | `string`     | ✅       | Title text displayed at the top of the confirmation screen.                                                      |
 | `subTitle`           | `string`     | ❌       | Subtitle text displayed below the title.                                                                         |
 | `styles`             | `object`     | ❌       | Custom styles for container, orderInfo, buttonContainer, orderInfoText, button, buttonText, title, and subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ---
 

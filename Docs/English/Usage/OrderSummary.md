@@ -28,6 +28,7 @@ The **OrderSummary** component provides a detailed summary of an order, includin
 | `title`      | `string`      | ✅       | Title text displayed at the top of the summary.                                                                                                              |
 | `subTitle`   | `string`      | ❌       | Subtitle text displayed below the title.                                                                                                                     |
 | `styles`     | `object`      | ❌       | Custom styles for `container`, `itemContainer`, `itemText`, `summaryContainer`, `summaryText`, `totalText`, `button`, `buttonText`, `title`, and `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **OrderItem Object Structure**
 

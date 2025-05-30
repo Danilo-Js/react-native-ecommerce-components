@@ -26,7 +26,7 @@ The **ReviewAndRatings** component allows users to view, add, and manage reviews
 | `title`         | `string`                                 | ✅        | Title text displayed at the top of the reviews section.                                                                                                           |
 | `subTitle`      | `string`                                 | ❌        | Subtitle text displayed below the title.                                                                                                                          |
 | `styles`        | `object`                                 | ❌        | Custom styles for `container`, `title`, `subTitle`, `reviewContainer`, `reviewUser`, `reviewComment`, `reviewDate`, `reviewRating`, `inputContainer`, `input`, `button`, `buttonText`, `ratingContainer`, and `averageRating`. |
-
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **Review Object Structure**
 

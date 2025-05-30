@@ -23,6 +23,7 @@ The **OrderTracking** component displays the status of an order through a series
 | `title`    | `string`              | ✅       | Title text displayed at the top of the tracking component.                                                                                              |
 | `subTitle` | `string`              | ❌       | Subtitle text displayed below the title.                                                                                                                |
 | `styles`   | `object`              | ❌       | Custom styles for `container`, `title`, `subTitle`, `stepContainer`, `stepTitle`, `stepDescription`, `stepCompleted`, `stepCurrent`, and `stepPending`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **OrderTrackingStep Object Structure**
 

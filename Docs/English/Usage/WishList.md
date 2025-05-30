@@ -25,6 +25,7 @@ The **WishList** component displays a list of favorite products, allowing users 
 | `title`        | `string`                       | ✅       | Title text displayed at the top of the wishlist.                                                                                                      |
 | `subTitle`     | `string`                       | ❌       | Subtitle text displayed below the title.                                                                                                              |
 | `styles`       | `object`                       | ❌       | Custom styles for `container`, `itemContainer`, `image`, `itemText`, `priceText`, `buttonContainer`, `button`, `buttonText`, `title`, and `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **WishlistItem Object Structure**
 

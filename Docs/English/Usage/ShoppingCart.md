@@ -26,6 +26,7 @@ The **ShoppingCart** component provides a detailed overview of items in a user's
 | `title`            | `string`                                     | ✅       | Title text displayed at the top of the shopping cart.                                                                                       |
 | `subTitle`         | `string`                                     | ❌       | Subtitle text displayed below the title.                                                                                                    |
 | `styles`           | `object`                                     | ❌       | Custom styles for `container`, `itemContainer`, `itemText`, `button`, `buttonText`, `totalContainer`, `totalText`, `title`, and `subTitle`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **CartItem Object Structure**
 

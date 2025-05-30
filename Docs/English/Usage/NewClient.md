@@ -24,6 +24,7 @@ The **NewClient** component provides an intuitive interface for collecting custo
 | `title`    | `string`                                 | ✅       | Title text displayed at the top of the form.                                 |
 | `subTitle` | `string`                                 | ❌       | Subtitle text displayed below the title.                                     |
 | `styles`   | `object`                                 | ❌       | Custom styles for container, input, button, buttonText, title, and subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ---
 

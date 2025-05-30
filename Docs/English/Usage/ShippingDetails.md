@@ -23,6 +23,7 @@ The **ShippingDetails** component provides a comprehensive interface for collect
 | `title`    | `string`                                         | ✅       | Title text displayed at the top of the form.                                             |
 | `subTitle` | `string`                                         | ❌       | Subtitle text displayed below the title.                                                 |
 | `styles`   | `object`                                         | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **ShippingDetailsData Object Structure**
 

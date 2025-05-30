@@ -23,6 +23,7 @@ The **SearchBar** component provides an intuitive search interface, allowing use
 | `placeholder`     | `string`                  | ❌       | Placeholder text displayed in the input field. Default is `"Search..."`. |
 | `clearButtonText` | `string`                  | ❌       | Text displayed on the clear button. Default is `"Clear"`.                |
 | `styles`          | `object`                  | ❌       | Custom styles for `container`, `input`, `button`, and `buttonText`.      |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ---
 

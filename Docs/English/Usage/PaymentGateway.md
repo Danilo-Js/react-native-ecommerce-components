@@ -23,6 +23,7 @@ The **PaymentGateway** component provides a secure and user-friendly interface f
 | `title`           | `string`                                   | ✅       | Title text displayed at the top of the payment form.                                     |
 | `subTitle`        | `string`                                   | ❌       | Subtitle text displayed below the title.                                                 |
 | `styles`          | `object`                                   | ❌       | Custom styles for `container`, `title`, `subTitle`, `input`, `button`, and `buttonText`. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ### 📦 **PaymentDetails Object Structure**
 

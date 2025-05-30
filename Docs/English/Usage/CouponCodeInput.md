@@ -25,6 +25,7 @@ The **CouponCodeInput** component provides a user-friendly way to input and appl
 | `title`          | `string`                   | ✅       | Title text displayed above the coupon input.                                                                              |
 | `subTitle`       | `string`                   | ❌       | Subtitle text displayed below the title.                                                                                  |
 | `styles`         | `object`                   | ❌       | Custom styles for container, message, input, buttonContainer, buttonApply, buttonRemove, buttonText, title, and subTitle. |
+| `language`         | `en` ou `pt`                 | ❌          | Component language in Portuguese or English (default). |
 
 ---
 
