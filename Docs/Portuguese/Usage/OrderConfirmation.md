@@ -9,7 +9,7 @@ O componente **OrderConfirmation** fornece um resumo claro de um pedido com deta
 <table>
   <tr>
     <td><strong>Confirmação de Pedido</strong></td>
-    <td><img src="../../Images/OrderConfirmation.png" alt="OrderConfirmation" width="200"/></td>
+    <td><img src="../../Images/OrderConfirmationpt.png" alt="OrderConfirmation" width="200"/></td>
   </tr>
 </table>
 

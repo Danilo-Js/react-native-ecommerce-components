@@ -84,7 +84,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderConfirmation.md">
         <strong>Confirmação de Pedido</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderConfirmationpt.png" alt="OrderConfirmation" width="300"/>
       </a>
     </td>
   </tr>
