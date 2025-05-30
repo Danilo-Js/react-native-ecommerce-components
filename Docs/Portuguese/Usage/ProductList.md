@@ -9,7 +9,7 @@ O componente **ProductList** exibe uma lista de produtos em formato de **grade**
 <table>
   <tr>
     <td><strong>Lista de Produtos</strong></td>
-    <td><img src="../../Images/ProductList.png" alt="ProductList" width="200"/></td>
+    <td><img src="../../Images/ProductListpt.png" alt="ProductList" width="200"/></td>
   </tr>
 </table>
 
@@ -88,7 +88,7 @@ const App = () => {
     <View style={{ flex: 1 }}>
       <ProductList
         language="pt"
-        products={filteredProducts}
+        products={products}
         onAddToCart={handleAddToCart}
         onProductPress={handleProductPress}
         gridView={true}

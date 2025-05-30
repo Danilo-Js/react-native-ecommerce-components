@@ -118,7 +118,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ProductList.md">
         <strong>Lista de Produtos</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductList.png" alt="ProductList" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductListpt.png" alt="ProductList" width="300"/>
       </a>
     </td>
     <td align="center">
