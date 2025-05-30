@@ -9,7 +9,7 @@ O componente **OrderSummary** fornece um resumo detalhado de um pedido, incluind
 <table>
   <tr>
     <td><strong>Resumo do Pedido</strong></td>
-    <td><img src="../../Images/OrderSummary.png" alt="OrderSummary" width="200"/></td>
+    <td><img src="../../Images/OrderSummarypt.png" alt="OrderSummary" width="200"/></td>
   </tr>
 </table>
 
