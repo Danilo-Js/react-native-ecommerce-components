@@ -9,7 +9,7 @@ O componente **SearchBar** oferece uma interface intuitiva de pesquisa, permitin
 <table>
   <tr>
     <td><strong>Barra de Pesquisa</strong></td>
-    <td><img src="../../Images/SearchBar.png" alt="SearchBar" width="200"/></td>
+    <td><img src="../../Images/SearchBarpt.png" alt="SearchBar" width="200"/></td>
   </tr>
 </table>
 

@@ -130,7 +130,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/SearchBar.md">
         <strong>Barra de Pesquisa</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/SearchBar.png" alt="SearchBar" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/SearchBarpt.png" alt="SearchBar" width="300"/>
       </a>
     </td>
     <td align="center">
