@@ -9,7 +9,7 @@ O componente **ProductDetail** exibe informações detalhadas sobre um produto e
 <table>
   <tr>
     <td><strong>Detalhes do Produto</strong></td>
-    <td><img src="../../Images/ProductDetail.png" alt="ProductDetail" width="200"/></td>
+    <td><img src="../../Images/ProductDetailpt.png" alt="ProductDetail" width="200"/></td>
   </tr>
 </table>
 

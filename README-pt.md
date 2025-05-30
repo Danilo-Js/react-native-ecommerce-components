@@ -110,7 +110,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/ProductDetail.md">
         <strong>Detalhes do Produto</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductDetailpt.png" alt="ProductDetail" width="300"/>
       </a>
     </td>
   </tr>
