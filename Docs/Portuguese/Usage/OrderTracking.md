@@ -9,7 +9,7 @@ O componente **OrderTracking** exibe o status de um pedido por meio de uma séri
 <table>
   <tr>
     <td><strong>Rastreamento de Pedido</strong></td>
-    <td><img src="../../Images/OrderTracking.png" alt="OrderTracking" width="200"/></td>
+    <td><img src="../../Images/OrderTrackingpt.png" alt="OrderTracking" width="200"/></td>
   </tr>
 </table>
 

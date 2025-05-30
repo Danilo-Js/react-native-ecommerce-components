@@ -98,7 +98,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/OrderTracking.md">
         <strong>Rastreamento de Pedido</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderTracking.png" alt="OrderTracking" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderTrackingpt.png" alt="OrderTracking" width="300"/>
       </a>
     </td>
     <td align="center">
