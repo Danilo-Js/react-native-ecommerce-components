@@ -9,7 +9,7 @@ O componente **PaymentGateway** fornece uma interface segura e intuitiva para in
 <table>
   <tr>
     <td><strong>Gateway de Pagamento</strong></td>
-    <td><img src="../../Images/PaymentGateway.png" alt="PaymentGateway" width="200"/></td>
+    <td><img src="../../Images/PaymentGatewaypt.png" alt="PaymentGateway" width="200"/></td>
   </tr>
 </table>
 

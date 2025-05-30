@@ -104,7 +104,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/PaymentGateway.md">
         <strong>Gateway de Pagamento</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/PaymentGatewaypt.png" alt="PaymentGateway" width="300"/>
       </a>
     </td>
     <td align="center">
