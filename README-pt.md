@@ -150,7 +150,7 @@ Clique na imagem para visualizar a documentação do componente.
     <td align="center">
       <a href="Docs/Portuguese/Usage/WishList.md">
         <strong>Lista de Desejos</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/WishList.png" alt="WishList" width="300"/>
+        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/WishListpt.png" alt="WishList" width="300"/>
       </a>
     </td>
   </tr>

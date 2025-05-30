@@ -9,7 +9,7 @@ O componente **WishList** exibe uma lista de produtos favoritos, permitindo que 
 <table>
   <tr>
     <td><strong>Lista de Desejos</strong></td>
-    <td><img src="../../Images/WishList.png" alt="WishList" width="200"/></td>
+    <td><img src="../../Images/WishListpt.png" alt="WishList" width="200"/></td>
   </tr>
 </table>
 

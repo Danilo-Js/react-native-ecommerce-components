@@ -41,7 +41,7 @@ const translations: Record<Language, {
     addConfirmMessage: name => `Do you want to add "${name}" to your cart?`,
     cancelText: 'Cancel',
     removeText: 'Remove',
-    addText: 'Add',
+    addText: '+ Cart',
   },
   pt: {
     defaultTitle: 'Lista de Desejos',
@@ -52,7 +52,7 @@ const translations: Record<Language, {
     addConfirmMessage: name => `Deseja adicionar "${name}" ao seu carrinho?`,
     cancelText: 'Cancelar',
     removeText: 'Remover',
-    addText: 'Adicionar',
+    addText: '+ Carrinho',
   },
 };
 
