@@ -9,7 +9,7 @@ O componente **ShoppingCart** fornece uma visão detalhada dos itens no carrinho
 <table>
   <tr>
     <td><strong>Carrinho de Compras</strong></td>
-    <td><img src="../../Images/ShoppingCart.png" alt="ShoppingCart" width="200"/></td>
+    <td><img src="../../Images/ShoppingCartpt.png" alt="ShoppingCart" width="200"/></td>
   </tr>
 </table>
 

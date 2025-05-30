@@ -121,8 +121,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
         : item
     );
     setCartItems(updated);
-    const updatedQty = updated.find(i => i.id === id)?.quantity || 1;
-    onUpdateQuantity(id, updatedQty);
+    onUpdateQuantity(id, updated.find(i => i.id === id)!.quantity);
   };
 
   const confirmRemove = (id: string) => {
@@ -157,9 +156,10 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
   const renderItem = ({ item }: { item: CartItem }) => (
     <View style={[styles.itemContainer, customStyles.itemContainer]}>
-      <Text style={[styles.itemText, customStyles.itemText]}>//
+      <Text style={[styles.itemText, customStyles.itemText]}>
         {item.name} - ${item.price.toFixed(2)} x {item.quantity}
       </Text>
+
       <View style={[styles.quantityContainer, customStyles.quantityContainer]}>
         <TouchableOpacity onPress={() => handleQuantityChange(item.id, -1)}>
           <Text style={[styles.quantityButton, customStyles.quantityButton]}>-</Text>
@@ -171,6 +171,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
           <Text style={[styles.quantityButton, customStyles.quantityButton]}>+</Text>
         </TouchableOpacity>
       </View>
+
       <TouchableOpacity onPress={() => confirmRemove(item.id)}>
         <Text style={[styles.removeButton, customStyles.removeButton]}>
           {t.removeButtonText}
@@ -181,17 +182,21 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
   return (
     <View style={[styles.container, customStyles.container]}>
-      <Text style={[styles.title, customStyles.title]}>{title || t.defaultTitle}</Text>
-      { (subTitle || t.defaultSubTitle) && (
-        <Text style={[styles.subTitle, customStyles.subTitle]}> 
+      <Text style={[styles.title, customStyles.title]}>
+        {title || t.defaultTitle}
+      </Text>
+      {(subTitle || t.defaultSubTitle) && (
+        <Text style={[styles.subTitle, customStyles.subTitle]}>
           {subTitle || t.defaultSubTitle}
         </Text>
-      ) }
+      )}
+
       <FlatList
         data={cartItems}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
+
       <View style={[styles.totalContainer, customStyles.totalContainer]}>
         <Text style={[styles.totalText, customStyles.totalText]}>
           {t.totalLabel} ${calculateTotal().toFixed(2)}
@@ -207,23 +212,51 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 };
 
 const styles = StyleSheet.create({
-  container: { padding: wp('5%'), borderRadius: wp('3%') },
+  container: {
+    padding: wp('5%'),
+    borderRadius: wp('3%'),
+  },
   itemContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: hp('2%'),
     borderBottomWidth: 1,
     borderColor: '#ccc',
     paddingBottom: hp('1%'),
   },
-  itemText: { fontSize: wp('4%') },
-  quantityContainer: { flexDirection: 'row', alignItems: 'center' },
-  quantityButton: { fontSize: wp('5%'), paddingHorizontal: wp('2%') },
-  quantityText: { fontSize: wp('4%'), marginHorizontal: wp('2%') },
-  removeButton: { color: 'red', fontSize: wp('4%') },
-  totalContainer: { marginTop: hp('3%'), alignItems: 'center' },
-  totalText: { fontSize: wp('5%'), fontWeight: 'bold' },
+  // Aqui permitimos que o texto enrole e não quebre o layout
+  itemText: {
+    flex: 1,
+    flexWrap: 'wrap',
+    fontSize: wp('4%'),
+    marginRight: wp('2%'),
+  },
+  quantityContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: wp('2%'),
+  },
+  quantityButton: {
+    fontSize: wp('5%'),
+    paddingHorizontal: wp('2%'),
+  },
+  quantityText: {
+    fontSize: wp('4%'),
+    marginHorizontal: wp('2%'),
+  },
+  removeButton: {
+    color: 'red',
+    fontSize: wp('4%'),
+    marginLeft: wp('2%'),
+  },
+  totalContainer: {
+    marginTop: hp('3%'),
+    alignItems: 'center',
+  },
+  totalText: {
+    fontSize: wp('5%'),
+    fontWeight: 'bold',
+  },
   button: {
     backgroundColor: '#28a745',
     paddingVertical: hp('2%'),
@@ -231,9 +264,21 @@ const styles = StyleSheet.create({
     marginTop: hp('2%'),
     borderRadius: wp('2%'),
   },
-  buttonText: { color: '#fff', fontWeight: 'bold', fontSize: wp('4%') },
-  title: { fontSize: wp('5%'), fontWeight: 'bold', marginBottom: hp('1%') },
-  subTitle: { fontSize: wp('4%'), color: '#555', marginBottom: hp('2%') },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: wp('4%'),
+  },
+  title: {
+    fontSize: wp('5%'),
+    fontWeight: 'bold',
+    marginBottom: hp('1%'),
+  },
+  subTitle: {
+    fontSize: wp('4%'),
+    color: '#555',
+    marginBottom: hp('2%'),
+  },
 });
 
 export default ShoppingCart;
