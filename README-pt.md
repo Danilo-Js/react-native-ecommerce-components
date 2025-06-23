@@ -53,6 +53,8 @@
 
 Este projeto foi criado como parte de um **Trabalho de Conclusão de Curso (TCC)** em Ciência da Computação na **UFES (Universidade Federal do Espírito Santo)**.
 
+Foi desenvolvido o ecommerce [TechEcommerce](https://github.com/Danilo-Js/TechEcommerce), como comprovação das funcionalidades dessa biblioteca. 
+
 Deixe uma **_⭐ ESTRELA_** no [repositório](https://github.com/Danilo-Js/react-native-ecommerce-components) e contribua para melhorar ainda mais esta biblioteca.
 
 ---
