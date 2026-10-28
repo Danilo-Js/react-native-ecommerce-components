@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Componentes para e-commerce">
+<rect width="1200" height="240" fill="#f3f6fb"/><rect x="0" y="0" width="1200" height="8" fill="#2257b5"/>
+<path d="M946 59h63v49h74v74h-63v-49h-74z" fill="none" stroke="#2257b5" stroke-width="3"/>
+<circle cx="946" cy="59" r="7" fill="#2257b5"/><circle cx="1083" cy="182" r="7" fill="#2257b5"/>
+<text x="55" y="105" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#162b48">Componentes para e-commerce</text>
+<text x="57" y="149" font-family="Arial, sans-serif" font-size="22" fill="#354f70">React Native · TypeScript · React</text>
+<text x="57" y="204" font-family="Arial, sans-serif" font-size="17" fill="#354f70">Danilo Lima · Ciência da Computação</text></svg>

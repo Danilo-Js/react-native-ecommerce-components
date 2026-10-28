@@ -1,221 +1,92 @@
-<p align="center">
-  <a href="./README.md">🇺🇸 English Documentation</a> | 
-  <a href="./README-pt.md">🇧🇷 Documentação em Português</a>
-</p>
+![Componentes para e-commerce](Docs/assets/capa.svg)
 
----
+# Componentes para e-commerce
 
-<h1 align="center">
-  react-native-ecommerce-components
-</h1>
+Biblioteca de componentes React Native desenvolvida no contexto do meu TCC em Ciência da Computação na UFES. O foco é separar apresentação, dados e ações para reutilizar os mesmos elementos em diferentes telas.
 
-<h5 align="center">
-  Components to boost the development of your ecommerce.
-</h5>
+**TCC · Ciência da Computação · UFES**
 
----
+React Native · TypeScript · React
 
-<p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Danilo-Js/react-native-ecommerce-components">
+[English](README.en.md) · [Meu percurso em Ciência da Computação](https://github.com/Danilo-Js/My-Computer-Science-Course)
 
-  <a href="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components/commits/master">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/react-native-ecommerce-components">
-  </a>
-  
-  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/react-native-ecommerce-components">
-  
-  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/react-native-ecommerce-components">
-</p>
+<p align="center"><img src="Docs/Images/CategoryListpt.png" alt="Demonstração original de Componentes para e-commerce" width="260" /></p>
 
-<p align="center">
-  <a href="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/react-native-ecommerce-components">
-  </a>
+## O que este projeto explora
 
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Danilo-Js/react-native-ecommerce-components">
+- Contratos de propriedades tipados e callbacks para integrar comportamento.
+- Componentes para catálogo, busca, carrinho, entrega e fluxos demonstrativos de checkout.
+- Personalização de estilos e textos em português e inglês.
 
-  <a href="https://www.npmjs.com/package/react-native-ecommerce-components">
-    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-ecommerce-components.svg">
-  </a>
-</p>
+## Como explorar
 
-<p align="center">
-  <a href="#information_source-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#clipboard-usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="Docs/English/HowToContribuite.md">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="Docs/English/Diagrams.md">Diagrams</a>&nbsp;&nbsp;&nbsp;
-</p>
+| Caminho | Conteúdo |
+|---|---|
+| [Exportações da biblioteca](src/index.tsx) | `src/index.tsx` |
+| [Implementação dos componentes](src/components) | `src/components` |
+| [Guia de uso em português](Docs/Portuguese/Usage) | `Docs/Portuguese/Usage` |
+| [Usage reference in English](Docs/English/Usage) | `Docs/English/Usage` |
+| [Exemplos por componente](UsageExamples) | `UsageExamples` |
+| [Diagramas e organização](Docs/Portuguese/Diagrams.md) | `Docs/Portuguese/Diagrams.md` |
 
----
+## Executar ou consultar
 
-## :information_source: **About the Project**
-
-This project was created as part of a final paper for the Computer Science course at **UFES (Federal University of Espírito Santo)**.
-
-The [TechEcommerce](https://github.com/Danilo-Js/TechEcommerce) ecommerce was developed, in Portuguese, as proof of the functionalities of this library.
-
-Please leave a **_⭐ STAR_** on the [repository](https://github.com/Danilo-Js/react-native-ecommerce-components) and contribute to the library to help improve it further.
-
----
-
-## 📸 **Components**
-
-Click on the image to view the component documentation.
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="Docs/English/Usage/CategoryList.md">
-        <strong>Category List</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/CategoryList.png" alt="CategoryList" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/CouponCodeInput.md">
-        <strong>Coupon Code Input</strong><br/>
-        <img src="./Docs/Images/CouponCodeInput.png" alt="CouponCodeInput" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/NewClient.md">
-        <strong>New Client Form</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/NewClient.png" alt="NewClient" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/OrderConfirmation.md">
-        <strong>Order Confirmation</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderConfirmation.png" alt="OrderConfirmation" width="300"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="Docs/English/Usage/OrderSummary.md">
-        <strong>Order Summary</strong><br/>
-        <img
-          src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderSummary.png"
-          alt="Order Summary"
-          width="300"
-        />
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/OrderTracking.md">
-        <strong>Order Tracking</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/OrderTracking.png" alt="OrderTracking" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/PaymentGateway.md">
-        <strong>Payment Gateway</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/PaymentGateway.png" alt="PaymentGateway" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/ProductDetail.md">
-        <strong>Product Detail</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductDetail.png" alt="ProductDetail" width="300"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="Docs/English/Usage/ProductList.md">
-        <strong>Product List</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ProductList.png" alt="ProductList" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/ReviewAndRatings.md">
-        <strong>Review and Ratings</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ReviewAndRatings.png" alt="ReviewAndRatings" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/SearchBar.md">
-        <strong>Search Bar</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/SearchBar.png" alt="SearchBar" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/ShippingDetails.md">
-        <strong>Shipping Details</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShippingDetails.png" alt="ShippingDetails" width="300"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="Docs/English/Usage/ShoppingCart.md">
-        <strong>Shopping Cart</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/ShoppingCart.png" alt="ShoppingCart" width="300"/>
-      </a>
-    </td>
-    <td align="center">
-      <a href="Docs/English/Usage/WishList.md">
-        <strong>Wish List</strong><br/>
-        <img src="https://raw.githubusercontent.com/Danilo-Js/react-native-ecommerce-components/main/Docs/Images/WishList.png" alt="WishList" width="300"/>
-      </a>
-    </td>
-  </tr>
-</table>
-
----
-
-## :clipboard: Usage
-
-### **Installation**
-
-To install the library, run one of the following commands:
-
-```sh
-yarn add react-native-ecommerce-components
-```
-
-or
-
-```sh
+```bash
 npm install react-native-ecommerce-components
 ```
 
-### **Using a Component**
+Instale em um projeto React Native já configurado. A biblioteca depende dos pares React/React Native e de `react-native-responsive-screen`, conforme [package.json](package.json). Consulte o guia do componente para verificar suas propriedades antes de integrar.
 
-1. **Import the desired component** in your project:
+### Exemplo mínimo
 
-```js
-import { NewClient } from "react-native-ecommerce-components/lib";
-```
+```tsx
+import { ProductList } from 'react-native-ecommerce-components';
 
-2. **Render the component:**
-
-```js
-<NewClient
-  onSubmit={(data) => console.log(data)}
-  fields={["Name", "Email"]}
-  title="Customer Registration"
-  subTitle="Fill out the form below"
+<ProductList
+  products={[{ id: 'demo-1', title: 'Produto demonstrativo', price: 99.9, image: 'https://placehold.co/300x300/png' }]}
+  onProductPress={product => console.log(product.id)}
+  onAddToCart={product => console.log(product.id)}
+  language="pt"
 />
 ```
 
-### **Editing Components in Node Modules**
+## Componentes
 
-If necessary, you can navigate to the following path:
+| Catálogo e busca | Compra e entrega | Conta e relacionamento |
+|---|---|---|
+| CategoryList · ProductList · ProductDetail · SearchBar | ShoppingCart · OrderSummary · CouponCodeInput · ShippingDetails · PaymentGateway · OrderConfirmation · OrderTracking | NewClient · WishList · ReviewAndRatings |
 
-```plaintext
-node_modules/react-native-ecommerce-components/lib/components
-```
+[Documentação em português](Docs/Portuguese/Usage) · [English API reference](Docs/English/Usage) · [Aplicativo demonstrativo](https://github.com/Danilo-Js/TechEcommerce)
 
-Locate the desired component file and make your edits.
+| Componente | Referência |
+|---|---|
+| `CategoryList` | [Português](Docs/Portuguese/Usage/CategoryList.md) · [English](Docs/English/Usage/CategoryList.md) |
+| `ProductList` | [Português](Docs/Portuguese/Usage/ProductList.md) · [English](Docs/English/Usage/ProductList.md) |
+| `ProductDetail` | [Português](Docs/Portuguese/Usage/ProductDetail.md) · [English](Docs/English/Usage/ProductDetail.md) |
+| `SearchBar` | [Português](Docs/Portuguese/Usage/SearchBar.md) · [English](Docs/English/Usage/SearchBar.md) |
+| `ShoppingCart` | [Português](Docs/Portuguese/Usage/ShoppingCart.md) · [English](Docs/English/Usage/ShoppingCart.md) |
+| `OrderSummary` | [Português](Docs/Portuguese/Usage/OrderSummary.md) · [English](Docs/English/Usage/OrderSummary.md) |
+| `CouponCodeInput` | [Português](Docs/Portuguese/Usage/CouponCodeInput.md) · [English](Docs/English/Usage/CouponCodeInput.md) |
+| `ShippingDetails` | [Português](Docs/Portuguese/Usage/ShippingDetails.md) · [English](Docs/English/Usage/ShippingDetails.md) |
+| `PaymentGateway` | [Português](Docs/Portuguese/Usage/PaymentGateway.md) · [English](Docs/English/Usage/PaymentGateway.md) |
+| `OrderConfirmation` | [Português](Docs/Portuguese/Usage/OrderConfirmation.md) · [English](Docs/English/Usage/OrderConfirmation.md) |
+| `OrderTracking` | [Português](Docs/Portuguese/Usage/OrderTracking.md) · [English](Docs/English/Usage/OrderTracking.md) |
+| `NewClient` | [Português](Docs/Portuguese/Usage/NewClient.md) · [English](Docs/English/Usage/NewClient.md) |
+| `WishList` | [Português](Docs/Portuguese/Usage/WishList.md) · [English](Docs/English/Usage/WishList.md) |
+| `ReviewAndRatings` | [Português](Docs/Portuguese/Usage/ReviewAndRatings.md) · [English](Docs/English/Usage/ReviewAndRatings.md) |
 
----
+## Conceitos e contexto
 
-## :memo: **License**
+Os componentes de pagamento representam interface e coleta de dados. A biblioteca não é, por si só, um gateway, adquirente, serviço antifraude ou backend de comércio eletrônico.
 
-This project is under the **MIT License**. See the [LICENSE](https://github.com/Danilo-Js/react-native-ecommerce-components/blob/master/LICENSE) file for details.
+## Autoria e procedência
 
----
+Danilo José Lima de Oliveira. O contexto acadêmico e os diagramas estão documentados no acervo do projeto.
 
-**Made with ❤️ by Danilo José Lima de Oliveira**  
-[Get in touch!](https://www.linkedin.com/in/danilo-js/)
+## Licença
+
+Os termos deste acervo estão em [LICENSE](LICENSE). Os projetos e materiais vinculados conservam suas próprias condições e atribuições.
+
+## Projetos relacionados
+
+- [TechEcommerce](https://github.com/Danilo-Js/TechEcommerce)
